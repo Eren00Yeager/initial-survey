@@ -1,0 +1,108 @@
+.font1 {   
+    text-align: center;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    
+    color: #202020;
+    } 
+   
+
+.font2 {
+    text-align: left;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    
+    color: #202020;
+} 
+
+
+.font3 {
+   
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 42px;
+
+    color: #000000;
+
+}
+
+.font4{
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #202020;
+
+    opacity: 0.7;   
+
+}
+
+
+.threeColAlign{
+    display: block;
+    .left{
+        float: left; width: 33.333%;
+    }
+
+    .right{
+        float: right; width: 33.333%;
+    }
+
+    .center{
+        display: inline-block; width: 33.333%;
+    }
+}
+
+.insChooser {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    justify-content: center;
+}
+
+.Red {
+    color: red;
+}
+
+.forDivMargin {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.forForm {
+    background: #202020;
+    border-radius: 23px;
+    text-align: center;
+}
+
+.textBox {
+    text-align: center;
+}
+
+.forButtons {
+    .b1{
+
+    }
+
+    .b2{
+
+    }
+
+    .b3{
+
+    }
+    
+}
