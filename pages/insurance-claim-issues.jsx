@@ -1,11 +1,10 @@
 import Insurance from '../components/InsuranceClaims'
-import styles from '../styles/InsuranceClaims.module.scss'
+import styles from '../styles/InsuranceStatus.module.scss'
 
 const InsuranceClaimIssues = () =>{
     return (
         <div className={styles.outerdiv}>
         <Insurance/>
-        <p> Ajinkya</p>
         </div>
     )
 }

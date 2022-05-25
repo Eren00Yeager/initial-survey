@@ -1,17 +1,40 @@
 
+@media (max-width: 768px) {
+
+    .forDivMargin {
+        background-color: white;
+        width: 100vw;
+        padding: 5%;
+    }
+
+}
+
+@media (min-width: 768px){
+
+    .forDivMargin {
+        height: 100vh;
+        background-color: white;
+        width: 35vw;
+        border-color: yellow;
+        border-style: solid;
+        box-shadow: #000000;
+    }
+
+}
+
+
 .outerdiv{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    background-image: url('../images/index.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.forDivMargin {
-    height: 100vh;
-    background-color: rgb(211, 211, 39);
-    width: 50vw;
-}
+
 
 .insChooser{
     text-align: center;
@@ -99,4 +122,40 @@ color: #000000;
     border: none;
     background-color: red;
     color: white;
+}
+
+.radiocontent{
+    text-align: left;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #202020;
+
+    opacity: 0.7;
+}
+
+.button{
+    margin-right: 10px;
+    width: 90px;
+    height: 40px;
+    background: #E6E6E6;
+    border-radius: 33px!important;
+    border: none;
+    color: black;
+
+
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #000000;
+}
+
+.button:hover,.button:active,.button:focus{
+    background-color: red;
 }
