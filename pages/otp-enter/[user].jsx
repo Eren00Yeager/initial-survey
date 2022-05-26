@@ -1,7 +1,7 @@
-import {useRouter} from 'next/router';
+import EnteredOtp from '../../components/OtpEnter'
 
 export default function otpValidator (){
-    const route = useRouter();
-
-    route.query.user;
+    return(
+        <EnteredOtp/>
+    )
 }

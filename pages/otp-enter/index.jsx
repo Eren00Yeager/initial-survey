@@ -1,8 +1,10 @@
 import EnteredOtp from '../../components/OtpEnter'
-
+// will make this a redirect to enter details
 const OtpEnter =()=>{
     return(
-        <EnteredOtp/>
+        <>
+        <h1>404 Page does not exist</h1>
+        </>
     )
 }
 

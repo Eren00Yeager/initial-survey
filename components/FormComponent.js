@@ -1,19 +1,65 @@
 import styles from "../styles/InsuranceClaims.module.scss";
 import { Button, ButtonGroup, Form } from "react-bootstrap";
-import Link from 'next/link';
+import OtpSender from './OtpGenerateSend'
+import { useRouter } from "next/router";
+import AES from 'crypto-js/aes';
 
 const FormComponent = () => {
 
-    async function userGenerator(){
-        var specUser = '/otp-enter/'
-        
-        return 
-    }
+  const router = useRouter();
+
+  async function encryptWithAES(text) {
+    const passphrase = '1a19z23';
+    return AES.encrypt(text, passphrase).toString();
+  };
+
+  async function dataFetch(e) {
+    e.preventDefault();
+
+    const name = e.target.name.value;
+    const mobile = e.target.contact.value;
+    const otp = await OtpSender(mobile);
+
+    const data = {
+      name: name,
+      mobile: mobile,
+      otp: otp,
+    };
+
+    var generatedUser = await encryptWithAES(mobile);
+    // Send the data to the server in JSON format.
+    const JSONdata = JSON.stringify(data);
+
+    // API endpoint where we send form data.
+    const endpoint = "api/backend/send-to-mongo";
+
+    // Form the request for sending data to the server.
+    const options = {
+      // The method is POST because we are sending data.
+      method: "POST",
+      // Tell the server we're sending JSON.
+      headers: {
+        "Content-Type": "application/json",
+      },
+      // Body of the request is the JSON data we created above.
+      body: JSONdata,
+    };
+
+    // Send the form data to our forms API on Vercel and get a response.
+    const response = await fetch(endpoint, options);
+
+    // Get the response data from server as JSON.
+    // If server returns the name submitted, that means the form works.
+    const result = await response.json();
+    router.push(`/otp-enter/${data}`);
+    return result.data;
+  }
+  
 
   return (
     <>
       <div>
-        <Form className={styles.formouter}>
+        <Form className={styles.formouter} onSubmit={dataFetch}>
           <p className={styles.radiocontent}>Choose the Insurance </p>
           <ButtonGroup className="mb-3">
             <Button className={styles.button}>Left</Button>
@@ -41,11 +87,9 @@ const FormComponent = () => {
             <br />
             <br />
 
-            <Link href= {userGenerator}>
-            <button type="submit" className={styles.submit}>
+            <button  type="submit" className={styles.submit}>
               ACT
             </button>
-            </Link>
           </div>
         </Form>
       </div>
