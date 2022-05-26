@@ -14,6 +14,7 @@ export default async function (req, res){
         name:dataRec.name,
         mobile: dataRec.mobile,
         otp:dataRec.otp,
+        dataEnc : dataRec.baseenc,
         createdAt: new Date(),
     });
 

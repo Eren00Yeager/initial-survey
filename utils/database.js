@@ -6,6 +6,7 @@ const newclient = new MongoClient(DATABASE_URL,
 
 async function connect(){
     try{
+        // add chk of if already connected
         await newclient.connect();
         const dab = newclient.db("testcase");
         return {dab,newclient};

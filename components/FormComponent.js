@@ -2,17 +2,22 @@ import styles from "../styles/InsuranceClaims.module.scss";
 import { Button, ButtonGroup, Form } from "react-bootstrap";
 import OtpSender from './OtpGenerateSend'
 import { useRouter } from "next/router";
-import AES from 'crypto-js/aes';
+import CryptoJS from 'crypto-js';
 
 const FormComponent = () => {
 
   const router = useRouter();
 
-  async function encryptWithAES(text) {
-    const passphrase = '1a19z23';
-    return AES.encrypt(text, passphrase).toString();
-  };
+  // async function encryptWithAES(text) {
+  //   const passphrase = '1a19z23';
+  //   return AES.encrypt(text, passphrase).toString();
+  // };
 
+  async function encrypt(text) {
+    return CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(text));
+  };
+  
+  
   async function dataFetch(e) {
     e.preventDefault();
 
@@ -20,13 +25,17 @@ const FormComponent = () => {
     const mobile = e.target.contact.value;
     const otp = await OtpSender(mobile);
 
+    var generatedUser = await encrypt(mobile);
+    // const toSend =toString(generatedUser);
+    // const toSend = JSON.stringify({encrypted: generatedUser});
+    
     const data = {
       name: name,
       mobile: mobile,
       otp: otp,
+      baseenc : generatedUser,
     };
 
-    var generatedUser = await encryptWithAES(mobile);
     // Send the data to the server in JSON format.
     const JSONdata = JSON.stringify(data);
 
@@ -51,7 +60,7 @@ const FormComponent = () => {
     // Get the response data from server as JSON.
     // If server returns the name submitted, that means the form works.
     const result = await response.json();
-    router.push(`/otp-enter/${data}`);
+    router.push(`/otp-enter/${generatedUser}`);
     return result.data;
   }
   
