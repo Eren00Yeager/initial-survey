@@ -1,0 +1,161 @@
+
+@media (max-width: 768px) {
+
+    .forDivMargin {
+        background-color: white;
+        width: 100vw;
+        padding: 5%;
+    }
+
+}
+
+@media (min-width: 768px){
+
+    .forDivMargin {
+        height: 100vh;
+        background-color: white;
+        width: 35vw;
+        border-color: yellow;
+        border-style: solid;
+        box-shadow: #000000;
+    }
+
+}
+
+
+.outerdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/index.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.insChooser{
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+.font1 {   
+    text-align: center;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    
+    color: #202020;
+    } 
+   
+
+.font2 {
+text-align: justify;
+font-family: 'SF Pro Display';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 30px;
+
+color: #000000;
+} 
+
+
+.font3 {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 42px;
+    color: #000000;
+
+}
+
+.Red {
+    color: red;
+}
+
+
+.forForm {
+    background: #202020;
+    border-radius: 23px;
+    text-align: center;
+    width: 50%;
+    height: 20vh;
+    align-self: center;
+}
+
+
+//For from component
+
+.formouter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formcomp{
+    width: 70%;
+    background-color: black;
+    border-radius: 23px;
+    padding: 5%;
+    text-align: center;
+}
+
+.input{
+    background: #F5F5F5;
+    border-radius: 23px;
+    width: 100%;
+    padding: 2%;
+}
+
+.submit{
+    border-radius: 23px;
+    padding: 2%;
+    width: 30%;
+    border: none;
+    background-color: red;
+    color: white;
+}
+
+.radiocontent{
+    text-align: left;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #202020;
+
+    opacity: 0.7;
+}
+
+.button{
+    margin-right: 10px;
+    width: 90px;
+    height: 40px;
+    background: #E6E6E6;
+    border-radius: 33px!important;
+    border: none;
+    color: black;
+
+
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #000000;
+}
+
+.button:hover,.button:active,.button:focus{
+    background-color: red;
+}
