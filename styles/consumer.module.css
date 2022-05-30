@@ -129,6 +129,8 @@ align-items:center;
 .fm{
 display: flex;
 flex-direction:column;
+/* background-color: aqua; */
+align-items: center;
 }
 .f1{
 font-family: 'Poppins';
@@ -189,15 +191,13 @@ text-align:center;
 /* background-color: #FF9C60; */
 padding: 10px 0px 10px 0px;
 }
-.tq{
+.greet{
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 700;
-font-size: 16px;
-line-height: 24px;
+font-size: 1em;
+/* line-height: 75px; */
 color: #FFFFFF;
-position: relative;
-top:30px;
 }
 
 
