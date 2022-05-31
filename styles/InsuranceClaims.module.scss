@@ -1,161 +1,185 @@
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (min-width: 480px) {
+  .Container {
+    font-size: 25px;
+  }
 
-@media (max-width: 768px) {
+  .font2 {
+    text-align: center;
+  }
 
-    .forDivMargin {
-        background-color: white;
-        width: 100vw;
-        padding: 5%;
-    }
+  .forForm {
+      margin-top: 2em;
+    border-radius: 23px;
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+  }
 
+  .forInp {
+    padding-left: 2em;
+    width: 35%;
+    height: 40%;
+    justify-content: center;
+  }
+
+  .input {
+    background: #f5f5f5;
+    border-radius: 23px;
+    width: 100%;
+    height: 100%;
+    font-size: 70%;
+  }
+
+
+  
+  .forSub {
+    padding-left: 2em;
+    width: 35%;
+    height: 40%;
+    justify-content: center;
 }
 
-@media (min-width: 768px){
-
-    .forDivMargin {
-        height: 100vh;
-        background-color: white;
-        width: 35vw;
-        border-color: yellow;
-        border-style: solid;
-        box-shadow: #000000;
-    }
-
+  .submit {
+    background: #f5f5f5;
+    border-radius: 23px;
+    width: 100%;
+    height: 100%; 
+    font-size: 70%;
+  }
 }
 
+@media screen and (max-width: 480px) {
+  .Container {
+    font-size: 20px;
+  }
 
-.outerdiv{
+  .forForm {
+      margin-top: 2em;
+    border-radius: 23px;
+    background-color: #000000;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url('../images/index.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  }
+
+  .forInp {
+    padding: 1em;
+  }
+
+  .forSub {
+    padding-top: 1.5em;
+    text-align: center;
+    padding-bottom: 1em;
+    font-size: 1.2em;
+  }
+
+  .input {
+    background: #f5f5f5;
+    border-radius: 23px;
+    width: 100%;
+  }
+
+  .submit {
+    border-radius: 23px;
+    padding: 0.3em;
+    border: none;
+    background-color: blue;
+    color: white;
+  }
 }
 
+.font1 {
+  text-align: center;
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1em;
 
-
-.insChooser{
-    text-align: center;
-    padding-left: 10%;
-    padding-right: 10%;
+  color: blue;
 }
-
-
-.font1 {   
-    text-align: center;
-    font-family: 'SF Pro Display';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 45px;
-    
-    color: #202020;
-    } 
-   
 
 .font2 {
-text-align: justify;
-font-family: 'SF Pro Display';
-font-style: normal;
-font-weight: 700;
-font-size: 25px;
-line-height: 30px;
+  //text-align: center;
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3em;
+  line-height: 1.3em;
 
-color: #000000;
-} 
-
+  color: #000000;
+}
 
 .font3 {
-    font-family: 'SF Pro Display';
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 1.3em;
+
+  color: #000000;
+}
+
+.font4{
+    text-align: left;
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 700;
-    font-size: 35px;
-    line-height: 42px;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    padding: 0.5em;
+  
     color: #000000;
-
-}
-
-.Red {
-    color: red;
-}
-
-
-.forForm {
-    background: #202020;
-    border-radius: 23px;
-    text-align: center;
-    width: 50%;
-    height: 20vh;
-    align-self: center;
 }
 
 
 //For from component
 
-.formouter{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.formouter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.formcomp{
-    width: 70%;
-    background-color: black;
+.formcomp {
+  background-color: black;
+  border-radius: 23px;
+}
+
+.radiocontent {
+  text-align: left;
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 1em;
+
+  color: #202020;
+
+  opacity: 0.7;
+}
+
+.button {
+  background: #e6e6e6;
+  border: none;
+  border-radius: 23px;
+  color: black;
+
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.8em;
+
+  color: #000000;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  background-color: blue;
+}
+
+.basicPadd{
+    background-color: #000000;
     border-radius: 23px;
-    padding: 5%;
-    text-align: center;
-}
-
-.input{
-    background: #F5F5F5;
-    border-radius: 23px;
-    width: 100%;
-    padding: 2%;
-}
-
-.submit{
-    border-radius: 23px;
-    padding: 2%;
-    width: 30%;
-    border: none;
-    background-color: red;
-    color: white;
-}
-
-.radiocontent{
-    text-align: left;
-    font-family: 'SF Pro Display';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 21px;
-
-    color: #202020;
-
-    opacity: 0.7;
-}
-
-.button{
-    margin-right: 10px;
-    width: 90px;
-    height: 40px;
-    background: #E6E6E6;
-    border-radius: 33px!important;
-    border: none;
-    color: black;
-
-
-    font-family: 'SF Pro Display';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 21px;
-
-    color: #000000;
-}
-
-.button:hover,.button:active,.button:focus{
-    background-color: red;
 }

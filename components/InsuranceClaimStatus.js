@@ -1,17 +1,52 @@
-import { Container, Row } from 'react-bootstrap'
-import styles from '../styles/InsuranceStatus.module.scss'
+import { Container, Row, Col } from "react-bootstrap";
+import styles from "../styles/InsuranceClaims.module.scss";
 
-const InsuranceStatus =()=>{
-    return(
-        <Container className={styles.forDivMargin}>
-            <Row><p className={styles.font1}>INSURED<span className={styles.red}>.</span></p></Row>
+const InsuranceStatus = () => {
+  return (
+    <Container fluid className={styles.Container}>
+      <br />
+      <Row>
+        <p className={styles.font1}>
+          INSURED<span style={{ color: "blue" }}>.</span>
+        </p>
+      </Row>
 
-            <Row><p className={styles.font2}>Congrats ! You have taken<br/> your first step in fighting<br/> the bureaucracy. </p></Row>
-            <center>
-                <Row className={styles.font3outer}> <p className={styles.font3}>We will reach out to you to take the next step.</p></Row>
-            
-            </center>
-        </Container>
-    )}
+      <br />
+      <br />
 
-export default InsuranceStatus
+<br />
+      <br />
+      
+      <Row>
+        <Col></Col>
+        <Col xs="10">
+          <p className={styles.font2}>
+            Congrats ! You have taken your first step in fighting the
+            bureaucracy.{" "}
+          </p>
+        </Col>
+        <Col></Col>
+      </Row>
+      <br />
+      <br />
+      
+
+      <Row>
+        <Col></Col>
+        <Col xs="10" lg="6">
+          <div className={styles.basicPadd}>
+            {" "}
+            <p className={styles.font4} style={{ color: "white" }}>
+              We will reach out to you to take the next step
+              <span style={{ color: "blue" }}>.</span>
+            </p>
+          </div>
+        </Col>
+
+        <Col></Col>
+      </Row>
+    </Container>
+  );
+};
+
+export default InsuranceStatus;
