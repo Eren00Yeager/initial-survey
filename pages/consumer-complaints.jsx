@@ -29,7 +29,6 @@ export default function consumer() {
               <div>
                 a<span className={consumerStyles.white}>gor</span>á
               </div>
-
             </div>
 
             <div>
@@ -37,13 +36,13 @@ export default function consumer() {
             </div>
           </div>
           <div className={consumerStyles.cont}>
-            <div>
+            <div className={consumerStyles.cont1}>
               <div className={consumerStyles.t1}>
                 <span className={consumerStyles.title}>
                   <span className={consumerStyles.title2}>
                     Still haven’t got that refund?
                   </span>
-                  <br></br>
+    
                   <span className={consumerStyles.title1}>
                     Allow us to fight your fights.
                   </span>
@@ -52,7 +51,7 @@ export default function consumer() {
               <div className={consumerStyles.mid}>
                 <span>
                   At agorá, we provide you the legal resources to fight against
-                  poor customer services and <br></br>fradulent market practises in
+                  poor customer services and fradulent market practises in
                   e-commerce.
                 </span>
 
