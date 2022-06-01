@@ -13,9 +13,8 @@ const InsuranceStatus = () => {
 
       <br />
       <br />
-
-<br />
       <br />
+     
       
       <Row>
         <Col></Col>

@@ -73,6 +73,7 @@ const Insurance = () => {
                 type="name"
                 name="name"
                 placeholder="Name"
+                required
               />
             </div>
 
@@ -83,6 +84,8 @@ const Insurance = () => {
                 type="contact"
                 name="contact"
                 placeholder="Contact"
+                pattern="[0-9]{10}"
+                required
               />
             </div>
             <div className = {InsuranceStyles.forSub}>
