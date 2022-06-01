@@ -399,6 +399,11 @@ font-size: 1em;
 /* line-height: 75px; */
 color: #FFFFFF;
 }
+.fm{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 }
 
 
