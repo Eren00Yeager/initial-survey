@@ -26,7 +26,7 @@ export default function consumer() {
               <div>
                 <Image src={i} alt="Pic" width={80} height={85} />
               </div>
-              <div>
+              <div className={consumerStyles.ag}>
                 a<span className={consumerStyles.white}>gor</span>á
               </div>
 
