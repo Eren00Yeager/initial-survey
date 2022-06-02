@@ -26,13 +26,10 @@ export default function consumer() {
               <div>
                 <Image src={i} alt="Pic" width={80} height={85} />
               </div>
-              <div>
+              <div className={consumerStyles.ag}>
                 a<span className={consumerStyles.white}>gor</span>á
               </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> 3ef51a43d7e9a66447a60135dce70e7b3c22660b
             </div>
 
             <div>
@@ -40,21 +37,13 @@ export default function consumer() {
             </div>
           </div>
           <div className={consumerStyles.cont}>
-<<<<<<< HEAD
             <div>
-=======
-            <div className={consumerStyles.cont1}>
->>>>>>> 3ef51a43d7e9a66447a60135dce70e7b3c22660b
               <div className={consumerStyles.t1}>
                 <span className={consumerStyles.title}>
                   <span className={consumerStyles.title2}>
                     Still haven’t got that refund?
                   </span>
-<<<<<<< HEAD
                   <br></br>
-=======
-    
->>>>>>> 3ef51a43d7e9a66447a60135dce70e7b3c22660b
                   <span className={consumerStyles.title1}>
                     Allow us to fight your fights.
                   </span>
@@ -63,11 +52,7 @@ export default function consumer() {
               <div className={consumerStyles.mid}>
                 <span>
                   At agorá, we provide you the legal resources to fight against
-<<<<<<< HEAD
                   poor customer services and <br></br>fradulent market practises in
-=======
-                  poor customer services and fradulent market practises in
->>>>>>> 3ef51a43d7e9a66447a60135dce70e7b3c22660b
                   e-commerce.
                 </span>
 
@@ -100,17 +85,12 @@ export default function consumer() {
               </div>
             </div>
             <div className={consumerStyles.fm}>
-              <div className={consumerStyles.f1}>Start your journey here.</div>
-
-              <form action="./thank-you" method="post">
-
-                <div className={consumerStyles.i1}><input className={consumerStyles.ph} placeholder="Email or Phone number" required></input></div>
-                <div className={consumerStyles.i2}><input className={consumerStyles.go} type="submit" value="Go"></input></div>
-
-              </form>
-
+          
+            <div className={consumerStyles.greet}>Thank you for signing up with us.</div>
+            <div className={consumerStyles.greet}>We will soon reach out to you.</div>
             </div>
-          </div>
+            </div>
+          
         </div>
         <div className={consumerStyles.foot}>
           By signing up, you are agreeing to our term’s & conditions & for us to contact you through the phone number & email provided.
@@ -119,8 +99,4 @@ export default function consumer() {
     </div>
 
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 3ef51a43d7e9a66447a60135dce70e7b3c22660b

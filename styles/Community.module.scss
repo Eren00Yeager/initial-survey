@@ -1,0 +1,197 @@
+@media screen and (min-width: 480px) {
+  .Container {
+    font-size: 16px;
+    border-radius: 23px;
+  }
+
+  .forDiv1 {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border-radius: 1em;
+    padding: 1em;
+  }
+
+  .forDiv2 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .divForText {
+    width: 25%;
+  }
+  .divForButtons {
+    width: 25%;
+  }
+
+  .forButton1{
+    padding: 0.35em;
+    border-radius: 1em;
+    background-color: red;
+    color:hsl(0, 0%, 100%);
+    width: 30%;
+    word-wrap: break-word;
+  }
+
+  .forDiv {
+    background-color: black;
+    border-radius: 1em;
+    padding: 1em;
+  }
+
+  .forButton {
+    background-color: D9D9D9;
+    color: #000;
+    border-radius: 1em;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    width: 80%;
+    font-size: 100%;
+    line-height: 1em;
+    padding: 1em;
+    word-wrap: break-word;
+
+  }
+
+  .forInput {
+    padding: 0.35em;
+    width: 80%;
+    border-radius: 1em;
+    word-wrap: break-word;
+}
+.align{
+    width: 33%;
+    text-align: center;
+}
+
+.align1{
+    width: 33%;
+    text-align: center;
+}
+ 
+}
+
+@media screen and (max-width: 480px) {
+  .Container {
+    font-size: 16px;
+    border-radius: 23px;
+  }
+
+  .forDiv1 {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border-radius: 1em;
+    padding: 1em;
+  }
+
+  .forDiv2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .divForButtons {
+    padding: 0.25em;
+  }
+  .forButton {
+    background-color: D9D9D9;
+    color: #000;
+    border-radius: 1em;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    width: 100%;
+    font-size: 1em;
+    line-height: 1em;
+    padding: 1em;
+  }
+
+  
+  .forInput {
+    padding: 0.35em;
+    border-radius: 1em;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.align{
+    padding: 0.35em;
+    text-align: center;
+}
+
+.forButton1{
+    padding: 0.35em;
+    border-radius: 1em;
+    background-color: red;
+    color:hsl(0, 0%, 100%);
+    width: 30%;
+    word-wrap: break-word;
+  }
+
+  .align1{
+      padding-top: 2.5em;
+      text-align: center;
+  }
+
+  // css for above part
+
+.forh1{
+  text-align: center;
+  font-family: 'SF Pro Display';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 30px;
+}
+
+.upperText{
+  text-align: center;
+  color: black;
+  font-family: 'SF Pro Display';
+font-style: normal;
+font-weight: 500;
+font-size: 25px;
+line-height: 30px;
+}
+
+.graph{
+  text-align: center;
+}
+
+.finalText{
+  padding-right: 20%;
+  text-align: center;
+  font-family: 'SF Pro Display';
+font-style: normal;
+font-weight: 600;
+font-size: 25px;
+line-height: 30px;
+}
+ 
+}
+
+.font2 {
+  color: white;
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1em;
+  text-align: center;
+  padding: 1em;
+  line-height: 1em;
+}
+
+.font3 {
+  color: white;
+  font-family: "SF Pro Display";
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.8em;
+  text-align: center;
+  padding: 1em;
+  line-height: 1em;
+}
+
+
+
