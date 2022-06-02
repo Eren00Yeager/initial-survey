@@ -8,6 +8,20 @@
     text-align: center;
   }
 
+  
+  .font3 {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 1.3em;
+
+    text-align: center;
+
+    color: #000000;
+  }
+
+
   .forForm {
       margin-top: 2em;
     border-radius: 23px;
@@ -18,8 +32,6 @@
 
   .forInp {
     padding: 0.5em;
-    width: 35%;
-    justify-content: center;
   }
 
   .input {
@@ -52,6 +64,19 @@
   .Container {
     font-size: 20px;
   }
+  
+.font3 {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 1.3em;
+
+  text-align: left;
+
+  color: #000000;
+}
+
 
   .forForm {
       margin-top: 2em;
@@ -105,18 +130,6 @@
   font-weight: 700;
   font-size: 1.3em;
   line-height: 1.3em;
-
-  color: #000000;
-}
-
-.font3 {
-  font-family: "SF Pro Display";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 2em;
-  line-height: 1.3em;
-
-  text-align: center;
 
   color: #000000;
 }
