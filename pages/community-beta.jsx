@@ -12,7 +12,7 @@ const community = () => {
 
   return (
     <Container fluid className={styles.Container}>
-      <Community />
+      <Community text= {"Choose to be here."} />
       {/* <Row>
         <h1>
           The <span style={{ color: "red" }}>2.5% Club</span>

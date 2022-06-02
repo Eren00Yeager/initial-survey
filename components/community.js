@@ -4,7 +4,7 @@ import Image from "next/image";
 import graph from "../images/graph.png";
 import arrow from "../images/arrow.svg";
 
-function Community()
+function Community(props)
 {
     return (
         <Container>
@@ -23,7 +23,7 @@ function Community()
                     <Image src={graph} alt="Graph" />
                 </div>
                 <div className={styles.finalText}>
-                    <span ><Image src={arrow} />You’re almost here.</span>
+                    <span ><Image src={arrow} />{props.text}</span>
                         
                 </div>
             </div>
