@@ -59,7 +59,7 @@ export default function consumer() {
                 <Image src={i} alt="Pic" width={80} height={85} />
               </div>
               <div>
-                a<span className={consumerStyles.white}>gor</span>á
+                agorá
               </div>
             </div>
 
