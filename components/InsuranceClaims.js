@@ -7,9 +7,43 @@ import {
   ButtonGroup,
   Form,
 } from "react-bootstrap";
+import { useState,useRef } from "react";
+import FormComponent from "./FormComponent";
 
 const Insurance = () => {
-  function dataFetch() {}
+
+  const [type,setType]=useState('')
+  const [name,setName]=useState('')
+  const [contact,setContact]=useState('')
+
+
+  const submitHandler=async(e)=>{
+    e.preventDefault();
+    console.log([type,name,contact])
+
+    try{
+      const response = await fetch("/api/insurancesheet", {
+          method: "POST",
+          body: JSON.stringify({type,name,contact}),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+      console.log(await response.json())
+      window.location.href='/insurance-resolve-status'
+
+    }catch(e){
+      console.log(e)
+      alert("There was an error in submitting\nPlease try again")
+      setEop('');
+    }
+  }
+
+  const buttonClick=(e)=>{
+    e.preventDefault();
+    console.log(e.target.value)
+    setType(e.target.value)
+  }
 
   function onChangeValue(){
 
@@ -53,36 +87,21 @@ const Insurance = () => {
       
 
       <Row>
-        <Form className={InsuranceStyles.formouter} onSubmit={dataFetch}>
+        <Form className={InsuranceStyles.formouter} onSubmit={submitHandler}>
           <p className={InsuranceStyles.radiocontent}>
             Choose the Insurance type
           </p>
-        <div class="btn-group" role="group">
-            
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"/>
-            <label class={`btn btn-primary ${InsuranceStyles.button}`} for="btnradio1">
-             Health
-              </label>
-          
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off"/>
-            <label class={`btn btn-primary  ${InsuranceStyles.button}`} for="btnradio2">Life</label>
-            
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off"/>
-            <label class={`btn btn-primary  ${InsuranceStyles.button}`} for="btnradio3">Vehicle</label>
-
-            
-            </div>
-          {/* </div> */}
-            {/* <Col>
-              <Button className={InsuranceStyles.button}>Health</Button>
+          <Row>
+            <Col>
+              <Button className={InsuranceStyles.button} name="Health" value="Health" onClick={buttonClick}>Health</Button>
             </Col>
             <Col>
-              <Button className={InsuranceStyles.button}>Life</Button>
+              <Button className={InsuranceStyles.button} name="Life" value="Life" onClick={buttonClick}>Life</Button>
             </Col>
             <Col>
-              <Button className={InsuranceStyles.button}>Vehicle</Button>
-            </Col> */}
-         
+              <Button className={InsuranceStyles.button} name="Vehicle" value="Vehicle" onClick={buttonClick}>Vehicle</Button>
+            </Col>
+          </Row>
           <div className={InsuranceStyles.forForm}>
             <div className = {InsuranceStyles.forInp}>
               {" "}
@@ -93,6 +112,8 @@ const Insurance = () => {
                 name="name"
                 placeholder="Name"
                 required
+                value={name}
+                onChange={(e)=>setName(e.target.value)}
               />
             </div>
 
@@ -105,6 +126,8 @@ const Insurance = () => {
                 placeholder="Contact"
                 pattern="[0-9]{10}"
                 required
+                value={contact}
+                onChange={(e)=>setContact(e.target.value)}
               />
             </div>
             <div className = {InsuranceStyles.forSub}>
@@ -116,6 +139,7 @@ const Insurance = () => {
 
         </Form>
       </Row>
+
       <br/>
     </Container>
   );

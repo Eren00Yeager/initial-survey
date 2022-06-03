@@ -1,6 +1,7 @@
 import { Row, Container, Form, Col } from "react-bootstrap";
 import styles from "../styles/Community.module.scss";
 import { useRouter } from "next/router";
+import Community from "../components/community";
 
 const community = () => {
   const router = useRouter();
@@ -11,17 +12,19 @@ const community = () => {
 
   return (
     <Container fluid className={styles.Container}>
-      <Row>
+      <Community text= {"Choose to be here."} />
+      {/* <Row>
         <h1>
           The <span style={{ color: "red" }}>2.5% Club</span>
         </h1>
       </Row>
       <Row>
         <h1>sp,e sdaf</h1>
-      </Row>
-      <Row>
+      </Row> */}
+      <Row className={styles.check}>
           <Col></Col>
           <Col lg="11" xs="10"><div className={styles.forDiv1}>
+            
           <div className={styles.forDiv2}>
             <div className={styles.divForText}>
               <p className={styles.font2}>Current community openings</p>

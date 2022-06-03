@@ -4,7 +4,39 @@ import consumerStyles from "../styles/consumer.module.css";
 import svg from "../pic/mark.svg";
 import i from "../pic/i1.png";
 import Consumer from "../components/Consumer";
+
+import { useState } from "react";
+
+
 export default function consumer() {
+
+
+  const [eop,setEop]=useState('');
+
+    const submitHandler= async (e)=> {
+      e.preventDefault();
+
+      console.log(eop)
+      try{
+        const response = await fetch("/api/consumersheet", {
+            method: "POST",
+            body: JSON.stringify({eop}),
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          })
+        console.log(await response.json())
+        window.location.href='/thank-you'
+
+      }catch(e){
+        console.log(e)
+        alert("There was an error in submitting\nPlease try again")
+        setEop('');
+      }
+    
+  }
+
+
   return (
     <div className={consumerStyles.s}>
       <Head>
@@ -86,9 +118,10 @@ export default function consumer() {
             <div className={consumerStyles.fm}>
               <div className={consumerStyles.f1}>Start your journey here.</div>
 
-              <form action="./thank-you" method="post">
+              <form onSubmit={submitHandler}>
 
-                <div className={consumerStyles.i1}><input className={consumerStyles.ph} placeholder="Email or Phone number" required></input></div>
+                <div className={consumerStyles.i1}><input className={consumerStyles.ph} placeholder="Email or Phone number" 
+                required value={eop} onChange={(e)=>setEop(e.target.value)}></input></div>
                 <div className={consumerStyles.i2}><input className={consumerStyles.go} type="submit" value="Go"></input></div>
 
               </form>
