@@ -11,6 +11,10 @@ import {
 const Insurance = () => {
   function dataFetch() {}
 
+  function onChangeValue(){
+
+  }
+
   return (
     <Container fluid className={InsuranceStyles.Container}>
       <br />
@@ -53,8 +57,23 @@ const Insurance = () => {
           <p className={InsuranceStyles.radiocontent}>
             Choose the Insurance type
           </p>
-          <Row>
-            <Col>
+        <div class="btn-group" role="group">
+            
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"/>
+            <label class={`btn btn-primary ${InsuranceStyles.button}`} for="btnradio1">
+             Health
+              </label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off"/>
+            <label class={`btn btn-primary  ${InsuranceStyles.button}`} for="btnradio2">Life</label>
+            
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off"/>
+            <label class={`btn btn-primary  ${InsuranceStyles.button}`} for="btnradio3">Vehicle</label>
+
+            
+            </div>
+          {/* </div> */}
+            {/* <Col>
               <Button className={InsuranceStyles.button}>Health</Button>
             </Col>
             <Col>
@@ -62,8 +81,8 @@ const Insurance = () => {
             </Col>
             <Col>
               <Button className={InsuranceStyles.button}>Vehicle</Button>
-            </Col>
-          </Row>
+            </Col> */}
+         
           <div className={InsuranceStyles.forForm}>
             <div className = {InsuranceStyles.forInp}>
               {" "}

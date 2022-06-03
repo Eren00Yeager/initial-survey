@@ -10,7 +10,7 @@
 
   
   .font3 {
-    font-family: "SF Pro Display";
+    font-family: "helvetica";
     font-style: normal;
     font-weight: 700;
     font-size: 2em;
@@ -66,7 +66,7 @@
   }
   
 .font3 {
-  font-family: "SF Pro Display";
+  font-family: "helvetica";
   font-style: normal;
   font-weight: 700;
   font-size: 2em;
@@ -115,7 +115,7 @@
 
 .font1 {
   text-align: center;
-  font-family: "SF Pro Display";
+  font-family: "helvetica";
   font-style: normal;
   font-weight: 700;
   font-size: 1em;
@@ -125,7 +125,7 @@
 
 .font2 {
   //text-align: center;
-  font-family: "SF Pro Display";
+  font-family: "helvetica";
   font-style: normal;
   font-weight: 700;
   font-size: 1.3em;
@@ -136,7 +136,7 @@
 
 .font4{
     text-align: left;
-    font-family: "SF Pro Display";
+    font-family: "helvetica";
     font-style: normal;
     font-weight: 700;
     font-size: 1.3em;
@@ -163,15 +163,20 @@
 
 .radiocontent {
   text-align: left;
-  font-family: "SF Pro Display";
+  font-family: "helvetica";
   font-style: normal;
   font-weight: 600;
   font-size: 1em;
   line-height: 1em;
 
-  color: #202020;
 
   opacity: 0.7;
+}
+
+.workS{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .button {
@@ -180,7 +185,7 @@
   border-radius: 23px;
   color: black;
 
-  font-family: "SF Pro Display";
+  font-family: "helvetica";
   font-style: normal;
   font-weight: 600;
   font-size: 0.8em;
