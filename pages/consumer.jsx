@@ -6,11 +6,10 @@ import im from "../pic/i2.svg";
 import i from "../pic/i1.png";
 import Consumer from "../components/Consumer";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 export default function consumer() {
-
 
     const [eop, setEop] = useState('');
 
@@ -56,8 +55,8 @@ export default function consumer() {
 
                 <div className={consumerStyles.head}>
                     <div className={consumerStyles.hd}>
-                        <div>
-                            <Image src={i} alt="Pic" width={80} height={85} />
+                        <div className={consumerStyles.log}>
+                            <Image src={i} alt="Pic"  />
                         </div>
                         <div>
                             agorá
@@ -69,7 +68,7 @@ export default function consumer() {
                     </div>
                 </div>
                 <div className={consumerStyles.main}>
-                    <form className={consumerStyles.frm}>
+                    <form className={consumerStyles.frm} method="post" action="./thank-you">
                         <div className={consumerStyles.grev}>
                             Submit your Grievance
                         </div>
@@ -112,7 +111,7 @@ export default function consumer() {
                             </span>
                         </div>
                         <div className={consumerStyles.py}>
-                         <Image src={im}/>
+                            <Image src={im} />
                         </div>
                     </div>
 
@@ -155,10 +154,6 @@ export default function consumer() {
                     </div>
 
                 </div>
-
-
-
-
             </div>
         </div>
 
