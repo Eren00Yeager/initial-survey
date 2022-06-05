@@ -21,6 +21,7 @@ const Insurance = () => {
     e.preventDefault();
     console.log([type, name, contact]);
 
+
     try {
       const response = await fetch("/api/insurancesheet", {
         method: "POST",
@@ -34,17 +35,13 @@ const Insurance = () => {
     } catch (e) {
       console.log(e);
       alert("There was an error in submitting\nPlease try again");
-      setEop("");
+      setName('');
+      setType('');
+      setContact('');
     }
   };
 
-  const buttonClick = (e) => {
-    e.preventDefault();
-    console.log(e.target.value);
-    setType(e.target.value);
-  };
 
-  function onChangeValue() {}
 
   return (
     <Container fluid className={InsuranceStyles.Container}>
@@ -108,6 +105,8 @@ const Insurance = () => {
                         name="btnradio"
                         id="btnradio1"
                         autocomplete="off"
+                        value="Health"
+                        onClick={(e)=>setType(e.target.value)}
                       />
                       <label
                         class={`btn btn-primary ${InsuranceStyles.button}`}
@@ -123,6 +122,8 @@ const Insurance = () => {
                         name="btnradio"
                         id="btnradio2"
                         autocomplete="off"
+                        value="Life"
+                        onClick={(e)=>setType(e.target.value)}
                       />
                       <label
                         class={`btn btn-primary ${InsuranceStyles.button}`}
@@ -138,6 +139,8 @@ const Insurance = () => {
                         name="btnradio"
                         id="btnradio3"
                         autocomplete="off"
+                        value="Vehicle"
+                        onClick={(e)=>setType(e.target.value)}
                       />
                       <label
                         class={`btn  btn-primary  ${InsuranceStyles.button}`}

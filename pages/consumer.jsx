@@ -6,21 +6,24 @@ import im from "../pic/i2.svg";
 import i from "../pic/i1.png";
 import Consumer from "../components/Consumer";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 
 export default function consumer() {
 
-    const [eop, setEop] = useState('');
+    const [name, setName] = useState('');
+    const [mobile, setMobile] = useState('');
+    const [email, setEmail] = useState('');
+    const [problem, setProblem] = useState('');
 
     const submitHandler = async (e) => {
         e.preventDefault();
 
-        console.log(eop)
+        console.log([name,mobile,email,problem])
         try {
             const response = await fetch("/api/consumersheet", {
                 method: "POST",
-                body: JSON.stringify({ eop }),
+                body: JSON.stringify({ name,mobile,email,problem }),
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -31,7 +34,10 @@ export default function consumer() {
         } catch (e) {
             console.log(e)
             alert("There was an error in submitting\nPlease try again")
-            setEop('');
+            setName('');
+            setMobile('');
+            setEmail('');
+            setProblem('');
         }
 
     }
@@ -68,26 +74,26 @@ export default function consumer() {
                     </div>
                 </div>
                 <div className={consumerStyles.main}>
-                    <form className={consumerStyles.frm} method="post" action="./thank-you">
+                    <form className={consumerStyles.frm} onSubmit={submitHandler}>
                         <div className={consumerStyles.grev}>
                             Submit your Grievance
                         </div>
                         <div className={consumerStyles.details}>
                             <div className={consumerStyles.det}>
                                 <div className={consumerStyles.nam}>Name</div>
-                                <input type="text" placeholder="Name" className={consumerStyles.plc}></input>
+                                <input type="text" placeholder="Name" className={consumerStyles.plc} value={name} onChange={(e)=>setName(e.target.value)}></input>
                             </div>
                             <div className={consumerStyles.det}>
                                 <div className={consumerStyles.nam}>Mobile No.</div>
-                                <input type="text" placeholder="Mobile No." className={consumerStyles.plc}></input>
+                                <input type="text" placeholder="Mobile No." className={consumerStyles.plc} value={mobile} onChange={(e)=>setMobile(e.target.value)}></input>
                             </div>
                             <div className={consumerStyles.det}>
                                 <div className={consumerStyles.nam}>Email Id.</div>
-                                <input type="text" placeholder="Email Id." className={consumerStyles.plc}></input>
+                                <input type="text" placeholder="Email Id." className={consumerStyles.plc} value={email} onChange={(e)=>setEmail(e.target.value)}></input>
                             </div>
                             <div className={consumerStyles.det}>
                                 <div className={consumerStyles.nam}>Problem Faced</div>
-                                <input type="text" placeholder="" className={consumerStyles.plc}></input>
+                                <input type="text" placeholder="" className={consumerStyles.plc} value={problem} onChange={(e)=>setProblem(e.target.value)}></input>
                             </div>
                         </div>
                         <div className={consumerStyles.terms}>

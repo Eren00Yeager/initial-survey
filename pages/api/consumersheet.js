@@ -3,11 +3,18 @@ import env from '../../env'
 
 async function handler(req, res) {
   if (req.method === 'POST') {
-    const { eop } = req.body;
-    if(eop==null){
+    const { name,mobile,email,problem } = req.body;
+
+    var dateUTC = new Date();
+    var dateUTC = dateUTC.getTime() 
+    var dateIST = new Date(dateUTC);
+    dateIST.setHours(dateIST.getHours() + 5); 
+    dateIST.setMinutes(dateIST.getMinutes() + 30);
+
+    if(name==null || mobile==null || email==null || problem==null){
         res.status(500).json({message:"The form is empty"})
     }else{
-        console.log(eop)
+        console.log([name,mobile,email,problem,dateIST])
     }
 
     try{
@@ -31,22 +38,22 @@ async function handler(req, res) {
       
           const response = await sheets.spreadsheets.values.append({
             spreadsheetId: env.DATABASE_ID,
-            range: 'Consumer!A2:A1000',
+            range: 'Consumer!A3:E1000',
             valueInputOption: 'USER_ENTERED',
             requestBody: {
-              values: [[eop]],
+              values: [[name,mobile,email,problem,dateIST]],
             },
           });
       
       
-          res.status(201).json({ message: 'It works!', body:eop , response });
+          res.status(201).json({ message: 'Success!', body:[name,mobile,email,problem,dateIST], response });
     }catch(e){
         console.log(e)
         res.status(500).send(e)
     }
 
   }
-  res.status(200).json({ message: 'Hey!' });
+  res.status(200).json({ message: 'Only POST allowed!' });
 }
 
 export default handler;
