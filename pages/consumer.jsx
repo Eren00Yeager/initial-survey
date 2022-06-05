@@ -15,11 +15,22 @@ export default function consumer() {
     const [mobile, setMobile] = useState('');
     const [email, setEmail] = useState('');
     const [problem, setProblem] = useState('');
-
+    const [error, seterror] = useState('');
+    const emailValidation= ()=>{
+        const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        if(!email || regex.test(email) === false){
+           
+                seterror("Email is not valid");
+       
+            return false;
+        }
+        return true;
+    }
     const submitHandler = async (e) => {
         e.preventDefault();
 
         console.log([name,mobile,email,problem])
+       if(emailValidation()){
         try {
             const response = await fetch("/api/consumersheet", {
                 method: "POST",
@@ -39,7 +50,7 @@ export default function consumer() {
             setEmail('');
             setProblem('');
         }
-
+        }
     }
 
 
@@ -81,23 +92,24 @@ export default function consumer() {
                         <div className={consumerStyles.details}>
                             <div className={consumerStyles.det}>
                                 <div className={consumerStyles.nam}>Name</div>
-                                <input type="text" placeholder="Name" className={consumerStyles.plc} value={name} onChange={(e)=>setName(e.target.value)}></input>
+                                <input type="text" placeholder="Name" className={consumerStyles.plc} value={name} required onChange={(e)=>setName(e.target.value)}></input>
                             </div>
                             <div className={consumerStyles.det}>
                                 <div className={consumerStyles.nam}>Mobile No.</div>
-                                <input type="text" placeholder="Mobile No." className={consumerStyles.plc} value={mobile} onChange={(e)=>setMobile(e.target.value)}></input>
+                                <input type="text" placeholder="Mobile No." pattern="[0-9]{10}" className={consumerStyles.plc} required value={mobile} onChange={(e)=>setMobile(e.target.value)}></input>
                             </div>
                             <div className={consumerStyles.det}>
                                 <div className={consumerStyles.nam}>Email Id.</div>
-                                <input type="text" placeholder="Email Id." className={consumerStyles.plc} value={email} onChange={(e)=>setEmail(e.target.value)}></input>
+                                <input type="text" placeholder="Email Id." className={consumerStyles.plc} value={email} required onChange={(e)=>setEmail(e.target.value)}></input>
+                                <div className={consumerStyles.err}>{error}</div>
                             </div>
                             <div className={consumerStyles.det}>
                                 <div className={consumerStyles.nam}>Problem Faced</div>
-                                <input type="text" placeholder="" className={consumerStyles.plc} value={problem} onChange={(e)=>setProblem(e.target.value)}></input>
+                                <input type="text" placeholder="" className={consumerStyles.plc} value={problem} required onChange={(e)=>setProblem(e.target.value)}></input>
                             </div>
                         </div>
                         <div className={consumerStyles.terms}>
-                            <div className={consumerStyles.int}><input type="checkbox" className={consumerStyles.check} id="vehicle1" name="vehicle1" value="Bike"></input>
+                            <div className={consumerStyles.int}><input type="checkbox" required className={consumerStyles.check} id="vehicle1" name="vehicle1" value="Bike"></input>
                                 <div>I have read and accept the Terms of<br></br><span style={{ color: "#2196F3" }}> Service & Privacy Policy *</span></div></div>
                             <input className={consumerStyles.sub} type="submit" value="SUBMIT"></input>
                         </div>

@@ -336,12 +336,30 @@
         flex-direction: column;
         row-gap: 10px;
     }
+    .err{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        /* text-align:center; */
+        color: rgb(109, 0, 0);
+        
+        
+        }
  }
 
  @media only screen and (min-width: 900px) {
 .log{
 width: 80px;
 height: 80px;
+}
+.err{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+/* text-align:center; */
+color: rgb(109, 0, 0);
+font-size: 0.5em;
+
 }
     .container{
 background-color: #303030;
