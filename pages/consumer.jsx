@@ -16,6 +16,8 @@ export default function consumer() {
     const [email, setEmail] = useState('');
     const [problem, setProblem] = useState('');
     const [error, seterror] = useState('');
+
+
     const emailValidation= ()=>{
         const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
         if(!email || regex.test(email) === false){
@@ -26,10 +28,13 @@ export default function consumer() {
         }
         return true;
     }
+
+
     const submitHandler = async (e) => {
         e.preventDefault();
 
         console.log([name,mobile,email,problem])
+        
        if(emailValidation()){
         try {
             const response = await fetch("/api/consumersheet", {
@@ -39,9 +44,11 @@ export default function consumer() {
                     'Content-Type': 'application/json',
                 },
             })
-            console.log(await response.json())
-            window.location.href = '/thank-you'
-
+            if(await response.status==201){
+                window.location.href="/thank-you"
+            }else{
+                throw response.json()
+            }
         } catch (e) {
             console.log(e)
             alert("There was an error in submitting\nPlease try again")
@@ -50,7 +57,9 @@ export default function consumer() {
             setEmail('');
             setProblem('');
         }
+        
         }
+
     }
 
 

@@ -30,9 +30,13 @@ const Insurance = () => {
           "Content-Type": "application/json",
         },
       });
-      console.log(await response.json());
-      window.location.href = "/insurance-resolve-status";
-    } catch (e) {
+      if(await response.status==201){
+        window.location.href="/insurance-resolve-status"
+      }else{
+          throw response.json()
+      } 
+      
+    }catch (e) {
       console.log(e);
       alert("There was an error in submitting\nPlease try again");
       setName('');

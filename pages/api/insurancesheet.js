@@ -1,5 +1,5 @@
 import { google } from 'googleapis';
-import env from '../../env'
+import { Router } from 'next/router';
 
 async function handler(req, res) {
   if (req.method === 'POST') {
@@ -20,9 +20,9 @@ async function handler(req, res) {
     try{
         const auth = new google.auth.GoogleAuth({
             credentials: {
-              client_email: env.client_email,
-              client_id: env.client_id,
-              private_key: env.private_key.replace(/\\n/g, '\n'),
+              client_email: process.env.client_email,
+              client_id: process.env.client_id,
+              private_key: process.env.private_key.replace(/\\n/g, '\n'),
             },
             scopes: [
               'https://www.googleapis.com/auth/drive',
@@ -37,7 +37,7 @@ async function handler(req, res) {
           });
       
           const response = await sheets.spreadsheets.values.append({
-            spreadsheetId: env.DATABASE_ID,
+            spreadsheetId: process.env.DATABASE_ID,
             range: 'Insurance!A3:D1000',
             valueInputOption: 'USER_ENTERED',
             requestBody: {
@@ -45,8 +45,7 @@ async function handler(req, res) {
             },
           });
       
-      
-          res.status(201).json({ message: 'Success!', body:[type,name,contact,dateIST] , response });
+          res.status(201).json({ message: 'Success!' });
     }catch(e){
         console.log(e)
         res.status(500).send(e)
