@@ -117,20 +117,21 @@ export default function consumer() {
 
                     </form>
                     <div className={consumerStyles.tct}>
-                        <div className={consumerStyles.t1}>
-                            <span className={consumerStyles.title}>
-                                <span className={consumerStyles.title2}>
-                                    Still haven’t got that refund?
-                                </span>
-
-                                <span className={consumerStyles.title1}>
-                                    Allow us to Fight your Fights.
-                                </span>
-                            </span>
-                        </div>
-                        <div className={consumerStyles.py}>
+                    <div className={consumerStyles.py}>
                             <Image src={im} />
                         </div>
+                        <div className={consumerStyles.t1}>
+                            <div className={consumerStyles.title}>
+                                <div className={consumerStyles.title2}>
+                                    Still haven’t got that refund?
+                                </div>
+
+                                <div className={consumerStyles.title1}>
+                                    Allow us to Fight your Fights.
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
 
                 </div>

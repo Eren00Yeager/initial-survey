@@ -170,7 +170,17 @@
          /* padding-left: 20px; */
          position: relative;
          text-align: center;
-     
+         /* height: 50vh; */
+         height:358px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+   
+         /* background-color: #9E9CFF; */
+     }
+     .py{
+         bottom: 0;
+         position: absolute;
      }
       .title{
       font-family: 'Poppins';
@@ -361,7 +371,7 @@ color: rgb(109, 0, 0);
 font-size: 0.5em;
 
 }
-    .container{
+.container{
 background-color: #303030;
 /* background-image: linear-gradient(to top,#712020, #FF9C60); */
 min-height: 100vh;
@@ -431,16 +441,18 @@ justify-content: space-between;
     row-gap: 10px;
 }
 .t1{
-    /* background-color: pink; */
     position: absolute;
     display: flex;
     flex-direction: column;
+    top:0;
 }
 .py{
+    
     /* background-color: yellow; */
-    position: absolute;
-    bottom:-8%;
-    left: 10%;
+    position: relative;
+    top:12%;
+    /* position: absolute; */
+    
     /* margin-right: auto; */
     /* top: 50px; */
 }
@@ -530,7 +542,11 @@ color: #9E9CFF;
     position: relative;
     /* text-align: center; */
     /* border: 2px solid black; */
-    height:458px;
+    height:460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 .title{
 font-family: 'Poppins';
@@ -570,12 +586,7 @@ line-height: 1.7em;
     flex-direction:row;
     align-items:center;
 }
-.t1{
-padding-top: 10px;
-padding-bottom: 10px;
-/* background-color: yellow; */
-text-align:center;
-}
+
 .points{
 text-align:center;
 /* background-color:pink; */
