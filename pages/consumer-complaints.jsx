@@ -25,7 +25,7 @@ export default function consumer() {
               'Content-Type': 'application/json',
             },
           })
-        console.log(await response.json())
+        console.log(await response.status())
         window.location.href='/thank-you'
 
       }catch(e){

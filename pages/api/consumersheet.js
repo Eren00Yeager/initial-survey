@@ -43,9 +43,9 @@ async function handler(req, res) {
               values: [[name,mobile,email,problem,dateIST]],
             },
           });
+
+          res.status(201).json({ message: 'Success!' });
       
-      
-          res.status(201).json({ message: 'Success!', body:[name,mobile,email,problem,dateIST], response });
     }catch(e){
         console.log(e)
         res.status(500).send(e)

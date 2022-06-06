@@ -1,4 +1,5 @@
 import { google } from 'googleapis';
+import { Router } from 'next/router';
 
 async function handler(req, res) {
   if (req.method === 'POST') {
@@ -44,8 +45,7 @@ async function handler(req, res) {
             },
           });
       
-      
-          res.status(201).json({ message: 'Success!', body:[type,name,contact,dateIST] , response });
+          res.status(201).json({ message: 'Success!' });
     }catch(e){
         console.log(e)
         res.status(500).send(e)
