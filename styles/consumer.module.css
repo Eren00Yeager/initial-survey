@@ -128,8 +128,8 @@
      width:90%;
      }
      .check{
-         width:20px;
-         height: 20px;
+         width:25px;
+         height: 25px;
      }
      .int{
          display: flex;
@@ -536,7 +536,7 @@ text-align: center;
 color: #9E9CFF;
 }
 .tct{
-    width:40%;
+    min-width:50%;
     /* background-color: pink; */
     /* padding-left: 20px; */
     position: relative;
