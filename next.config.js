@@ -8,10 +8,7 @@ const nextConfig = {
       }
     }
     return config
-  },
-  env:{
-    type:'dasdsad',
-  },
+  }
 }
 
 module.exports = nextConfig;
