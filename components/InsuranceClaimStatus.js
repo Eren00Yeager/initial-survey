@@ -3,7 +3,7 @@ import styles from "../styles/InsuranceClaims.module.scss";
 
 const InsuranceStatus = () => {
   return (
-    <Container fluid className={styles.Container}>
+    <Container className={styles.Container}>
       <br />
       <Row>
         <p className={styles.font1}>
@@ -18,13 +18,13 @@ const InsuranceStatus = () => {
       
       <Row>
         <Col></Col>
-        <Col xs="10">
-          <p className={styles.font2}>
+        <Col xs="10" lg="9">
+          <p className={styles.font2} style={{textAlign:"center"}}>
             Congrats ! You have taken your first step in fighting the
             bureaucracy.{" "}
           </p>
         </Col>
-        <Col></Col>
+        <Col ></Col>
       </Row>
       <br />
       <br />
