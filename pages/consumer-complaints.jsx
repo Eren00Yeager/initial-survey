@@ -40,8 +40,12 @@ export default function consumer() {
                         'Content-Type': 'application/json',
                     },
                 })
-                console.log(await response.json())
-                setst(true)
+                if(await response.status==201){
+                    setst(true)
+                  }else{
+                      throw response.json()
+                } 
+                
 
             } catch (e) {
                 console.log(e)
