@@ -54,6 +54,7 @@ export default function consumer() {
                 setMobile('');
                 setEmail('');
                 setProblem('');
+                setst(false);
             }
         }
     }
