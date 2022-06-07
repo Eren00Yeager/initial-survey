@@ -48,38 +48,60 @@ const Insurance = () => {
 
 
   return (
-    <Container fluid className={InsuranceStyles.Container}>
+    <Container className={InsuranceStyles.Container}>
       <br />
       <Row>
-        <p className={InsuranceStyles.font1}>
-          INSURED<span style={{ color: "black" }}>.</span>
-        </p>
+        <p className={InsuranceStyles.font1}>INSURED.</p>
       </Row>
-      <br />
-      <Row>
+      <Row style={{ paddingTop: "0.5em" }}>
         <Col></Col>
-        <Col lg="3" xs="7">
+
+        <Col xs="10" lg="8" className={InsuranceStyles.giveBorder}>
+          <div className={InsuranceStyles.forDivflex}>
+            <p className={InsuranceStyles.font2}>
+              Claim <span style={{ color: "#ADADAD" }}>Rejected?</span>
+              <br />
+              Claim <span style={{ color: "#ADADAD" }}>Delayed?</span>
+              <br />
+              Claim Amount{" "}
+              <span style={{ color: "#ADADAD" }}>Unsatisfactory?</span>
+            </p>
+            <div className={InsuranceStyles.forSpImage}>
+              {" "}
+              <Image src={fail} width="250%" height="250%" /> 
+            </div>
+          </div>
+        </Col>
+        {/* <Col lg="8" className={InsuranceStyles.giveBorder}>
+          <div className={InsuranceStyles.forDivflex}><p className={InsuranceStyles.font2}>
+              Claim <span style={{ color: "#ADADAD" }}>Rejected?</span><br/>
+              Claim <span style={{ color: "#ADADAD" }}>Delayed?</span><br/>
+              Claim Amount <span style={{ color: "#ADADAD" }}>Unsatisfactory?</span> 
+            </p>
+          <Image src={fail} width={175} height={175} />
+            </div>
+          
+        </Col> */}
+        {/* <Col lg="3" xs="7">
           <p className={InsuranceStyles.font2}>
-            <span style={{ color: "rgba(0, 0, 0, 0.41)" }}>Your </span>
-            claim <span style={{ color: "rgba(0, 0, 0, 0.41)" }}>got </span>
-            rejected, delayed{" "}
-            <span style={{ color: "rgba(0, 0, 0, 0.41)" }}>or </span>
-            less claim passed?{" "}
+            Claim <span style={{ color: "#ADADAD" }}>Rejected?</span><br/>
+            Claim <span style={{ color: "#ADADAD" }}>Delayed?</span><br/>
+            Claim Amount <span style={{ color: "#ADADAD" }}>Unsatisfactory?</span> 
           </p>
         </Col>
         <Col xs="4" lg="3" style={{ textAlign: "center" }}>
           <Image src={fail} width={150} height={150} />
-        </Col>
+        </Col> */}
         <Col></Col>
       </Row>
 
       <Row>
-        <Col lg="1" xs="1"></Col>
-        <Col lg="10" xs="10">
-          <div style={{ paddingTop: "0.5em" }}>
+        <Col lg="2" xs="1"></Col>
+        <Col lg="8" xs="10">
+          <div style={{ paddingTop: "0.8em" }}>
             <p className={InsuranceStyles.font3}>
               Let the
-              <span style={{ color: "blue" }}> experts </span>
+              <span style={{ color: "#619698" }}> experts </span>
               handle your case!
             </p>
           </div>
@@ -95,7 +117,7 @@ const Insurance = () => {
           <Form className={InsuranceStyles.formouter} onSubmit={submitHandler}>
             <Row>
               <Col></Col>
-              <Col xs="10" lg="4">
+              <Col xs="10" lg="6">
                 <p className={InsuranceStyles.radiocontent}>
                   Choose the Insurance type
                 </p>
@@ -168,7 +190,7 @@ const Insurance = () => {
               </Col>
               <Col></Col>
             </Row>
-
+            <Row>
             <div className={InsuranceStyles.forForm}>
               <div className={InsuranceStyles.forInp}>
                 {" "}
@@ -203,6 +225,7 @@ const Insurance = () => {
                 </button>
               </div>
             </div>
+            </Row>
           </Form>
         </Col>
         <Col></Col>
