@@ -75,7 +75,8 @@
         font-weight: 700;
         color: 000000;
         font-size: 1em;   
-       
+        position: relative;
+        top:3px;
       }
       .head{
       display: flex;
@@ -412,6 +413,7 @@ font-style: normal;
 font-weight: 700;
 color: 000000;
 font-size: 1em; 
+
 }
 .head{
 display: flex;

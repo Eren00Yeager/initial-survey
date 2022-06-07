@@ -4,7 +4,6 @@ import consumerStyles from "../styles/consumer.module.css";
 import svg from "../pic/mark.svg";
 import im from "../pic/i2.svg";
 import i from "../pic/i1.png";
-import Consumer from "../components/Consumer";
 
 import { useState } from "react";
 
@@ -29,8 +28,8 @@ export default function consumer() {
 
         <div className={consumerStyles.head}>
           <div className={consumerStyles.hd}>
-            <div>
-              <Image src={i} alt="Pic" width={80} height={85} />
+            <div  className={consumerStyles.log}>
+              <Image src={i} alt="Pic" />
             </div>
             <div>
               agorá
