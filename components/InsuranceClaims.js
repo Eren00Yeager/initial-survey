@@ -21,6 +21,7 @@ const Insurance = () => {
     e.preventDefault();
     console.log([type, name, contact]);
 
+
     try {
       const response = await fetch("/api/insurancesheet", {
         method: "POST",
@@ -29,22 +30,22 @@ const Insurance = () => {
           "Content-Type": "application/json",
         },
       });
-      console.log(await response.json());
-      window.location.href = "/insurance-resolve-status";
-    } catch (e) {
+      if(await response.status==201){
+        window.location.href="/insurance-resolve-status"
+      }else{
+          throw response.json()
+      } 
+      
+    }catch (e) {
       console.log(e);
       alert("There was an error in submitting\nPlease try again");
-      setEop("");
+      setName('');
+      setType('');
+      setContact('');
     }
   };
 
-  const buttonClick = (e) => {
-    e.preventDefault();
-    console.log(e.target.value);
-    setType(e.target.value);
-  };
 
-  function onChangeValue() {}
 
   return (
     <Container className={InsuranceStyles.Container}>
@@ -130,6 +131,8 @@ const Insurance = () => {
                         name="btnradio"
                         id="btnradio1"
                         autocomplete="off"
+                        value="Health"
+                        onClick={(e)=>setType(e.target.value)}
                       />
                       <label
                         class={`btn btn-primary ${InsuranceStyles.button}`}
@@ -145,6 +148,8 @@ const Insurance = () => {
                         name="btnradio"
                         id="btnradio2"
                         autocomplete="off"
+                        value="Life"
+                        onClick={(e)=>setType(e.target.value)}
                       />
                       <label
                         class={`btn btn-primary ${InsuranceStyles.button}`}
@@ -160,6 +165,8 @@ const Insurance = () => {
                         name="btnradio"
                         id="btnradio3"
                         autocomplete="off"
+                        value="Vehicle"
+                        onClick={(e)=>setType(e.target.value)}
                       />
                       <label
                         class={`btn  btn-primary  ${InsuranceStyles.button}`}
