@@ -3,7 +3,7 @@ import Image from "next/image";
 import consumerStyles from "../styles/consumer.module.css";
 import svg from "../pic/mark.svg";
 import im from "../pic/i2.svg";
-import i from "../pic/i1.png";
+// import i from "../pic/i1.png";
 
 
 import { useState } from "react";
@@ -16,6 +16,7 @@ export default function consumer() {
     const [email, setEmail] = useState('');
     const [problem, setProblem] = useState('');
     const [error, seterror] = useState('');
+    const [st, setst] = useState(false);
     const emailValidation = () => {
         const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
         if (!email || regex.test(email) === false) {
@@ -39,8 +40,12 @@ export default function consumer() {
                         'Content-Type': 'application/json',
                     },
                 })
-                console.log(await response.json())
-                window.location.href = '/thank-you'
+                if(await response.status==201){
+                    setst(true)
+                  }else{
+                      throw response.json()
+                } 
+                
 
             } catch (e) {
                 console.log(e)
@@ -49,76 +54,86 @@ export default function consumer() {
                 setMobile('');
                 setEmail('');
                 setProblem('');
+                setst(false);
             }
         }
     }
 
+    function handleScroll() {
+        window.scroll({
+          top: document.body.offsetHeight,
+          left: 0, 
+          behavior: 'smooth',
+        });
+      }
 
+    const thnk = (
+        <div className={consumerStyles.tnk}>
+            <div className={consumerStyles.thank}>Thank you for
+                signing up with us.
+                We will soon
+                reach out to you.</div>
+        </div>
+    )
+    const frm = (
+        <form className={consumerStyles.frm} onSubmit={submitHandler}>
+            <div className={consumerStyles.grev}>
+                Submit your Grievance
+            </div>
+            <div className={consumerStyles.details}>
+                <div className={consumerStyles.det}>
+                    <div className={consumerStyles.nam}>Name</div>
+                    <input type="text" placeholder="Name" className={consumerStyles.plc} value={name} required onChange={(e) => setName(e.target.value)}></input>
+                </div>
+                <div className={consumerStyles.det}>
+                    <div className={consumerStyles.nam}>Mobile No.</div>
+                    <input type="text" placeholder="Mobile No." pattern="[0-9]{10}" className={consumerStyles.plc} required value={mobile} onChange={(e) => setMobile(e.target.value)}></input>
+                </div>
+                <div className={consumerStyles.det}>
+                    <div className={consumerStyles.nam}>Email Id.</div>
+                    <input type="text" placeholder="Email Id." className={consumerStyles.plc} value={email} required onChange={(e) => setEmail(e.target.value)}></input>
+                    <div className={consumerStyles.err}>{error}</div>
+                </div>
+                <div className={consumerStyles.det}>
+                    <div className={consumerStyles.nam}>Problem Faced</div>
+                    <input type="text" placeholder="" className={consumerStyles.plc} value={problem} required onChange={(e) => setProblem(e.target.value)}></input>
+                </div>
+            </div>
+            <div className={consumerStyles.terms}>
+                <div className={consumerStyles.int}><input type="checkbox" required className={consumerStyles.check} id="vehicle1" name="vehicle1" value="Bike"></input>
+                    <div>I have read and accept the Terms of<br></br><span style={{ color: "#2196F3" }}> Service & Privacy Policy *</span></div></div>
+                <input className={consumerStyles.sub} type="submit" value="SUBMIT"></input>
+            </div>
+
+
+        </form>
+    )
     return (
         <div className={consumerStyles.s}>
             <Head>
                 <title>Consumer Complaints</title>
                 <meta name="description" content="" />
                 <link rel="icon" href="/favicon.ico" />
-                <link
-                    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-                    rel="stylesheet"
-                    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-                    crossorigin="anonymous"
-                ></link>
+                <link href='https://fonts.googleapis.com/css?family=Open Sans Condensed:700' rel='stylesheet'></link>
             </Head>
 
             <div className={consumerStyles.container}>
 
                 <div className={consumerStyles.head}>
                     <div className={consumerStyles.hd}>
-                        <div className={consumerStyles.log}>
-                            <Image src={i} alt="Pic" />
-                        </div>
-                        <div>
-                            agorá
-                        </div>
+                        GetYourRefund
                     </div>
 
                     <div>
-                        <button className={consumerStyles.btn}>About</button>
+                        <button className={consumerStyles.btn} onClick={handleScroll}>About</button>
                     </div>
                 </div>
                 <div className={consumerStyles.main}>
-                    <form className={consumerStyles.frm} onSubmit={submitHandler}>
-                        <div className={consumerStyles.grev}>
-                            Submit your Grievance
-                        </div>
-                        <div className={consumerStyles.details}>
-                            <div className={consumerStyles.det}>
-                                <div className={consumerStyles.nam}>Name</div>
-                                <input type="text" placeholder="Name" className={consumerStyles.plc} value={name} required onChange={(e) => setName(e.target.value)}></input>
-                            </div>
-                            <div className={consumerStyles.det}>
-                                <div className={consumerStyles.nam}>Mobile No.</div>
-                                <input type="text" placeholder="Mobile No." pattern="[0-9]{10}" className={consumerStyles.plc} required value={mobile} onChange={(e) => setMobile(e.target.value)}></input>
-                            </div>
-                            <div className={consumerStyles.det}>
-                                <div className={consumerStyles.nam}>Email Id.</div>
-                                <input type="text" placeholder="Email Id." className={consumerStyles.plc} value={email} required onChange={(e) => setEmail(e.target.value)}></input>
-                                <div className={consumerStyles.err}>{error}</div>
-                            </div>
-                            <div className={consumerStyles.det}>
-                                <div className={consumerStyles.nam}>Problem Faced</div>
-                                <input type="text" placeholder="" className={consumerStyles.plc} value={problem} required onChange={(e) => setProblem(e.target.value)}></input>
-                            </div>
-                        </div>
-                        <div className={consumerStyles.terms}>
-                            <div className={consumerStyles.int}><input type="checkbox" required className={consumerStyles.check} id="vehicle1" name="vehicle1" value="Bike"></input>
-                                <div>I have read and accept the Terms of<br></br><span style={{ color: "#2196F3" }}> Service & Privacy Policy *</span></div></div>
-                            <input className={consumerStyles.sub} type="submit" value="SUBMIT"></input>
-                        </div>
 
-
-                    </form>
+                    {st ? thnk : frm}
                     <div className={consumerStyles.tct}>
                         <div className={consumerStyles.py}>
-                            <Image src={im} />
+                            <Image fetchpriority="high" src={im} />
                         </div>
                         <div className={consumerStyles.t1}>
                             <div className={consumerStyles.title}>
@@ -127,7 +142,7 @@ export default function consumer() {
                                 </div>
 
                                 <div className={consumerStyles.title1}>
-                                    Allow us to Fight your Fights.
+                                    Allow us to Fight <br></br>for your Rights.
                                 </div>
                             </div>
                         </div>
@@ -137,13 +152,14 @@ export default function consumer() {
                 </div>
 
                 <div className={consumerStyles.fo}>
-                    <div className={consumerStyles.mid}>
-                        <span>
-                            At agorá, we provide you the legal resources to fight against
-                            poor customer services and fradulent market practises in
-                            e-commerce.
-                        </span>
 
+                    <div className={consumerStyles.mid}>
+                        Have you ever received a damaged, defective, or fake product bought online? Did you face difficulties getting the product replaced or returned? Did you have to make a lot of calls to get the refund? Did you feel that there should be someone to help you out? If your answer to any of these questions is yes, we have great news for you!
+                    </div>
+                    <div className={consumerStyles.mid}>
+                        we provide you the legal resources to fight against
+                        poor customer services and fradulent market practises in
+                        e-commerce.
                     </div>
                     <div className={consumerStyles.points}>
                         <div>
