@@ -9,7 +9,6 @@ import {
 } from "react-bootstrap";
 import { useState, useRef } from "react";
 import Image from "next/image";
-import FormComponent from "./FormComponent";
 import fail from "../pic/rejecc.png";
 
 const Insurance = () => {
