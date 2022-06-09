@@ -142,7 +142,7 @@ export default function consumer() {
                                 </div>
 
                                 <div className={consumerStyles.title1}>
-                                    Allow us to Fight your Fights.
+                                    Allow us to Fight for your Rights.
                                 </div>
                             </div>
                         </div>
@@ -157,7 +157,7 @@ export default function consumer() {
                         Have you ever received a damaged, defective, or fake product bought online? Did you face difficulties getting the product replaced or returned? Did you have to make a lot of calls to get the refund? Did you feel that there should be someone to help you out? If your answer to any of these questions is yes, we have great news for you!
                     </div>
                     <div className={consumerStyles.mid}>
-                        At agorá, we provide you the legal resources to fight against
+                        we provide you the legal resources to fight against
                         poor customer services and fradulent market practises in
                         e-commerce.
                     </div>
