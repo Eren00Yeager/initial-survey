@@ -1,15 +1,7 @@
 import InsuranceStyles from "../styles/InsuranceClaims.module.scss";
-import {
-  Row,
-  Container,
-  Col,
-  Button,
-  ButtonGroup,
-  Form,
-} from "react-bootstrap";
+import { Row, Container, Col, Form } from "react-bootstrap";
 import { useState, useRef } from "react";
 import Image from "next/image";
-import FormComponent from "./FormComponent";
 import fail from "../pic/rejecc.png";
 
 const Insurance = () => {
@@ -21,7 +13,6 @@ const Insurance = () => {
     e.preventDefault();
     console.log([type, name, contact]);
 
-
     try {
       const response = await fetch("/api/insurancesheet", {
         method: "POST",
@@ -30,28 +21,25 @@ const Insurance = () => {
           "Content-Type": "application/json",
         },
       });
-      if(await response.status==201){
-        window.location.href="/insurance-resolve-status"
-      }else{
-          throw response.json()
-      } 
-      
-    }catch (e) {
+      if ((await response.status) == 201) {
+        window.location.href = "/insurance-resolve-status";
+      } else {
+        throw response.json();
+      }
+    } catch (e) {
       console.log(e);
       alert("There was an error in submitting\nPlease try again");
-      setName('');
-      setType('');
-      setContact('');
+      setName("");
+      setType("");
+      setContact("");
     }
   };
-
-
 
   return (
     <Container className={InsuranceStyles.Container}>
       <br />
       <Row>
-        <p className={InsuranceStyles.font1}>INSURED.</p>
+        <p className={InsuranceStyles.font1}>Claim Remedy</p>
       </Row>
       <Row style={{ paddingTop: "0.5em" }}>
         <Col></Col>
@@ -68,7 +56,7 @@ const Insurance = () => {
             </p>
             <div className={InsuranceStyles.forSpImage}>
               {" "}
-              <Image src={fail} width="250%" height="250%" /> 
+              <Image src={fail} width="250%" height="250%" />
             </div>
           </div>
         </Col>
@@ -132,7 +120,7 @@ const Insurance = () => {
                         id="btnradio1"
                         autocomplete="off"
                         value="Health"
-                        onClick={(e)=>setType(e.target.value)}
+                        onClick={(e) => setType(e.target.value)}
                       />
                       <label
                         class={`btn btn-primary ${InsuranceStyles.button}`}
@@ -149,7 +137,7 @@ const Insurance = () => {
                         id="btnradio2"
                         autocomplete="off"
                         value="Life"
-                        onClick={(e)=>setType(e.target.value)}
+                        onClick={(e) => setType(e.target.value)}
                       />
                       <label
                         class={`btn btn-primary ${InsuranceStyles.button}`}
@@ -166,7 +154,7 @@ const Insurance = () => {
                         id="btnradio3"
                         autocomplete="off"
                         value="Vehicle"
-                        onClick={(e)=>setType(e.target.value)}
+                        onClick={(e) => setType(e.target.value)}
                       />
                       <label
                         class={`btn  btn-primary  ${InsuranceStyles.button}`}
@@ -191,47 +179,89 @@ const Insurance = () => {
               <Col></Col>
             </Row>
             <Row>
-            <div className={InsuranceStyles.forForm}>
-              <div className={InsuranceStyles.forInp}>
-                {" "}
-                <input
-                  className={InsuranceStyles.input}
-                  id="name"
-                  type="name"
-                  name="name"
-                  placeholder="Name"
-                  required
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
-              </div>
+              <div className={InsuranceStyles.forForm}>
+                <div className={InsuranceStyles.forInp}>
+                  {" "}
+                  <input
+                    className={InsuranceStyles.input}
+                    id="name"
+                    type="name"
+                    name="name"
+                    placeholder="Name"
+                    required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </div>
 
-              <div className={InsuranceStyles.forInp}>
-                <input
-                  className={InsuranceStyles.input}
-                  id="contact"
-                  type="contact"
-                  name="contact"
-                  placeholder="Contact"
-                  pattern="[0-9]{10}"
-                  required
-                  value={contact}
-                  onChange={(e) => setContact(e.target.value)}
-                />
+                <div className={InsuranceStyles.forInp}>
+                  <input
+                    className={InsuranceStyles.input}
+                    id="contact"
+                    type="contact"
+                    name="contact"
+                    placeholder="Contact"
+                    pattern="[0-9]{10}"
+                    required
+                    value={contact}
+                    onChange={(e) => setContact(e.target.value)}
+                  />
+                </div>
+                <div className={InsuranceStyles.forSub}>
+                  <button type="submit" className={InsuranceStyles.submit}>
+                    Act
+                  </button>
+                </div>
               </div>
-              <div className={InsuranceStyles.forSub}>
-                <button type="submit" className={InsuranceStyles.submit}>
-                  Act
-                </button>
-              </div>
-            </div>
             </Row>
           </Form>
         </Col>
         <Col></Col>
       </Row>
-
       <br />
+      <br />
+      <Row>
+        <Col></Col>
+        <Col className={InsuranceStyles.about} xs="10" lg="10">
+          <h1 className={InsuranceStyles.aboutHead}>About us</h1>{" "}
+          <p className={InsuranceStyles.aboutDesc}>
+            {" "}
+            We are engineers pained by the situation where People who pay
+            premiums for years have to struggle to get their claims. An
+            individual finds oneself helpless in front of the big companies and
+            their ever confusing terms and conditions.
+            <br />
+            <br />
+            Tired of this, we decided to change it forever through Claim Remedy.
+            At Claim Remedy, we provide individuals legal help to fight for
+            their claims. With our robust system, we believe we would succeed on
+            the misson.
+          </p>
+        </Col>
+        <Col></Col>
+      </Row>
+      <br />
+      <br />
+      <Row className={InsuranceStyles.forFooter}>
+        <Col></Col>
+        <Col lg="8">
+          <p className={InsuranceStyles.footerText}>
+            We are just a call away  @+91&nbsp;7297803114
+            <p className={InsuranceStyles.footerText2}>
+              or mail us at
+              <span style={{ color: "#1B45DB" }}>
+                {" "}
+                claimremedycares@gmail.com
+              </span>
+              <br />
+            </p>
+          </p>
+          <p className={InsuranceStyles.footerText3}>
+            ⓒ 2022 Claim Remedy &nbsp; FAQ&nbsp; &nbsp;About
+          </p>
+        </Col>
+        <Col></Col>
+      </Row>
     </Container>
   );
 };

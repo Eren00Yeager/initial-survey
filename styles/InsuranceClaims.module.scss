@@ -11,7 +11,6 @@
     text-align: left;
   }
 
-  
   .font3 {
     font-family: "helvetica";
     font-style: normal;
@@ -24,11 +23,10 @@
     color: white;
   }
 
-
   .forForm {
-      margin-top: 1em;
+    margin-top: 1em;
     border-radius: 23px;
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -37,35 +35,35 @@
   .forInp {
     padding: 0.7em;
     margin-left: 5%;
-    width: 30%;  
-    text-align: center;  
+    width: 30%;
+    text-align: center;
   }
 
   .input {
     background: #f5f5f5;
     border-radius: 23px;
-    border :none;
+    border: none;
     width: 100%;
     font-size: 70%;
     padding: 0.25em;
     padding-left: 10%;
     color: #000000;
     font-family: Helvetica;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); 
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 
-  .forDivflex{
+  .forDivflex {
     position: relative;
     display: flex;
     flex-direction: row;
     padding: 1em;
   }
-  
+
   .forSub {
-    padding: 0.45em ;
+    padding: 0.45em;
     width: 40%;
     text-align: center;
-}
+  }
 
   .submit {
     border-radius: 23px;
@@ -78,7 +76,7 @@
     background-color: #619698;
   }
 
-  .forSpImage{
+  .forSpImage {
     position: absolute;
     top: -20%;
     right: -10%;
@@ -93,23 +91,22 @@
     min-width: 100vw;
   }
 
-.font3 {
-  font-family: "helvetica";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 2.5em;
-  line-height: 1.3em;
+  .font3 {
+    font-family: "helvetica";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.5em;
+    line-height: 1.3em;
 
-  text-align: left;
+    text-align: left;
 
-  color: white;
-}
-
+    color: white;
+  }
 
   .forForm {
     margin-top: 1.5em;
     border-radius: 23px;
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
     display: flex;
     flex-direction: column;
   }
@@ -143,23 +140,24 @@
     color: white;
     font-weight: 600;
     word-wrap: break-word;
-    width:30%
+    width: 30%;
   }
-  
-  
-  .forDivflex{
+
+  .forDivflex {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1em;
   }
-  
-  .forSpImage{
+
+  .forSpImage {
     text-align: center;
     height: 100%;
     width: 100%;
   }
+
+  
 }
 
 .font1 {
@@ -183,18 +181,17 @@
   color: white;
 }
 
-.font4{
-    text-align: left;
-    font-family: "helvetica";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.3em;
-    line-height: 1.3em;
-    padding: 0.5em;
-  
-    color: #000000;
-}
+.font4 {
+  text-align: left;
+  font-family: "helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  padding: 0.5em;
 
+  color: #000000;
+}
 
 //For from component
 
@@ -222,7 +219,7 @@
   opacity: 0.7;
 }
 
-.workS{
+.workS {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -248,17 +245,88 @@
 .button:hover,
 .button:active,
 .button:focus,
-.button:checked
- {
-  background-color: #619698!important;
+.button:checked {
+  background-color: #619698 !important;
 }
 
-.basicPadd{
-    background-color: #000000;
-    border-radius: 23px;
-}
-
-.giveBorder{
+.basicPadd {
+  background-color: #000000;
   border-radius: 23px;
-  background-color:  #333743;
+}
+
+.giveBorder {
+  border-radius: 23px;
+  background-color: #333743;
+}
+
+.about {
+  border: none;
+  border-radius: 23px;
+  padding: 1em;
+
+  background-color: #d9d9d9;
+}
+
+.aboutHead {
+  text-align: center;
+
+  font-family: "helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2em;
+  line-height: 30px;
+  /* identical to box height */
+
+  color: #000000;
+}
+
+.aboutDesc {
+  padding-top: 1em;
+  font-family: "helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 1.3em;
+  // letter-spacing: -0.01em;
+
+  color: #000000;
+}
+
+.forFooter {
+  background-color: #d9d9d9;
+
+  padding-top: 1em;
+}
+
+.footerText {
+  text-align: center;
+
+  font-family: "helvetica";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1em;
+
+  color: #000000;
+}
+
+.footerText2{
+  text-align: center;
+
+  font-family: "helvetica";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.8em;
+  color:black;
+  opacity: 0.52;
+  padding-bottom: 0.8em;
+}
+
+.footerText3{
+  text-align: center;
+
+  font-family: "helvetica";
+  font-style: normal;
+  font-size: 0.5em;
+
+  margin-bottom: 0;
 }
