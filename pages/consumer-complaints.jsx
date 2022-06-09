@@ -3,7 +3,7 @@ import Image from "next/image";
 import consumerStyles from "../styles/consumer.module.css";
 import svg from "../pic/mark.svg";
 import im from "../pic/i2.svg";
-import i from "../pic/i1.png";
+// import i from "../pic/i1.png";
 
 
 import { useState } from "react";
@@ -54,6 +54,14 @@ export default function consumer() {
         }
     }
 
+    function handleScroll() {
+        window.scroll({
+          top: document.body.offsetHeight,
+          left: 0, 
+          behavior: 'smooth',
+        });
+      }
+
     const thnk = (
         <div className={consumerStyles.tnk}>
             <div className={consumerStyles.thank}>Thank you for
@@ -101,23 +109,18 @@ export default function consumer() {
                 <title>Consumer Complaints</title>
                 <meta name="description" content="" />
                 <link rel="icon" href="/favicon.ico" />
-
+                <link href='https://fonts.googleapis.com/css?family=Open Sans Condensed:700' rel='stylesheet'></link>
             </Head>
 
             <div className={consumerStyles.container}>
 
                 <div className={consumerStyles.head}>
                     <div className={consumerStyles.hd}>
-                        <div className={consumerStyles.log}>
-                            <Image fetchpriority="high" src={i} alt="Pic" />
-                        </div>
-                        <div>
-                            agorá
-                        </div>
+                        GetYourRefund
                     </div>
 
                     <div>
-                        <button className={consumerStyles.btn}>About</button>
+                        <button className={consumerStyles.btn} onClick={handleScroll}>About</button>
                     </div>
                 </div>
                 <div className={consumerStyles.main}>
@@ -144,13 +147,14 @@ export default function consumer() {
                 </div>
 
                 <div className={consumerStyles.fo}>
-                    <div className={consumerStyles.mid}>
-                        <span>
-                            At agorá, we provide you the legal resources to fight against
-                            poor customer services and fradulent market practises in
-                            e-commerce.
-                        </span>
 
+                    <div className={consumerStyles.mid}>
+                        Have you ever received a damaged, defective, or fake product bought online? Did you face difficulties getting the product replaced or returned? Did you have to make a lot of calls to get the refund? Did you feel that there should be someone to help you out? If your answer to any of these questions is yes, we have great news for you!
+                    </div>
+                    <div className={consumerStyles.mid}>
+                        At agorá, we provide you the legal resources to fight against
+                        poor customer services and fradulent market practises in
+                        e-commerce.
                     </div>
                     <div className={consumerStyles.points}>
                         <div>

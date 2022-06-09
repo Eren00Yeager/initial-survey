@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
 .container{font-size:32px;}
 @media only screen and (max-width: 900px) {
@@ -15,34 +16,20 @@
     .container{
         background-color: #303030;
         /* background-image: linear-gradient(to top,#712020, #FF9C60); */
-        min-height: 100vh;
+        /* min-height: 100vh; */
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        row-gap: 20px;
+        row-gap: 30px;
         padding: 5px 10px;
         }
-      .hd{
-       
-      font-family: 'Playfair Display';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 50px;
-      line-height: 80px;
-      /* background-color: blue; */
-      color: #FFFFFF;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      column-gap: 10px;
-      }
       .main{
         /* background-color: #FF9C60; */
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
+        row-gap: 30px;
     }
     .frm{
         width: 90%;
@@ -61,7 +48,24 @@
         /* background-color: aqua; */
         /* align-items: center; */
         }
-       
+        .hd{
+            font-size: 32px;
+            color: #FFFFFF;
+            text-align: center;
+            font-family: 'Open Sans Condensed';
+            font-style: normal;
+            font-weight: 700;
+            line-height: 44px;
+            }
+            .head{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width:90%;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: space-between;
+            }
       .btn{
         background-color: #FFFFFF;
         border: none;
@@ -74,13 +78,6 @@
         font-size: 1em;   
         position: relative;
         top:3px;
-      }
-      .head{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      /* background-color: yellow; */
-      justify-content: space-between;
       }
       .t1{
           position: absolute;
@@ -298,6 +295,15 @@
         font-weight: 500;
         color: rgb(109, 0, 0);
         }
+    .fo{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        /* background-color: #9E9CFF; */
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        }
  }
 
  @media only screen and (min-width: 900px) {
@@ -312,15 +318,15 @@ font-weight: 500;
 /* text-align:center; */
 color: rgb(109, 0, 0);
 font-size: 0.5em;
-
 }
 .container{
 background-color: #303030;
 /* background-image: linear-gradient(to top,#712020, #FF9C60); */
-min-height: 100vh;
+/* min-height: 100vh; */
 display: flex;
 flex-direction: column;
 justify-content: space-between;
+row-gap: 20px;
 }
 .title{
     font-family: 'Poppins';
@@ -332,17 +338,16 @@ justify-content: space-between;
     align-items: flex-start;
     }
 .hd{
-font-family: 'Playfair Display';
-font-style: normal;
-font-weight: 400;
 font-size: 2em;
-line-height: 1.1em;
+/* line-height: 1.1em; */
 /* background-color: blue; */
 color: #FFFFFF;
 text-align: center;
-display: flex;
-flex-direction: row;
-column-gap: 10px;
+font-family: 'Open Sans Condensed';
+font-style: normal;
+font-weight: 700;
+/* font-size: 75px; */
+line-height: 102px;
 }
 
 .btn{
@@ -362,7 +367,12 @@ display: flex;
 flex-direction: row;
 align-items: center;
 /* background-color: yellow; */
-padding:10px 20px 0px 20px;
+/* padding:10px 20px 0px 60px; */
+width:90%;
+margin-left: auto;
+margin-right: auto;
+/* margin: auto; */
+/* background-color: #BBDEFB; */
 justify-content: space-between;
 }
 .main{
@@ -511,7 +521,13 @@ line-height: 1.3em;
     margin: auto;
 }
 .fo{
-    padding: 10px 0px;
+   display: flex;
+   flex-direction: column;
+   row-gap: 20px;
+   /* background-color: #9E9CFF; */
+   margin-left: auto;
+   margin-right: auto;
+   width: 70%;
 }
 .mid{
 font-family: 'Poppins';
