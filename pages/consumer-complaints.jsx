@@ -142,7 +142,7 @@ export default function consumer() {
                                 </div>
 
                                 <div className={consumerStyles.title1}>
-                                    Allow us to Fight for your Rights.
+                                    Allow us to Fight <br></br>for your Rights.
                                 </div>
                             </div>
                         </div>
