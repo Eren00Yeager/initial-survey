@@ -60,26 +60,6 @@ const Insurance = () => {
             </div>
           </div>
         </Col>
-        {/* <Col lg="8" className={InsuranceStyles.giveBorder}>
-          <div className={InsuranceStyles.forDivflex}><p className={InsuranceStyles.font2}>
-              Claim <span style={{ color: "#ADADAD" }}>Rejected?</span><br/>
-              Claim <span style={{ color: "#ADADAD" }}>Delayed?</span><br/>
-              Claim Amount <span style={{ color: "#ADADAD" }}>Unsatisfactory?</span> 
-            </p>
-          <Image src={fail} width={175} height={175} />
-            </div>
-          
-        </Col> */}
-        {/* <Col lg="3" xs="7">
-          <p className={InsuranceStyles.font2}>
-            Claim <span style={{ color: "#ADADAD" }}>Rejected?</span><br/>
-            Claim <span style={{ color: "#ADADAD" }}>Delayed?</span><br/>
-            Claim Amount <span style={{ color: "#ADADAD" }}>Unsatisfactory?</span> 
-          </p>
-        </Col>
-        <Col xs="4" lg="3" style={{ textAlign: "center" }}>
-          <Image src={fail} width={150} height={150} />
-        </Col> */}
         <Col></Col>
       </Row>
 
@@ -247,7 +227,8 @@ const Insurance = () => {
         <Col lg="8">
           <p className={InsuranceStyles.footerText}>
             We are just a call away  @+91&nbsp;7297803114
-            <p className={InsuranceStyles.footerText2}>
+          </p>
+          <p className={InsuranceStyles.footerText2}>
               or mail us at
               <span style={{ color: "#1B45DB" }}>
                 {" "}
@@ -255,7 +236,6 @@ const Insurance = () => {
               </span>
               <br />
             </p>
-          </p>
           <p className={InsuranceStyles.footerText3}>
             ⓒ 2022 Claim Remedy &nbsp; FAQ&nbsp; &nbsp;About
           </p>
