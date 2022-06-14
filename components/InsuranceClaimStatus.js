@@ -78,7 +78,8 @@ const InsuranceStatus = () => {
         <Col lg="8">
           <p className={styles.footerText}>
             We are just a call away  @+91&nbsp;7297803114
-            <p className={styles.footerText2}>
+          </p>
+          <p className={styles.footerText2}>
               or mail us at
               <span style={{ color: "#1B45DB" }}>
                 {" "}
@@ -86,7 +87,6 @@ const InsuranceStatus = () => {
               </span>
               <br />
             </p>
-          </p>
           <p className={styles.footerText3}>
             ⓒ 2022 Claim Remedy &nbsp; FAQ&nbsp; &nbsp;About
           </p>
