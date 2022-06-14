@@ -322,7 +322,7 @@ font-size: 0.5em;
 .container{
 background-color: #303030;
 /* background-image: linear-gradient(to top,#712020, #FF9C60); */
-/* min-height: 100vh; */
+min-height: 100vh;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
