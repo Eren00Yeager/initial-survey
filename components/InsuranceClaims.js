@@ -13,6 +13,10 @@ const Insurance = () => {
     e.preventDefault();
     console.log([type, name, contact]);
 
+    if(type==""){
+      alert("Select the insurance type");
+      return;
+    }
     try {
       const response = await fetch("/api/insurancesheet", {
         method: "POST",
@@ -98,7 +102,7 @@ const Insurance = () => {
                         class="btn-check"
                         name="btnradio"
                         id="btnradio1"
-                        autocomplete="off"
+                        autoComplete="off"
                         value="Health"
                         onClick={(e) => setType(e.target.value)}
                       />
@@ -115,7 +119,7 @@ const Insurance = () => {
                         class="btn-check"
                         name="btnradio"
                         id="btnradio2"
-                        autocomplete="off"
+                        autoComplete="off"
                         value="Life"
                         onClick={(e) => setType(e.target.value)}
                       />
@@ -132,7 +136,7 @@ const Insurance = () => {
                         class="btn-check"
                         name="btnradio"
                         id="btnradio3"
-                        autocomplete="off"
+                        autoComplete="off"
                         value="Vehicle"
                         onClick={(e) => setType(e.target.value)}
                       />
