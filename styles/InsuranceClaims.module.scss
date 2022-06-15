@@ -9,6 +9,7 @@
 
   .font2 {
     text-align: left;
+    z-index: 1;
   }
 
   .font3 {
@@ -78,7 +79,7 @@
 
   .forSpImage {
     position: absolute;
-    top: -20%;
+    top: -30%;
     right: -10%;
   }
 }
@@ -156,8 +157,6 @@
     height: 100%;
     width: 100%;
   }
-
-  
 }
 
 .font1 {
@@ -166,6 +165,7 @@
   font-style: normal;
   font-weight: 700;
   font-size: 2em;
+  line-height: 1.3em;
 
   color: #619698;
 }
@@ -310,7 +310,7 @@
   color: #000000;
 }
 
-.footerText2{
+.footerText2 {
   text-align: center;
 
   margin-top: 0;
@@ -318,12 +318,12 @@
   font-style: normal;
   font-weight: 600;
   font-size: 0.8em;
-  color:black;
+  color: black;
   opacity: 0.52;
   padding-bottom: 0.8em;
 }
 
-.footerText3{
+.footerText3 {
   text-align: center;
 
   font-family: "helvetica";
@@ -332,3 +332,49 @@
 
   margin-bottom: 0;
 }
+
+.changeB {
+  font-size: 1em;
+  font-weight: 700;
+  font-style: normal;
+
+  border-radius: 33px;
+  border: none;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+
+  background-color: #333743;
+  color: white;
+}
+
+.changeB:hover {
+  opacity: 0.8;
+}
+.about1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.pforsomeText {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+
+  color: #dbdbdb;
+}
+
+.pforsomeText2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  width: fit-content;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  margin-top: 2em;
+
+  color: #dbdbdb;
+  background-color: #619698;
+}
+
