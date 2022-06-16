@@ -106,6 +106,7 @@ const Insurance = () => {
         </Col>
         <Col></Col>
       </Row>
+      
 
       <Row></Row>
 
@@ -182,3 +183,55 @@ const Insurance = () => {
 };
 
 export default Insurance;
+
+// <Row>
+//         <Col lg="1" xs="1"></Col>
+//         <Col lg="10" xs="10">
+//           <Form className={InsuranceStyles.formouter} onSubmit={submitHandler}>
+//             <Row>
+//               <Col></Col>
+//               <Col xs="10" lg="6">
+//                 
+//               </Col>
+//               <Col></Col>
+//             </Row>
+            // <Row>
+            //   <div className={InsuranceStyles.forForm}>
+            //     <div className={InsuranceStyles.forInp}>
+            //       {" "}
+            //       <input
+            //         className={InsuranceStyles.input}
+            //         id="name"
+            //         type="name"
+            //         name="name"
+            //         placeholder="Name"
+            //         required
+            //         value={name}
+            //         onChange={(e) => setName(e.target.value)}
+            //       />
+            //     </div>
+
+            //     <div className={InsuranceStyles.forInp}>
+            //       <input
+            //         className={InsuranceStyles.input}
+            //         id="contact"
+            //         type="contact"
+            //         name="contact"
+            //         placeholder="Contact"
+            //         pattern="[0-9]{10}"
+            //         required
+            //         value={contact}
+            //         onChange={(e) => setContact(e.target.value)}
+            //       />
+            //     </div>
+            //     <div className={InsuranceStyles.forSub}>
+            //       <button type="submit" className={InsuranceStyles.submit}>
+            //         Act
+            //       </button>
+            //     </div>
+            //   </div>
+            // </Row>
+//           </Form>
+//         </Col>
+//         <Col></Col>
+//       </Row>
