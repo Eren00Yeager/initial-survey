@@ -1,0 +1,156 @@
+@media screen and (min-width: 480px) {
+  .Container {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+  }
+
+  .font1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    /* identical to box height */
+
+    color: rgba(67, 44, 206, 0.85);
+  }
+
+  .font2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    border: 2px solid rgba(67, 44, 206, 0.75);
+    border-radius: 33px;
+
+    background-color: rgba(67, 44, 206, 0.85);
+    color: #ffffff;
+  }
+
+  .font3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 183px;
+    line-height: 228px;
+    text-align: center;
+
+    color: #000000;
+  }
+
+  .font4 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 74px;
+    line-height: 88px;
+    text-align: center;
+
+    color: #000000;
+  }
+
+  .font5 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 45px;
+    text-align: center;
+
+    opacity: 0.85;
+    color: rgba(32, 32, 32, 0.85);
+  }
+
+  .toShowForm {
+    margin-top: 1em;
+    width: fit-content;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    /* identical to box height */
+
+    color: #202020;
+
+    background: #f5f5f5;
+    border: 3px solid rgba(67, 44, 206, 0.85);
+    border-radius: 33px;
+  }
+
+  .font6 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    /* or 277% */
+
+    color: rgba(32, 32, 32, 0.76);
+  }
+
+  .font7 {
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    width: fit-content;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    /* or 277% */
+
+    color: rgba(32, 32, 32, 0.76);
+    background-color: rgba(67, 44, 206, 0.25);
+  }
+
+  .font8 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 53px;
+    line-height: 63px;
+
+    color: rgba(38, 50, 56, 0.85);
+  }
+
+  .font9 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 43px;
+    line-height: 61px;
+
+    color: rgba(0, 0, 0, 0.75);
+  }
+
+  .font10 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 51px;
+
+    color: rgba(0, 0, 0, 0.75);
+  }
+
+  .font11 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 31px;
+    line-height: 37px;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    letter-spacing: -0.01em;
+
+    background-color: rgba(67, 44, 206, 0.25);
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+  .font12{
+    font-style: normal;
+    font-weight: 520;
+    font-size: 24px;
+    line-height: 37px;
+  }
+}

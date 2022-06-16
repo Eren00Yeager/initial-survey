@@ -1,8 +1,10 @@
 import InsuranceStyles from "../styles/InsuranceClaims.module.scss";
+import AboutImage from "../pic/forabout.svg";
+
 import { Row, Container, Col, Form } from "react-bootstrap";
 import { useState, useRef } from "react";
 import Image from "next/image";
-import fail from "../pic/rejecc.svg";
+import styles from "../styles/InsuranceNew.module.scss";
 
 const Insurance = () => {
   const [type, setType] = useState("");
@@ -40,94 +42,138 @@ const Insurance = () => {
   };
 
   return (
-    <Container className={InsuranceStyles.Container}>
-      <br />
+    <Container fluid className={styles.Container}>
+      <Row style={{ paddingTop: "2em" }}>
+        <Col>
+          <p className={styles.font1}>ClaimRemedy</p>
+        </Col>
+        <Col></Col>
+        <Col style={{ textAlign: "center" }}>
+          <button className={styles.font2}>
+            <a href="#whenclicked">Get Your Claim</a>
+          </button>
+        </Col>
+      </Row>
+
       <Row>
         <Col></Col>
+        <Col lg="11">
+          <p className={styles.font3}>Get Your Claim</p>
+          <p className={styles.font4}>
+            back from any company.
+            <br />
+            Totally Hassle Free.
+          </p>
+        </Col>
+        <Col></Col>
+      </Row>
+
+      <Row style={{ paddingTop: "1.5em" }}>
+        <Col></Col>
+        <Col lg="11">
+          <p className={styles.font5}>
+            If your claim was wrongly rejected, delayed, or a less claim amount
+            given, our experts can get your claim from any company while you sit
+            back and relax!{" "}
+          </p>
+        </Col>
+        <Col></Col>
+      </Row>
+
+      <Row style={{ justifyContent: "center" }}>
+        <button className={styles.toShowForm}>
+          <a href="#whenclicked">Get Your Claim</a>
+        </button>
+      </Row>
+
+      <Row style={{ paddingTop: "8em" }}>
+        <Col></Col>
         <Col lg="6">
-          <p className={InsuranceStyles.font1}>Claim Remedy</p>
+          <p id="whenclicked" className={styles.font6}>
+            We don’t charge you before we get your money!
+          </p>
+          <p className={styles.font7}>So let’s get what is yours!</p>
         </Col>
-        <Col className={InsuranceStyles.about1} style={{ textAlign: "center" }}>
-          <button className={InsuranceStyles.changeB}>About</button>
+        <Col >
         </Col>
-      </Row>
-      <Row style={{ paddingTop: "0.8em" }}>
         <Col></Col>
+      </Row>
 
-        <Col xs="10" lg="9" className={InsuranceStyles.giveBorder}>
-          <div className={InsuranceStyles.forDivflex}>
-            <p className={InsuranceStyles.font2}>
-              Claim <span style={{ color: "#ADADAD" }}>Rejected?</span>
-              <br />
-              Claim <span style={{ color: "#ADADAD" }}>Delayed?</span>
-              <br />
-              Claim Amount{" "}
-              <span style={{ color: "#ADADAD" }}>Unsatisfactory?</span>
-            </p>
-            <div className={InsuranceStyles.forSpImage}>
+      <Row>
+        <Col></Col>
+        <Col lg="10">
+          <p className={styles.font8}>How it works</p>
+        </Col>
+        <Col></Col>
+      </Row>
+
+      <Row></Row>
+
+      <Row style={{ paddingTop: "3em" }}>
+        <Col></Col>
+        <Col lg="10">
+          <p className={styles.font8}>Why ClaimRemedy</p>
+          <p className={styles.font10}>
+            1.{" "}
+            <span
+              style={{ backgroundColor: "rgba(67, 44, 206, 0.25)" }}
+              className={styles.font9}
+            >
               {" "}
-              <Image src={fail} width="300%" height="300%" />
-            </div>
-          </div>
+              No charges
+            </span>{" "}
+            before you get your claim.
+            <br />
+            2.{" "}
+            <span
+              style={{ backgroundColor: "rgba(67, 44, 206, 0.25)" }}
+              className={styles.font9}
+            >
+              {" "}
+              300+ experts team
+            </span>{" "}
+            that knows the insurance industry Inside out.
+            <br />
+            3.{" "}
+            <span
+              style={{ backgroundColor: "rgba(67, 44, 206, 0.25)" }}
+              className={styles.font9}
+            >
+              {" "}
+              Zero Hassles
+            </span>{" "}
+            ,we do all the papers.
+          </p>
         </Col>
         <Col></Col>
       </Row>
-      <br />
 
-      <Row style={{ paddingTop: "1em" }}>
+      <Row style={{ paddingTop: "3em" }}>
         <Col></Col>
-        <Col lg="9">
+        <Col lg="10">
           <Row>
-            <Col lg="8">
-              <p
-                className={InsuranceStyles.font1}
-                style={{ textAlign: "left" }}
-              >
-                {" "}
-                Our experts can get your claim from any company!
-              </p>
-              <p className={InsuranceStyles.pforsomeText}>
-                We don’t charge you before we get your money!
-              </p>
-              <p className={InsuranceStyles.pforsomeText2}>So let’s get what
-                is yours!</p>
+            <p className={styles.font8}>About us</p>
+          </Row>
+          <Row>
+            <Col>
+              <Image src={AboutImage} />
             </Col>
             <Col>
-              <p > 
-                asdasd adas dasd as nd asd asdn asda s ascas dasd asmnd n sad
-                asd asd snd asnd as
+              <span className={styles.font11}>
+                We are engineers pained by the situation{" "}
+              </span>
+              <p className={styles.font12}>
+                where People who pay premiums for years have to struggle to get
+                their claims. An individual finds oneself helpless in front of
+                the big companies and their ever confusing terms and conditions.
+                <br />
+                <br />
+                Tired of this, we decided to change it forever through Claim
+                Remedy. At Claim Remedy, we provide individuals legal help to
+                fight for their claims.
               </p>
             </Col>
           </Row>
-        </Col>
-
-        <Col></Col>
-      </Row>
-
-      <br />
-      
-      <br />
-      <br />
-
-      <br />
-      <br />
-      <Row className={InsuranceStyles.forFooter}>
-        <Col></Col>
-        <Col lg="8">
-          <p className={InsuranceStyles.footerText}>
-            We are just a call away @+91&nbsp;7297803114
-          </p>
-          <p className={InsuranceStyles.footerText2}>
-            or mail us at
-            <span style={{ color: "#1B45DB" }}>
-              {" "}
-              claimremedycares@gmail.com
-            </span>
-            <br />
-          </p>
-          <p className={InsuranceStyles.footerText3}>
-            ⓒ 2022 Claim Remedy &nbsp; FAQ&nbsp; &nbsp;About
-          </p>
         </Col>
         <Col></Col>
       </Row>
