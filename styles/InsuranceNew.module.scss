@@ -1,67 +1,195 @@
-@media screen and (min-width: 480px) {
-  .Container {
-    min-width: 100vw;
-    min-height: 100vh;
-    background-color: #f5f5f5;
-  }
+@import url("http://fonts.cdnfonts.com/css/sf-pro-display");
+
+@media screen and (min-width: 576px) {
+
+  
+.Container {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-size: 1vw;
+  line-height: 1vw;
+}
 
   .font1 {
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 2em;
+    line-height: 1.5em;
     text-align: center;
+    align-self: center;
+
     /* identical to box height */
 
     color: rgba(67, 44, 206, 0.85);
   }
 
   .font2 {
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 700;
-    font-size: 25px;
-    line-height: 30px;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    font-size: 2em;
+    line-height: 1em;
+    padding-top: 2.3%;
+    padding-bottom: 2.3%;
+    padding-left: 3%;
+    padding-right: 3%;
 
-    border: 2px solid rgba(67, 44, 206, 0.75);
-    border-radius: 33px;
+    border: 0.07em solid rgba(67, 44, 206, 0.75);
+    border-radius: 1.3em;
 
     background-color: rgba(67, 44, 206, 0.85);
     color: #ffffff;
   }
 
   .font3 {
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 700;
-    font-size: 183px;
-    line-height: 228px;
+    font-size: 12.233vw;
+    line-height: 11.23vw;
     text-align: center;
 
     color: #000000;
   }
 
   .font4 {
+    font-family: "SF Pro Display";
     font-style: normal;
-    font-weight: 600;
-    font-size: 74px;
-    line-height: 88px;
+    font-weight: 500;
+    margin-top: 0.869vw;
+    font-size: 4.947vw;
+    line-height: 5.882vw;
     text-align: center;
 
     color: #000000;
   }
 
   .font5 {
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 500;
-    font-size: 35px;
-    line-height: 45px;
+    font-size: 2.34vw;
+    line-height: 3.008vw;
     text-align: center;
 
     opacity: 0.85;
     color: rgba(32, 32, 32, 0.85);
+  }
+
+  .font8 {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.543vw;
+    line-height: 4.211vw;
+
+    color: rgba(38, 50, 56, 0.85);
+  }
+
+  .font9 {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.844vw;
+    line-height: 3.778vw;
+
+    color: rgba(0, 0, 0, 0.75);
+  }
+
+  .font10 {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.249vw;
+    line-height: 2.683vw;
+
+    color: rgba(0, 0, 0, 0.75);
+  }
+
+  .font11 {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.072vw;
+    line-height: 2.473vw;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    letter-spacing: -0.01em;
+
+    background-color: rgba(67, 44, 206, 0.25);
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+  .font12 {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 520;
+    font-size: 1.604vw;
+    line-height: 2.473vw;
+  }
+
+  .font13 {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.671vw;
+    text-align: center;
+    /* identical to box height, or 332% */
+
+    padding-top: 1.5em;
+
+    color: #000000;
+  }
+
+  .font14 {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.337vw;
+    line-height: 1.604vw;
+    /* or 120% */
+
+    text-align: center;
+
+    color: #000000;
+  }
+
+  .font15 {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.671vw;
+    line-height: 2.005vw;
+    text-align: center;
+
+    color: #000000;
+  }
+
+  .font16 {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.869vw;
+    line-height: 1.07vw;
+    /* identical to box height */
+    text-align: center;
+    position: absolute;
+    bottom: 35%;
+    color: #000000;
+  }
+
+  .font17 {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.005vw;
+    text-align: center;
+    align-self: center;
+    /* identical to box height, or 277% */
+
+    color: rgba(32, 32, 32, 0.76);
   }
 
   .toShowForm {
@@ -70,8 +198,8 @@
 
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 2.005vw;
+    line-height: 2.406vw;
     padding-top: 0.2em;
     padding-bottom: 0.2em;
     padding-left: 0.5em;
@@ -81,76 +209,324 @@
     color: #202020;
 
     background: #f5f5f5;
-    border: 3px solid rgba(67, 44, 206, 0.85);
-    border-radius: 33px;
+    border: 0.201vw solid rgba(67, 44, 206, 0.85);
+    border-radius: 2.206vw;
   }
 
-  .font6 {
+  .parent {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .image2 {
+    position: absolute;
+    top: 12.5%;
+    // border: 1px green solid;
+  }
+
+  .forArrow {
+    position: absolute;
+    left: 90%;
+    top: 35%;
+  }
+
+  .forFooter {
+    position: relative;
+    padding-top: 1em;
+  }
+
+  .forLaptopMobile {
+    display: flex;
+  }
+
+  .font20 {
+    display: none;
+  }
+
+  .love {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mailPart {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.653vw;
+    line-height: 1.984vw;
+
+    color: #000000;
+    opacity: 0.52;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  
+.Container {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-size: 1vw;
+  line-height: 1vw;
+}
+
+
+  .font1 {
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
-    /* or 277% */
+    font-size: 3.846vw;
+    line-height: 4.615vw;
+    /* identical to box height */
 
-    color: rgba(32, 32, 32, 0.76);
+    color: rgba(67, 44, 206, 0.85);
   }
 
-  .font7 {
-    padding-left: 0.3em;
-    padding-right: 0.3em;
+  .font2 {
+    box-sizing: border-box;
+
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.333vw;
+    line-height: 4.103vw;
+    /* identical to box height */
+
+    color: #f5f5f5;
+
+    background: rgba(67, 44, 206, 0.85);
+    border: 0.769vw solid rgba(67, 44, 206, 0.85);
+    border-radius: 8.462vw;
+  }
+
+  .font3 {
+    padding-top: 0.3em;
+    margin-top: 0.4em;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12.821vw;
+    line-height: 8.462vw;
+    text-align: center;
+    margin-bottom: 0;
+
+    color: #000000;
+  }
+
+  .font4 {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 7.692vw;
+    line-height: 9.487vw;
+    /* or 133% */
+    padding-top: 2.564vw;
+
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.75);
+  }
+
+  .font5 {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4.359vw;
+    line-height: 5.385vw;
+    margin-top: 1em;
+    /* or 124% */
+
+    text-align: center;
+
+    color: rgba(32, 32, 32, 0.85);
+  }
+
+  .toShowForm {
+    box-sizing: border-box;
+
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4.103vw;
+    line-height: 4.872vw;
     width: fit-content;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+
+    /* identical to box height */
+
+    color: #202020;
+
+    background: #f5f5f5;
+    border: 0.769vw solid rgba(67, 44, 206, 0.85);
+    border-radius: 8.462vw;
+  }
+  .love {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .font17 {
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
-    /* or 277% */
+    font-size: 4.615vw;
+    line-height: 4.62vw;
+    /* identical to box height, or 461% */
+    text-align: left;
 
     color: rgba(32, 32, 32, 0.76);
-    background-color: rgba(67, 44, 206, 0.25);
   }
 
   .font8 {
+    margin-top: 2em;
+
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 700;
-    font-size: 53px;
-    line-height: 63px;
+    font-size: 7.692vw;
+    line-height: 9.231vw;
 
     color: rgba(38, 50, 56, 0.85);
   }
 
-  .font9 {
+  .font13 {
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 700;
-    font-size: 43px;
-    line-height: 61px;
+    font-size: 3.846vw;
+    line-height: 4.615vw;
+    /* or 553% */
 
+    text-align: center;
+
+    color: #000000;
+  }
+
+  .font14 {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.333vw;
+    line-height: 4.359vw;
+    /* or 131% */
+
+    text-align: center;
+
+    color: #000000;
+  }
+
+  .forLaptopMobile {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .forArrow {
+    display: none;
+    position: absolute;
+    left: 90%;
+    top: 35%;
+  }
+
+  .parent {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .image2 {
+    position: absolute;
+    top: 12.5%;
+    width: 85%;
+    // border: 1px green solid;
+  }
+
+  .font9 {
+    font-family: "SF Pro Display";
+    font-size: 3.846vw;
+    font-weight: 700;
+    line-height: 5.385vw;
+    letter-spacing: 0em;
     color: rgba(0, 0, 0, 0.75);
+    text-align: left;
   }
 
   .font10 {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 38px;
-    line-height: 51px;
-
+    font-family: "SF Pro Display";
+    font-size: 3.846vw;
+    font-weight: 600;
+    line-height: 5.385vw;
+    letter-spacing: 0em;
     color: rgba(0, 0, 0, 0.75);
+    text-align: left;
+  }
+
+  .font20 {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    margin-top: 0.5em;
+    font-weight: 700;
+    font-size: 7.692vw;
+    line-height: 13.077vw;
+    /* identical to box height, or 170% */
+    text-align: center;
+
+    color: rgba(32, 32, 32, 0.76);
   }
 
   .font11 {
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 600;
-    font-size: 31px;
-    line-height: 37px;
-    padding-left: 0.1em;
-    padding-right: 0.1em;
+    font-size: 5.897vw;
+    line-height: 6.923vw;
     letter-spacing: -0.01em;
 
-    background-color: rgba(67, 44, 206, 0.25);
     color: rgba(0, 0, 0, 0.65);
   }
 
-  .font12{
+  .font12 {
+    font-family: "SF Pro Display";
+    font-size: 4.372vw;
+    font-weight: 500;
+    line-height: 6.993vw;
+    letter-spacing: -0.01em;
+  }
+
+  .font15 {
+    font-family: "SF Pro Display";
+    font-size: 4.103vw;
+    font-weight: 600;
+    line-height: 4.872vw;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+
+  .mailPart {
+    font-size: 4.103vw;
+    font-weight: 600;
+    line-height: 4.872vw;
+    letter-spacing: 0em;
+    text-align: center;
+    opacity: 0.52;
+  }
+
+  .font16 {
+    font-family: "SF Pro Display";
     font-style: normal;
-    font-weight: 520;
-    font-size: 24px;
-    line-height: 37px;
+    font-weight: 600;
+    font-size: 3.077vw;
+    line-height: 3.59vw;
+    text-align: center;
+
+    color: #000000;
   }
 }

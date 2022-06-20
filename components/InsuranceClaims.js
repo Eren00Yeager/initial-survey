@@ -1,10 +1,18 @@
 import InsuranceStyles from "../styles/InsuranceClaims.module.scss";
-import AboutImage from "../pic/forabout.svg";
+import styles from "../styles/InsuranceNew.module.scss";
 
 import { Row, Container, Col, Form } from "react-bootstrap";
 import { useState, useRef } from "react";
 import Image from "next/image";
-import styles from "../styles/InsuranceNew.module.scss";
+
+import Love from "../pic/love.svg";
+import AboutImage from "../pic/forabout.svg";
+import Circle from "../pic/circle.svg";
+import Lawyer from "../pic/lawyer.svg";
+import Order from "../pic/order.svg";
+import Phone from "../pic/phone.svg";
+import Arrow from "../pic/arrow.svg";
+import Footer from "../pic/footerInsurance.svg";
 
 const Insurance = () => {
   const [type, setType] = useState("");
@@ -43,21 +51,30 @@ const Insurance = () => {
 
   return (
     <Container fluid className={styles.Container}>
-      <Row style={{ paddingTop: "2em" }}>
-        <Col>
-          <p className={styles.font1}>ClaimRemedy</p>
+      <Row style={{ paddingTop: "3em" }}>
+        <Col
+          xs="4"
+          lg="4"
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div className={styles.font1}>ClaimRemedy</div>
         </Col>
         <Col></Col>
-        <Col style={{ textAlign: "center" }}>
+        <Col lg="4" xs="6" style={{ textAlign: "center" }}>
           <button className={styles.font2}>
-            <a href="#whenclicked">Get Your Claim</a>
+            <a href="#faq">Get Your Claim</a>
           </button>
         </Col>
       </Row>
 
-      <Row>
+      <Row style={{ paddingTop: "3em" }}>
         <Col></Col>
-        <Col lg="11">
+        <Col lg="11" xs="12">
           <p className={styles.font3}>Get Your Claim</p>
           <p className={styles.font4}>
             back from any company.
@@ -68,13 +85,13 @@ const Insurance = () => {
         <Col></Col>
       </Row>
 
-      <Row style={{ paddingTop: "1.5em" }}>
+      <Row style={{ paddingTop: "1em" }}>
         <Col></Col>
         <Col lg="11">
           <p className={styles.font5}>
-            If your claim was wrongly rejected, delayed, or a less claim amount
-            given, our experts can get your claim from any company while you sit
-            back and relax!{" "}
+            If your insurance claim was wrongly rejected, delayed, or a less
+            claim amount given, our experts can get your claim from any company
+            while you sit back and relax!{" "}
           </p>
         </Col>
         <Col></Col>
@@ -82,37 +99,103 @@ const Insurance = () => {
 
       <Row style={{ justifyContent: "center" }}>
         <button className={styles.toShowForm}>
-          <a href="#whenclicked">Get Your Claim</a>
+          <a href="#faq">Get Your Claim</a>
         </button>
       </Row>
 
-      <Row style={{ paddingTop: "8em" }}>
+      <Row style={{ paddingTop: "2em" }}>
         <Col></Col>
-        <Col lg="6">
-          <p id="whenclicked" className={styles.font6}>
-            We don’t charge you before we get your money!
+        <Col lg="8">
+          <div className={styles.love}>
+            <div className={styles.font17}>Built with&nbsp;</div>
+            <div style={{ width: "5%", position: "relative" }}>
+              <Image src={Love} layout="responsive" />
+            </div>
+            <div className={styles.font17}>
+              &nbsp;by Engineers from IIT Madras
+            </div>
+          </div>
+        </Col>
+        <Col></Col>
+      </Row>
+
+      <Row style={{ paddingTop: "3.5em" }}>
+        <Col></Col>
+        <Col lg="10">
+          <p className={styles.font8} id="faq">
+            How it works
           </p>
-          <p className={styles.font7}>So let’s get what is yours!</p>
-        </Col>
-        <Col >
         </Col>
         <Col></Col>
       </Row>
 
-      <Row>
-        <Col></Col>
-        <Col lg="10">
-          <p className={styles.font8}>How it works</p>
-        </Col>
-        <Col></Col>
+      <Row style={{ paddingTop: "2em" }}>
+        <div className={styles.forLaptopMobile}>
+            <Col
+              sm="4"
+              xs="8"
+            >
+              <div className={styles.parent}>
+                <div className={styles.image2} style={{ width: "17%" }}>
+                  <Image src={Phone} layout="responsive" />
+                </div>
+                <div style={{ width: "25%", position: "relative" }}>
+                  <Image src={Circle} layout="responsive" />
+                </div>
+                <div className={styles.forArrow} style={{ width: "10%" }}>
+                  <Image src={Arrow} layout="responsive" />
+                </div>
+              </div>
+
+              <p className={styles.font13}>one on one guidance</p>
+              <p className={styles.font14}>
+                Our experts will call you to understand your case and guide you
+                on further process
+              </p>
+            </Col>
+
+          <Col sm="4" xs="8">
+            {" "}
+            <div className={styles.parent}>
+              <div className={styles.image2} style={{ width: "17%" }}>
+                <Image src={Order} layout="responsive"></Image>
+              </div>
+
+              <div style={{ width: "25%", position: "relative" }}>
+                <Image src={Circle} layout="responsive" />
+              </div>
+              <div className={styles.forArrow} style={{ width: "10%" }}>
+                <Image src={Arrow} layout="responsive" />
+              </div>
+            </div>
+            <p className={styles.font13}>Drafting a legal notice</p>
+            <p className={styles.font14}>
+              We send a legal notice to the company.In most cases, people get
+              their desired compensation at this stage
+            </p>
+          </Col>
+          <Col sm="4" xs="8">
+            {" "}
+            <div className={styles.parent}>
+              <div className={styles.image2} style={{ width: "17%" }}>
+                <Image src={Lawyer} layout="responsive" />
+              </div>
+              <div style={{ width: "25%", position: "relative" }}>
+                <Image src={Circle} layout="responsive" />
+              </div>
+            </div>
+            <p className={styles.font13}>Our top lawyers handle the case</p>
+            <p className={styles.font14}>
+              If it ever comes to this, you need not worry, our best lawyer will
+              help you though the process.
+            </p>
+          </Col>
+        </div>
       </Row>
-      
 
-      <Row></Row>
-
-      <Row style={{ paddingTop: "3em" }}>
-        <Col></Col>
-        <Col lg="10">
+      <Row style={{ paddingTop: "4em" }}>
+        <Col lg="1"></Col>
+        <Col lg="8">
           <p className={styles.font8}>Why ClaimRemedy</p>
           <p className={styles.font10}>
             1.{" "}
@@ -133,7 +216,7 @@ const Insurance = () => {
               {" "}
               300+ experts team
             </span>{" "}
-            that knows the insurance industry Inside out.
+            with 10+ years of experience.
             <br />
             3.{" "}
             <span
@@ -143,95 +226,80 @@ const Insurance = () => {
               {" "}
               Zero Hassles
             </span>{" "}
-            ,we do all the papers.
+            ,we do all the papers & going to Courts.
           </p>
+        </Col>
+        <Col>
+        <p className={styles.font20}> So let's get what is yours!</p>
+          {/* AddFormHer */}
+        </Col>
+      </Row>
+
+      <Row style={{ paddingTop: "4em" }}>
+        <Col></Col>
+        <Col lg="10">
+          <Row>
+            <p className={styles.font8} id="about">
+              About us
+            </p>
+          </Row>
+          <Row>
+            <div className={styles.forLaptopMobile}>
+              <Col sm="4" xs="11">
+                <div style={{ width: "100%", position: "relative"}}>
+                  <Image src={AboutImage} layout="responsive" />
+                </div>
+              </Col>
+              <Col xs= "11" sm="8">
+              <p className={styles.font12}>
+                <span className={styles.font11}>
+                  We are engineers pained by the situation{" "}
+                </span>
+               
+                  where People who pay premiums for years have to struggle to
+                  get their claims. An individual finds oneself helpless in
+                  front of the big companies and their ever confusing terms and
+                  conditions.
+                  <br />
+                  <br />
+                  Tired of this, we decided to change it forever through Claim
+                  Remedy. At Claim Remedy, we provide individuals legal help to
+                  fight for their claims.
+                </p>
+              </Col>
+            </div>
+          </Row>
         </Col>
         <Col></Col>
       </Row>
 
-      <Row style={{ paddingTop: "3em" }}>
-        <Col></Col>
-        <Col lg="10">
-          <Row>
-            <p className={styles.font8}>About us</p>
-          </Row>
-          <Row>
-            <Col>
-              <Image src={AboutImage} />
-            </Col>
-            <Col>
-              <span className={styles.font11}>
-                We are engineers pained by the situation{" "}
-              </span>
-              <p className={styles.font12}>
-                where People who pay premiums for years have to struggle to get
-                their claims. An individual finds oneself helpless in front of
-                the big companies and their ever confusing terms and conditions.
-                <br />
-                <br />
-                Tired of this, we decided to change it forever through Claim
-                Remedy. At Claim Remedy, we provide individuals legal help to
-                fight for their claims.
-              </p>
-            </Col>
-          </Row>
-        </Col>
-        <Col></Col>
+      <Row style={{ paddingTop: "4em" }}>
+        <p className={styles.font15}>
+          We are just a call away @+91&nbsp;7297803114
+          <br />
+          <span className={styles.mailPart}>
+            or mail us at
+            <span style={{ color: "#1B45DB" }}>
+              <a href="mailto:claimremedycares@gmail.com">
+                {" "}
+                claimremedycares@gmail.com
+              </a>
+            </span>
+          </span>
+        </p>
+      </Row>
+
+      <Row className={styles.forFooter}>
+        <p className={styles.font16}>
+          ⓒ 2022 Claim Remedy&nbsp;&nbsp;&nbsp;<a href="#faq">FAQ</a>{" "}
+          &nbsp;&nbsp;&nbsp;<a href="#about">About</a>
+        </p>
+        <div style={{ width: "100%", position: "relative" }}>
+          <Image src={Footer} layout="responsive" />
+        </div>
       </Row>
     </Container>
   );
 };
 
 export default Insurance;
-
-// <Row>
-//         <Col lg="1" xs="1"></Col>
-//         <Col lg="10" xs="10">
-//           <Form className={InsuranceStyles.formouter} onSubmit={submitHandler}>
-//             <Row>
-//               <Col></Col>
-//               <Col xs="10" lg="6">
-//                 
-//               </Col>
-//               <Col></Col>
-//             </Row>
-            // <Row>
-            //   <div className={InsuranceStyles.forForm}>
-            //     <div className={InsuranceStyles.forInp}>
-            //       {" "}
-            //       <input
-            //         className={InsuranceStyles.input}
-            //         id="name"
-            //         type="name"
-            //         name="name"
-            //         placeholder="Name"
-            //         required
-            //         value={name}
-            //         onChange={(e) => setName(e.target.value)}
-            //       />
-            //     </div>
-
-            //     <div className={InsuranceStyles.forInp}>
-            //       <input
-            //         className={InsuranceStyles.input}
-            //         id="contact"
-            //         type="contact"
-            //         name="contact"
-            //         placeholder="Contact"
-            //         pattern="[0-9]{10}"
-            //         required
-            //         value={contact}
-            //         onChange={(e) => setContact(e.target.value)}
-            //       />
-            //     </div>
-            //     <div className={InsuranceStyles.forSub}>
-            //       <button type="submit" className={InsuranceStyles.submit}>
-            //         Act
-            //       </button>
-            //     </div>
-            //   </div>
-            // </Row>
-//           </Form>
-//         </Col>
-//         <Col></Col>
-//       </Row>
