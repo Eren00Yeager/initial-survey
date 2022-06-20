@@ -26,8 +26,7 @@
 
   .forForm {
     border-radius: 23px;
-    background-color: #d9d9d9;
-    padding: 3vh;
+    padding:3vh 0vh 3vh 0vh;
   }
 
   .forInp {
@@ -42,7 +41,7 @@
     border: none;
     width: 100%;
     font-size: 70%;
-    padding: 0.25em;
+    padding: 1vh;
     padding-left: 10%;
     color: #000000;
     font-family: Helvetica;
@@ -69,7 +68,7 @@
     font-size: 70%;
     font-weight: 700;
     color: white;
-    background-color: #619698;
+    background-color: #432CCE;
   }
 
   .forSpImage {
@@ -102,7 +101,6 @@
   .forForm {
     margin-top: 1.5em;
     border-radius: 23px;
-    background-color: #d9d9d9;
     display: flex;
     flex-direction: column;
   }
@@ -125,14 +123,14 @@
 
     width: 100%;
     font-size: 0.7em;
-    padding: 0.7em;
+    padding: 1vh;
   }
 
   .submit {
     border-radius: 33px;
     padding: 0.3em;
     border: none;
-    background-color: #619698;
+    background-color: #432CCE;
     color: white;
     font-weight: 600;
     word-wrap: break-word;
@@ -207,11 +205,10 @@
   font-family: "helvetica";
   font-style: normal;
   font-weight: 600;
-  font-size: 0.9em;
+  font-size: 1.5em;
   line-height: 1em;
 
   color: grey;
-  opacity: 0.7;
 }
 
 .workS {
@@ -241,7 +238,7 @@
 .button:active,
 .button:focus,
 .button:checked {
-  background-color: #619698 !important;
+  background-color: #432CCE !important;
 }
 
 .basicPadd {
