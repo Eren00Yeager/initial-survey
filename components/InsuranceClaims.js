@@ -72,7 +72,7 @@ const Insurance = () => {
         <Col></Col>
         <Col lg="4" xs="6" style={{ textAlign: "center" }}>
           <button className={styles.font2}>
-            <a href="#faq">Get Your Claim</a>
+            <a href="#form">Get Your Claim</a>
           </button>
         </Col>
       </Row>
@@ -104,7 +104,7 @@ const Insurance = () => {
 
       <Row style={{ justifyContent: "center" }}>
         <button className={styles.toShowForm}>
-          <a href="#faq">Get Your Claim</a>
+          <a href="#form">Get Your Claim</a>
         </button>
       </Row>
 
@@ -196,7 +196,7 @@ const Insurance = () => {
 
       <Row style={{ paddingTop: "4em" }}>
         <Col lg="8">
-          <p className={styles.font8}>Why ClaimRemedy</p>
+          <p className={styles.font8} id="form">Why ClaimRemedy</p>
           <p className={styles.font10}>
             1.{" "}
             <span
