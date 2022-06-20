@@ -18,6 +18,11 @@ const Insurance = () => {
   const [type, setType] = useState("");
   const [name, setName] = useState("");
   const [contact, setContact] = useState("");
+  const [state, setState] = useState(false);
+
+  const ThankForm = (
+    <>Thank you for signing up with us. We will soon reach out to you.</>
+  );
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -131,28 +136,25 @@ const Insurance = () => {
 
       <Row style={{ paddingTop: "2em" }}>
         <div className={styles.forLaptopMobile}>
-            <Col
-              sm="4"
-              xs="8"
-            >
-              <div className={styles.parent}>
-                <div className={styles.image2} style={{ width: "17%" }}>
-                  <Image src={Phone} layout="responsive" />
-                </div>
-                <div style={{ width: "25%", position: "relative" }}>
-                  <Image src={Circle} layout="responsive" />
-                </div>
-                <div className={styles.forArrow} style={{ width: "10%" }}>
-                  <Image src={Arrow} layout="responsive" />
-                </div>
+          <Col sm="4" xs="8">
+            <div className={styles.parent}>
+              <div className={styles.image2} style={{ width: "17%" }}>
+                <Image src={Phone} layout="responsive" />
               </div>
+              <div style={{ width: "25%", position: "relative" }}>
+                <Image src={Circle} layout="responsive" />
+              </div>
+              <div className={styles.forArrow} style={{ width: "10%" }}>
+                <Image src={Arrow} layout="responsive" />
+              </div>
+            </div>
 
-              <p className={styles.font13}>one on one guidance</p>
-              <p className={styles.font14}>
-                Our experts will call you to understand your case and guide you
-                on further process
-              </p>
-            </Col>
+            <p className={styles.font13}>one on one guidance</p>
+            <p className={styles.font14}>
+              Our experts will call you to understand your case and guide you on
+              further process
+            </p>
+          </Col>
 
           <Col sm="4" xs="8">
             {" "}
@@ -230,7 +232,7 @@ const Insurance = () => {
           </p>
         </Col>
         <Col>
-        <p className={styles.font20}> So let's get what is yours!</p>
+          <p className={styles.font20}> So let's get what is yours!</p>
           {/* AddFormHer */}
         </Col>
       </Row>
@@ -246,16 +248,15 @@ const Insurance = () => {
           <Row>
             <div className={styles.forLaptopMobile}>
               <Col sm="4" xs="11">
-                <div style={{ width: "100%", position: "relative"}}>
+                <div style={{ width: "100%", position: "relative" }}>
                   <Image src={AboutImage} layout="responsive" />
                 </div>
               </Col>
-              <Col xs= "11" sm="8">
-              <p className={styles.font12}>
-                <span className={styles.font11}>
-                  We are engineers pained by the situation{" "}
-                </span>
-               
+              <Col xs="11" sm="8">
+                <p className={styles.font12}>
+                  <span className={styles.font11}>
+                    We are engineers pained by the situation{" "}
+                  </span>
                   where People who pay premiums for years have to struggle to
                   get their claims. An individual finds oneself helpless in
                   front of the big companies and their ever confusing terms and
