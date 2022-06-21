@@ -55,7 +55,7 @@ const Insurance = () => {
 
   
   const ThankForm = (
-    <Col lg='3'>Thank you for signing up with us. We will soon reach out to you.</Col>
+    <Col lg='3'><h3 style={{'backgroundColor':'rgba(67, 44, 206, 0.25)','padding':'2vh','borderRadius':'13px'}}>Thank you for signing up with us. We will soon reach out to you.</h3></Col>
   );
 
   const DetailsForm = (
