@@ -192,6 +192,19 @@
     color: rgba(32, 32, 32, 0.76);
   }
 
+  .fontThank{
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.805vw;
+    line-height: 3vw;
+    text-align: center;
+    align-self: center;
+    /* identical to box height, or 277% */
+
+    color: rgba(32, 32, 32, 0.9);
+  }
+
   .toShowForm {
     margin-top: 1em;
     width: fit-content;
@@ -383,6 +396,21 @@
 
     color: rgba(32, 32, 32, 0.76);
   }
+
+  .fontThank{
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 5.05vw;
+    line-height: 6vw;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+    /* identical to box height, or 277% */
+
+    color: rgba(32, 32, 32, 0.9);
+  }
+
 
   .font8 {
     margin-top: 2em;

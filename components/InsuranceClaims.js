@@ -38,6 +38,7 @@ const Insurance = () => {
         },
       });
       if ((await response.status) == 201) {
+        alert("Details Submitted Successfully");
         setState(true);
       } else {
         throw response.json();
@@ -55,7 +56,9 @@ const Insurance = () => {
 
   
   const ThankForm = (
-    <Col lg='3'>Thank you for signing up with us. We will soon reach out to you.</Col>
+    <Col lg='3' className={styles.fontThank} style={{textAlign:"left"}}>
+    Thank you for signing up with us. We will reach out to you soon.
+      </Col>
   );
 
   const DetailsForm = (
@@ -340,10 +343,11 @@ const Insurance = () => {
             </span>{" "}
             ,we do all the papers & going to Courts.
           </p>
-        </Col>
-        <Col>
+          <div>
         <p className={styles.font20}> So let's get what is yours!</p>
+        </div>
         </Col>
+       
         
         {state ? ThankForm : DetailsForm}
         
