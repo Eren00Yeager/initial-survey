@@ -20,7 +20,6 @@ const Insurance = () => {
   const [contact, setContact] = useState("");
   const [state, setState] = useState(false);
 
-
   const submitHandler = async (e) => {
     e.preventDefault();
     console.log([type, name, contact]);
@@ -52,122 +51,127 @@ const Insurance = () => {
     }
   };
 
-  
-
-  
   const ThankForm = (
-    <Col lg='3' className={styles.fontThank} style={{textAlign:"left"}}>
-    Thank you for signing up with us. We will reach out to you soon.
-      </Col>
+    <Col lg="3" className={styles.fontThank}>
+      <h3
+        style={{
+          backgroundColor: "rgba(67, 44, 206, 0.25)",
+          padding: "2vh",
+          borderRadius: "13px",
+        }}
+      >
+        Thank you for signing up with us. We will soon reach out to you.
+      </h3>
+    </Col>
   );
 
   const DetailsForm = (
-    <Col lg='3' className={InsuranceStyles.formCol}>
-            <Form onSubmit={submitHandler} className={InsuranceStyles.formdiv}>
-              <p className={InsuranceStyles.radiocontent}>
-                Choose the Insurance type
-              </p>
-              <Row>
-                <div class="btn-group" role="group">
-                  <Col>
-                    {" "}
-                    <input
-                      type="radio"
-                      class="btn-check"
-                      name="btnradio"
-                      id="btnradio1"
-                      autoComplete="off"
-                      value="Health"
-                      onClick={(e) => setType(e.target.value)}
-                    />
-                    <label
-                      class={`btn btn-primary ${InsuranceStyles.button}`}
-                      for="btnradio1"
-                    >
-                      Health
-                    </label>
-                  </Col>
-                  <Col>
-                    <input
-                      type="radio"
-                      class="btn-check"
-                      name="btnradio"
-                      id="btnradio2"
-                      autoComplete="off"
-                      value="Life"
-                      onClick={(e) => setType(e.target.value)}
-                    />
-                    <label
-                      className={`btn btn-primary ${InsuranceStyles.button}`}
-                      for="btnradio2"
-                    >
-                      Life
-                    </label>
-                  </Col>
-                  <Col>
-                    <input
-                      type="radio"
-                      class="btn-check"
-                      name="btnradio"
-                      id="btnradio3"
-                      autoComplete="off"
-                      value="Vehicle"
-                      onClick={(e) => setType(e.target.value)}
-                    />
-                    <label
-                      class={`btn btn-primary  ${InsuranceStyles.button}`}
-                      for="btnradio3"
-                    >
-                      Vehicle
-                    </label>
-                  </Col>
-                </div>
-              </Row>
-              <div className={InsuranceStyles.forForm} >
-                <Row>
-                  <div className={InsuranceStyles.forInp}>
-                    {" "}
-                    <input
-                      className={InsuranceStyles.input}
-                      id="name"
-                      type="name"
-                      name="name"
-                      placeholder="Name"
-                      required
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                    />
-                  </div>
-                </Row>
-                <Row>
-                  <div className={InsuranceStyles.forInp}>
-                      <input
-                        className={InsuranceStyles.input}
-                        id="contact"
-                        type="contact"
-                        name="contact"
-                        placeholder="Contact"
-                        pattern="[0-9]{10}"
-                        required
-                        value={contact}
-                        onChange={(e) => setContact(e.target.value)}
-                      />
-                    </div>
-                </Row>
-                <Row>
-                  <div className={InsuranceStyles.forSub}>
-                    <button type="submit" className={`btn btn-primary ${InsuranceStyles.submit}`}>
-                      Call Back
-                    </button>
-                  </div>
-                </Row>
-              </div>
-            </Form>
-          
-        </Col>
+    <Col lg="3" className={InsuranceStyles.formCol}>
+      <Form onSubmit={submitHandler} className={InsuranceStyles.formdiv}>
+        <p className={InsuranceStyles.radiocontent}>
+          Choose the Insurance type
+        </p>
+        <Row>
+          <div class="btn-group" role="group">
+            <Col>
+              {" "}
+              <input
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio1"
+                autoComplete="off"
+                value="Health"
+                onClick={(e) => setType(e.target.value)}
+              />
+              <label
+                class={`btn btn-primary ${InsuranceStyles.button}`}
+                for="btnradio1"
+              >
+                Health
+              </label>
+            </Col>
+            <Col>
+              <input
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio2"
+                autoComplete="off"
+                value="Life"
+                onClick={(e) => setType(e.target.value)}
+              />
+              <label
+                className={`btn btn-primary ${InsuranceStyles.button}`}
+                for="btnradio2"
+              >
+                Life
+              </label>
+            </Col>
+            <Col>
+              <input
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio3"
+                autoComplete="off"
+                value="Vehicle"
+                onClick={(e) => setType(e.target.value)}
+              />
+              <label
+                class={`btn btn-primary  ${InsuranceStyles.button}`}
+                for="btnradio3"
+              >
+                Vehicle
+              </label>
+            </Col>
+          </div>
+        </Row>
+        <div className={InsuranceStyles.forForm}>
+          <Row>
+            <div className={InsuranceStyles.forInp}>
+              {" "}
+              <input
+                className={InsuranceStyles.input}
+                id="name"
+                type="name"
+                name="name"
+                placeholder="Name"
+                required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+          </Row>
+          <Row>
+            <div className={InsuranceStyles.forInp}>
+              <input
+                className={InsuranceStyles.input}
+                id="contact"
+                type="contact"
+                name="contact"
+                placeholder="Contact"
+                pattern="[0-9]{10}"
+                required
+                value={contact}
+                onChange={(e) => setContact(e.target.value)}
+              />
+            </div>
+          </Row>
+          <Row>
+            <div className={InsuranceStyles.forSub}>
+              <button
+                type="submit"
+                className={`btn btn-primary ${InsuranceStyles.submit}`}
+              >
+                Call Back
+              </button>
+            </div>
+          </Row>
+        </div>
+      </Form>
+    </Col>
   );
-
-
 
   return (
     <Container fluid className={styles.Container}>
@@ -185,7 +189,7 @@ const Insurance = () => {
           <div className={styles.font1}>ClaimRemedy</div>
         </Col>
         <Col></Col>
-        <Col lg="4" xs="6" style={{ textAlign: "center"}}>
+        <Col lg="4" xs="6" style={{ textAlign: "center" }}>
           <button className={styles.font2}>
             <a href="#form">Get Your Claim</a>
           </button>
@@ -311,7 +315,9 @@ const Insurance = () => {
 
       <Row style={{ paddingTop: "4em" }}>
         <Col lg="8">
-          <p className={styles.font8} id="form">Why ClaimRemedy</p>
+          <p className={styles.font8} id="form">
+            Why ClaimRemedy
+          </p>
           <p className={styles.font10}>
             1.{" "}
             <span
@@ -344,13 +350,11 @@ const Insurance = () => {
             ,we do all the papers & going to Courts.
           </p>
           <div>
-        <p className={styles.font20}> So let's get what is yours!</p>
-        </div>
+            <p className={styles.font20}> So let's get what is yours!</p>
+          </div>
         </Col>
-       
-        
+
         {state ? ThankForm : DetailsForm}
-        
       </Row>
 
       <Row style={{ paddingTop: "4em" }}>
