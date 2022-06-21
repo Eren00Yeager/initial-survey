@@ -340,7 +340,7 @@
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 500;
-        font-size: 4.5vw;
+        font-size: 20px;
         text-align: center;
         }
         .sech{
@@ -359,7 +359,7 @@
                 font-family: 'Poppins';
                 font-style: normal;
                 font-weight: 500;
-                font-size: 15px;
+                font-size: 16px;
                 
                 color: #FFFFFF;
                 }
@@ -396,7 +396,7 @@
                     font-family: 'Poppins';
                     font-style: normal;
                     font-weight: 700;
-                    font-size: 18px;
+                    font-size: 20px;
                     color: #FFFFFF;
                 }
                 .ans{
@@ -404,7 +404,7 @@
                     font-family: 'Poppins';
                     font-style: normal;
                     font-weight: 400;
-                    font-size: 15px;
+                    font-size: 18px;
                     
                     color: #FFFFFF;
                 

@@ -161,7 +161,7 @@ export default function consumer() {
                     </div>
 
                     <div>
-                        <a href="#about-us" className={consumerStyles.btn} onClick={handleScroll}>About Us</a>
+                        <a href="#about-us" className={consumerStyles.btn} onClick={handleScroll}>About</a>
                     </div>
                 </div>
                 <div className={consumerStyles.main}>

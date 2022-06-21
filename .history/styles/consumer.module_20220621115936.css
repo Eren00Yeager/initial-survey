@@ -40,7 +40,7 @@
         display: flex;
         flex-direction: column;
         padding: 8px 15px 8px 15px;
-        row-gap: 20px;
+        row-gap: 10px;
     }
     
       .fm{
@@ -71,13 +71,14 @@
         background-color: #FFFFFF;
         border: none;
         border-radius: 50px;
-        padding: 0px 10px;
+        padding: 0px 20px;
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 700;
         color: 000000;
         font-size: 1em;   
-        
+        position: relative;
+        top:3px;
       }
       .t1{
           position: absolute;
@@ -116,7 +117,7 @@
      color: #A6A6A6;
      padding: 5px 20px;
      border:none;
-     width:100%;
+     width:90%;
      }
      .check{
          width:25px;
@@ -129,25 +130,25 @@
          align-items: center;
      }
      .terms{
-    
-        color:#FFFFFF;
-        align-self: center;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-        width:100%;
-        text-align: center;
+     font-family: 'Roboto';
+     font-style: normal;
+     font-weight: 400;
+     font-size: 15px;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     color:#FFFFFF;
+     column-gap: 20px;
+     padding-left: 10px;
+
      }
      .sub{
      background-color: #2196F3;
      border: none;
+     width:30%;
      color: #FFFFFF;
      border-radius: 10px;
-     padding-top: 10px;
-     padding-bottom: 10px;
-     width:100%;
+     padding: 5px;
      }
      .details{
          display: flex;
@@ -217,7 +218,7 @@
       font-family: 'Poppins';
       font-style: normal;
       font-weight: 500;
-      font-size: 18px;
+      font-size: 16px;
       text-align:center;
       color: white;
       }
@@ -242,7 +243,7 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     color: #FFFFFF;
     position: relative;
     left: 15px;
@@ -340,7 +341,7 @@
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 500;
-        font-size: 4.5vw;
+        font-size: 4vw;
         text-align: center;
         }
         .sech{
@@ -626,7 +627,7 @@
     }
     
     .box{
-        width:33%;
+        width:35%;
         display: flex;
         flex-direction: column;
         row-gap: 0.651vw;
@@ -729,8 +730,8 @@ justify-content: space-between;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0.521vw 0vw 0.521vw 0vw;
-    row-gap: 1.302vw;
+    padding: 0.521vw 0.977vw 0.521vw 0.977vw;
+    row-gap: 0.651vw;
 }
 .t1{
     position: absolute;
@@ -776,7 +777,7 @@ border-radius: 20px;
 color: #A6A6A6;
 padding: 5px 20px;
 border:none;
-width:100%;
+width:70%;
 }
 .check{
     width:20px;
@@ -789,33 +790,31 @@ width:100%;
     align-items: center;
 }
 .terms{
-    color:#FFFFFF;
-    align-self: center;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.042vw;
-    /* line-height: 19px; */
-    /* background-color: yellow; */
-    width:80%;
-    text-align: center;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 0.977vw;
+/* line-height: 21px; */
+display: flex;
+flex-direction: row;
+align-items: center;
+color:#FFFFFF;
+column-gap: 20px;
+padding-left: 10px;
+/* padding: 10px; */
 }
 .sub{
 background-color: #2196F3;
 border: none;
+width:30%;
 color: #FFFFFF;
 border-radius: 10px;
-padding-top: 5px;
-padding-bottom: 5px;
-width: 40%;
+padding: 5px;
 }
 .details{
     display: flex;
     flex-direction: column;
     row-gap: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    width:80%;
 }
 .tnk{
 width:40%;
@@ -876,7 +875,7 @@ font-style: normal;
 font-weight: 500;
 text-align:center;
 color: white;
-font-size: 20px;
+font-size: 0.5em;
 line-height: 1.7em;
 }
 .i{
@@ -904,7 +903,7 @@ flex-direction: row;
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 500;
-font-size: 20px;
+font-size: 0.5em;
 color: #FFFFFF;
 position: relative;
 left: 20px;

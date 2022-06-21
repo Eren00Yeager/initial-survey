@@ -161,7 +161,7 @@ export default function consumer() {
                     </div>
 
                     <div>
-                        <a href="#about-us" className={consumerStyles.btn} onClick={handleScroll}>About Us</a>
+                        <a href="#about-us" className={consumerStyles.btn} onClick={handleScroll}>About</a>
                     </div>
                 </div>
                 <div className={consumerStyles.main}>
@@ -262,36 +262,36 @@ export default function consumer() {
                         <div className={consumerStyles.box}>
                         <div className={consumerStyles.bsvg} ><div style={windowSize.width > 900 ?{  width:"6.120vw",position:"relative"}:{  width:"30vw",position:"relative"}}><Image src={j1} layout="responsive"></Image></div></div>
                             <div className={consumerStyles.des}>
-                                <span className={consumerStyles.des1}> Right to information </span>
-                                <span className={consumerStyles.des2}>about the quality of goods and services</span>
+                                <span className={consumerStyles.des1}> No fees </span>
+                                <span className={consumerStyles.des2}>before you are compensated.</span>
                             </div>
                         </div>
                         <div className={consumerStyles.box}>
                         <div className={consumerStyles.bsvg} ><div style={windowSize.width > 900 ?{  width:"9.440vw",position:"relative"}:{  width:"50vw",position:"relative"}}><Image src={j2} layout="responsive"></Image></div></div>
                             <div className={consumerStyles.des}>
-                                <span className={consumerStyles.des1}>Right to be heard </span>
-                                <span className={consumerStyles.des2}>in matters concerning consumer interest </span>
+                                <span className={consumerStyles.des1}>300+ lawyers </span>
+                                <span className={consumerStyles.des2}>experienced in consumer law. </span>
                             </div>
                         </div>
                         <div className={consumerStyles.box}>
                         <div className={consumerStyles.bsvg} ><div style={windowSize.width > 900 ?{  width:"12.891vw",position:"relative"}:{  width:"70vw",position:"relative"}}><Image src={j3} layout="responsive"></Image></div></div>
                             <div className={consumerStyles.des}>
-                                <span className={consumerStyles.des1}>Right to seek redressal</span>
-                                <span className={consumerStyles.des2}> when rights are infringed</span>
+                                <span className={consumerStyles.des1}>End-to-End</span>
+                                <span className={consumerStyles.des2}>seamless legal solutions for your woes  as a consumer.</span>
                             </div>
                         </div>
                         <div className={consumerStyles.box}>
                         <div className={consumerStyles.bsvg} ><div style={windowSize.width > 900 ?{  width:"7.161vw",position:"relative"}:{  width:"30vw",position:"relative"}}><Image src={j4} layout="responsive"></Image></div></div>
                             <div className={consumerStyles.des}>
-                                <span className={consumerStyles.des1}>Right to freely choose</span>
-                                <span className={consumerStyles.des2}> from goods & services </span>
+                                <span className={consumerStyles.des1}>300+ lawyers </span>
+                                <span className={consumerStyles.des2}>experienced in consumer law. </span>
                             </div>
                         </div>
                         <div className={consumerStyles.box}>
                         <div className={consumerStyles.bsvg} ><div style={windowSize.width > 900 ?{  width:"8.594vw",position:"relative"}:{  width:"40vw",position:"relative"}}><Image src={j5} layout="responsive"></Image></div></div>
                             <div className={consumerStyles.des}>
-                                <span className={consumerStyles.des1}>Right to safety</span>
-                                <span className={consumerStyles.des2}> from hazardous goods & services</span>
+                                <span className={consumerStyles.des1}>End-to-End</span>
+                                <span className={consumerStyles.des2}>seamless legal solutions for your woes  as a consumer.</span>
                             </div>
                         </div>
                     </div>
