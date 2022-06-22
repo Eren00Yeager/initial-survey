@@ -161,7 +161,7 @@ export default function consumer() {
                     </div>
 
                     <div>
-                        <a href="#about-us" className={consumerStyles.btn} onClick={handleScroll}>About Us</a>
+                        <a href="#about-us" className={consumerStyles.btn} onClick={handleScroll}>About</a>
                     </div>
                 </div>
                 <div className={consumerStyles.main}>
@@ -283,15 +283,15 @@ export default function consumer() {
                         <div className={consumerStyles.box}>
                         <div className={consumerStyles.bsvg} ><div style={windowSize.width > 900 ?{  width:"7.161vw",position:"relative"}:{  width:"30vw",position:"relative"}}><Image src={j4} layout="responsive"></Image></div></div>
                             <div className={consumerStyles.des}>
-                                <span className={consumerStyles.des1}>Right to freely choose</span>
-                                <span className={consumerStyles.des2}> from goods & services </span>
+                                <span className={consumerStyles.des1}>300+ lawyers </span>
+                                <span className={consumerStyles.des2}>experienced in consumer law. </span>
                             </div>
                         </div>
                         <div className={consumerStyles.box}>
                         <div className={consumerStyles.bsvg} ><div style={windowSize.width > 900 ?{  width:"8.594vw",position:"relative"}:{  width:"40vw",position:"relative"}}><Image src={j5} layout="responsive"></Image></div></div>
                             <div className={consumerStyles.des}>
-                                <span className={consumerStyles.des1}>Right to safety</span>
-                                <span className={consumerStyles.des2}> from hazardous goods & services</span>
+                                <span className={consumerStyles.des1}>End-to-End</span>
+                                <span className={consumerStyles.des2}>seamless legal solutions for your woes  as a consumer.</span>
                             </div>
                         </div>
                     </div>
