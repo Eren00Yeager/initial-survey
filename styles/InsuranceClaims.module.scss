@@ -1,3 +1,5 @@
+@import url("http://fonts.cdnfonts.com/css/sf-pro-display");
+
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (min-width: 850px) {
   .Container {
@@ -12,11 +14,12 @@
     z-index: 1;
   }
 
-  .formCol{
-    margin-right:10vh;
-    border:3px solid rgba(0, 0, 0, 0.5);
-    border-radius:13px;
-    padding:3vh
+  .formCol {
+    margin-right: 10vh;
+    border: none;
+    border-radius: 23px;
+    padding: 3vh;
+    background-color: #FFFFFF;
   }
 
   .font3 {
@@ -33,28 +36,34 @@
 
   .forForm {
     border-radius: 23px;
-    padding:3vh 0vh 3vh 0vh;
+    padding: 3vh 0vh 3vh 0vh;
   }
 
   .forInp {
     width: 100%;
     text-align: center;
     padding-bottom: 2vh;
-    font-size: 1em!important;
+    font-size: 1em !important;
   }
 
   .input {
-    font-size: 1em!important;
-    background: #f5f5f5;
-    border-radius: 23px;
-    border: none;
+    background: #ffffff;
+    border-radius: 2.183vw;
+    border: 0.132vw solid rgba(67, 44, 206, 0.29);
     width: 100%;
     font-size: 70%;
     padding: 1vh;
-    padding-left: 10%;
+    padding-left: 5%;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.124vw;
+    line-height: 1.323vw;
+
     color: #000000;
-    font-family: Helvetica;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    opacity: 0.8;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
   }
 
   .forDivflex {
@@ -67,24 +76,61 @@
   .forSub {
     width: 100%;
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
   }
 
   .submit {
-    border-radius: 23px;
+    border-radius: 2.183vw;
     width: 40%;
     border: none;
     padding: 1vh;
-    font-size: 70%;
+    font-family: "SF Pro Display";
+    font-style: normal;
     font-weight: 700;
-    color: white;
-    font-size: 1em!important;
-    background-color: #432CCE;
+    font-size: 1.257vw;
+    line-height: 1.521vw;
+    /* identical to box height */
+
+    color: #ffffff;
+    background-color: #432cce;
   }
 
   .forSpImage {
     position: absolute;
     top: -30%;
     right: -10%;
+  }
+
+  .radiocontent {
+    text-align: left;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.786vw;
+    line-height: 2.116vw;
+
+    color: #202020;
+
+    opacity: 0.7;
+  }
+
+  .button {
+    background: #e6e6e6;
+    border: none;
+    border-radius: 2.183vw;
+    color: black;
+    width: 90%;
+    padding: 0.529vw;
+    word-wrap: break-word;
+
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 550;
+    font-size: 1.19vw;
+    line-height: 1.389vw;
+
+    color: #000000;
   }
 }
 
@@ -108,16 +154,16 @@
     color: white;
   }
 
-  .formCol{
+  .formCol {
     padding: 3vh;
   }
 
-  .formdiv{
-    border:3px solid rgba(0, 0, 0, 0.5);
+  .formdiv {
+    border: 3px solid rgba(0, 0, 0, 0.5);
     padding: 3vh;
-    border-radius:13px;
+    border-radius: 23px;
+    background-color: white;
   }
-
 
   .button {
     background: #e6e6e6;
@@ -126,58 +172,83 @@
     color: black;
     width: 90%;
     word-wrap: break-word;
-  
-    font-family: "helvetica";
 
-    font-size: 3em!important;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 550;
+    font-size: 3.990vw;
+    line-height: 4.359vw;
+
     justify-content: center;
-  
+
     color: #000000;
   }
 
   .forForm {
     border-radius: 23px;
-    padding:3vh 0vh 3vh 0vh;
-    font-size: 2em!important;
+    padding: 3vh 0vh 3vh 0vh;
+    font-size: 2em !important;
+  }
 
+  .radiocontent {
+    text-align: left;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 550;
+    font-size: 7.179vw;
+    line-height: 7.949vw;
+
+    color: #202020;
+
+    opacity: 0.7;
   }
 
   .forInp {
     width: 100%;
     text-align: center;
+    justify-content: center;
     padding-bottom: 2vh;
-    font-size: 2em!important;
+    // font-size: 2em !important;
   }
 
   .input {
     background: #f5f5f5;
-    border-radius: 23px;
-    border: none;
+    border-radius: 5.897vw;
+    border: 2px solid rgba(67, 44, 206, 0.29);
     width: 100%;
     padding: 1vh;
-    padding-left: 10%;
-    color: #000000;
-    font-family: Helvetica;
-    font-size: 1em!important;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  }
+    padding-left: 5%;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4.359vw;
+    line-height: 3.128vw;
 
+    color: #000000;
+
+    opacity: 0.8;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+  }
 
   .forSub {
     width: 100%;
     text-align: center;
+    margin-top: 5.128vw;
   }
 
   .submit {
-    border-radius: 23px;
+    border-radius: 5.897vw;
     width: 40%;
     border: none;
-    padding: 1vh;
-    font-size: 70%;
+    font-family: "SF Pro Display";
+    padding: 3%;
+    font-style: normal;
     font-weight: 700;
-    font-size: 1.5em!important;
+    font-size: 5.103vw;
+    line-height: 4.872vw;
+    // padding-top: 1vh;
     color: white;
-    background-color: #432CCE;
+    background-color: #432cce;
   }
 
   .forDivflex {
@@ -243,45 +314,17 @@
   border-radius: 23px;
 }
 
-.radiocontent {
-  text-align: left;
-  font-family: "helvetica";
-  font-style: normal;
-  font-weight: 600;
-  font-size: large;
-  line-height: 1em;
-
-  color: grey;
-}
-
 .workS {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.button {
-  background: #e6e6e6;
-  border: none;
-  border-radius: 33px;
-  color: black;
-  width: 90%;
-  word-wrap: break-word;
-
-  font-family: "helvetica";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 0.7em;
-  justify-content: center;
-
-  color: #000000;
-}
-
 .button:hover,
 .button:active,
 .button:focus,
 .button:checked {
-  background-color: #432CCE !important;
+  background: rgba(67, 44, 206, 0.85) !important;
 }
 
 .basicPadd {
@@ -437,14 +480,14 @@
   color: #bababa;
 }
 
-.forImage2{
+.forImage2 {
   text-align: left;
   justify-content: left;
   background-color: #d9d9d9;
 }
 
-.formContent1{
-  font-family: 'SF Pro Display';
+.formContent1 {
+  font-family: "SF Pro Display";
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -452,8 +495,8 @@
   color: rgba(32, 32, 32, 0.76);
 }
 
-.formContent2{
-  font-family: 'SF Pro Display';
+.formContent2 {
+  font-family: "SF Pro Display";
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -462,4 +505,3 @@
   background-color: rgba(67, 44, 206, 0.15);
   padding: 1vh;
 }
-

@@ -8,7 +8,8 @@ const nextConfig = {
       }
     }
     return config
-  }
+  },
+  optimizeFonts: false,
 }
 
 module.exports = nextConfig;
