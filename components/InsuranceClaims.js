@@ -1,7 +1,15 @@
 import InsuranceStyles from "../styles/InsuranceClaims.module.scss";
 import styles from "../styles/InsuranceNew.module.scss";
+import SearchBar from "./searchbar";
 
-import { Row, Container, Col, Form } from "react-bootstrap";
+import {
+  Row,
+  Container,
+  Col,
+  Form,
+  Dropdown,
+  DropdownButton,
+} from "react-bootstrap";
 import { useState, useRef } from "react";
 import Image from "next/image";
 
@@ -14,15 +22,21 @@ import Phone from "../pic/phone.svg";
 import Arrow from "../pic/arrow.svg";
 import Footer from "../pic/footerInsurance.svg";
 
-const Insurance = () => {
+const Insurance = ({comp}) => {
   const [type, setType] = useState("");
   const [name, setName] = useState("");
   const [contact, setContact] = useState("");
+  const [mail, setMail] = useState("");
+  const [address, setAddress] = useState("");
+  const [relIssue,setRelIssue] = useState("Issue1");
+  const [company,setCompany] =useState("asd");
+  const [companyId,setCId] =useState("asd");
+  const [amt,setAmt]  = useState("");
   const [state, setState] = useState(false);
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    console.log([type, name, contact]);
+    console.log([type, name, contact,mail,address,relIssue,amt,company,companyId]);
 
     if (type == "") {
       alert("Select the insurance type");
@@ -31,7 +45,7 @@ const Insurance = () => {
     try {
       const response = await fetch("/api/insurancesheet", {
         method: "POST",
-        body: JSON.stringify({ type, name, contact }),
+        body: JSON.stringify({ type, name, contact,mail,address,relIssue,amt,company,companyId }),
         headers: {
           "Content-Type": "application/json",
         },
@@ -48,6 +62,13 @@ const Insurance = () => {
       setName("");
       setType("");
       setContact("");
+      setMail("");
+      setAddress("");
+      setRelIssue("Issue1");
+      // setCompany("");
+      // setCId("");
+      setAmt("");
+
     }
   };
 
@@ -86,7 +107,7 @@ const Insurance = () => {
               />
               <label
                 class={`btn btn-primary ${InsuranceStyles.button}`}
-                for="btnradio1"
+                htmlFor="btnradio1"
               >
                 Health
               </label>
@@ -103,7 +124,7 @@ const Insurance = () => {
               />
               <label
                 className={`btn btn-primary ${InsuranceStyles.button}`}
-                for="btnradio2"
+                htmlFor="btnradio2"
               >
                 Life
               </label>
@@ -120,7 +141,7 @@ const Insurance = () => {
               />
               <label
                 class={`btn btn-primary  ${InsuranceStyles.button}`}
-                for="btnradio3"
+                htmlFor="btnradio3"
               >
                 Vehicle
               </label>
@@ -159,12 +180,83 @@ const Insurance = () => {
             </div>
           </Row>
           <Row>
+            <div className={InsuranceStyles.forInp}>
+              <input
+                className={InsuranceStyles.input}
+                id="mail"
+                name="mail"
+                placeholder="Mail Id"
+                // pattern="^[A-Za-z0-9_-]{0,50}$"
+                required
+                value={mail}
+                onChange={(e) => setMail(e.target.value)}
+              />
+            </div>
+          </Row>
+          <Row>
+            <div className={InsuranceStyles.forInp}>
+              <input
+                className={InsuranceStyles.input}
+                id="address"
+                name="address"
+                placeholder="Address"
+                // pattern="^[A-Za-z0-9_-]{0,50}$"
+                required
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+              />
+            </div>
+          </Row>
+          <Row>
+            <div className={InsuranceStyles.forInp}>
+              <input
+                className={InsuranceStyles.input}
+                id="amt"
+                name="amt"
+                placeholder="Amount"
+                // pattern="^[A-Za-z0-9_-]{0,50}$"
+                required
+                value={amt}
+                onChange={(e) => setAmt(e.target.value)}
+              />
+            </div>
+          </Row>
+          <Row>
+            <Form.Group>
+              <Form.Label htmlFor="issues" >
+              Related Issue
+              </Form.Label>
+              <Form.Select id="issues" onChange={(e) => setRelIssue(e.target.value)}>
+                <option>Issue 1</option>
+                <option>Issue 2</option>
+              </Form.Select>
+            </Form.Group>
+          </Row>
+          <Row>
+            <SearchBar comp={comp} setCompany={setCompany} setCId={setCId}/>
+          </Row>
+          <Row>
+            <Form.Group controlId="formFileMultiple" className="mb-3">
+              <Form.Label>Add Relevant Documents</Form.Label>
+              <Form.Control type="file" multiple />
+            </Form.Group>
+          </Row>
+          <Row>
+          <Form.Group className="mb-3">
+              <Form.Check
+                type="checkbox"
+                id="consent"
+                label="I consent to take legal actions against the company"
+              />
+            </Form.Group>
+          </Row>
+          <Row>
             <div className={InsuranceStyles.forSub}>
               <button
                 type="submit"
                 className={`btn btn-primary ${InsuranceStyles.submit}`}
               >
-                Call Back
+                Submit
               </button>
             </div>
           </Row>
@@ -245,9 +337,7 @@ const Insurance = () => {
       <Row style={{ paddingTop: "3.5em" }}>
         <Col></Col>
         <Col lg="10">
-          <p className={styles.font8}>
-            How it works
-          </p>
+          <p className={styles.font8}>How it works</p>
         </Col>
         <Col></Col>
       </Row>
@@ -398,82 +488,83 @@ const Insurance = () => {
         <Col></Col>
         <Col lg="10" xs="10">
           <Row>
-            <p className={styles.font8} id="faq">FAQs</p>
+            <p className={styles.font8} id="faq">
+              FAQs
+            </p>
           </Row>
           <Row>
-
             <p className={styles.font22}>
               Q. What are generally the reasons for insurance claim rejection?
             </p>
             <br />
             <p className={styles.font21}>
-            Ans: The reasons may vary according to your case. It will be
-            mentioned in insurance claim denial letter given to you by the
-            company. Generally they may range from false information at the time
-            of getting the policy, missing the payment of premium, type of death
-            etc. when it comes to term insurance claim rejection reasons. Health
-            insurance claim rejection may be due to pre-existing conditions,
-            waiting period, exclusions in the policy etc.
+              Ans: The reasons may vary according to your case. It will be
+              mentioned in insurance claim denial letter given to you by the
+              company. Generally they may range from false information at the
+              time of getting the policy, missing the payment of premium, type
+              of death etc. when it comes to term insurance claim rejection
+              reasons. Health insurance claim rejection may be due to
+              pre-existing conditions, waiting period, exclusions in the policy
+              etc.
             </p>
-           
+
             <p className={styles.font22}>
               Q. Should I first approach the insurance company before filing a
               complaint in consumer court?
             </p>
             <p className={styles.font21}>
-            Ans: We would recommend that you file a complaint letter to
-            insurance company for claim rejection before approaching external
-            redressal bodies such as IRDAI, Consumer Courts , Ombudsman etc.
-            Complaining with the internal redressal mechanism will serve as
-            proof that we tried through internal customer support channels to
-            resolve the issue before approaching courts.
+              Ans: We would recommend that you file a complaint letter to
+              insurance company for claim rejection before approaching external
+              redressal bodies such as IRDAI, Consumer Courts , Ombudsman etc.
+              Complaining with the internal redressal mechanism will serve as
+              proof that we tried through internal customer support channels to
+              resolve the issue before approaching courts.
             </p>
-            
-            <p className={styles.font22}>
-              Q. How can ClaimRemedy help me?
-            </p>
+
+            <p className={styles.font22}>Q. How can ClaimRemedy help me?</p>
             <p className={styles.font21}>
-            Ans: We will assess your scenario and understand if you were truly
-            wronged by the insurance company. If yes, we file a legal notice to
-            your insurance company as the first step. If they do not resolve it
-            through this channel, we escalate it to the appropriate authority
-            such as IRDAI, Insurance Ombudsman or Consumer Courts as required.
-            We have a network of experienced insurance claim denial lawyers.
+              Ans: We will assess your scenario and understand if you were truly
+              wronged by the insurance company. If yes, we file a legal notice
+              to your insurance company as the first step. If they do not
+              resolve it through this channel, we escalate it to the appropriate
+              authority such as IRDAI, Insurance Ombudsman or Consumer Courts as
+              required. We have a network of experienced insurance claim denial
+              lawyers.
             </p>
-         
+
             <p className={styles.font22}>
               Q. How much time does it generally take to resolve the case?
             </p>
-            <p className={styles.font21}>         
-            Ans: It may take 15-30 days to get the issue resolved if the
-            companies are cooperative in the initial stage. If we have to fight
-            the case in consumer court, it may take upto 6 months or more
-            depending on how the courts schedule the cases.
-            </p>   
-          
+            <p className={styles.font21}>
+              Ans: It may take 15-30 days to get the issue resolved if the
+              companies are cooperative in the initial stage. If we have to
+              fight the case in consumer court, it may take upto 6 months or
+              more depending on how the courts schedule the cases.
+            </p>
+
             <p className={styles.font22}>
               Q. Do I need to pay any money to get my claim?
             </p>
-            <p className={styles.font21}>          
-            Ans:You do not have to pay any fees initially. If we are succesful
-            in getting your claim amount back, then only will we charge a 10%
-            success fees on your claim amount.
-            </p>   
-           
+            <p className={styles.font21}>
+              Ans:You do not have to pay any fees initially. If we are succesful
+              in getting your claim amount back, then only will we charge a 10%
+              success fees on your claim amount.
+            </p>
+
             <p className={styles.font22}>
               Q. What can I do to avoid insurance claim rejections in general?{" "}
             </p>
-            <p className={styles.font21}>         
-            Ans: Always be thorough with your policy document and be aware of
-            what is and what is NOT covered in the policy. Make sure you buy
-            your policy from trusted sources only. You can also check out the
-            claim rejection ratio of the insurance company you are planning to
-            buy insurance from. In addition, try to pay your premiums on time
-            and keep track of any changes in your insurance policy.
-            </p>    
+            <p className={styles.font21}>
+              Ans: Always be thorough with your policy document and be aware of
+              what is and what is NOT covered in the policy. Make sure you buy
+              your policy from trusted sources only. You can also check out the
+              claim rejection ratio of the insurance company you are planning to
+              buy insurance from. In addition, try to pay your premiums on time
+              and keep track of any changes in your insurance policy.
+            </p>
           </Row>
         </Col>
-        <Col ></Col>
+        <Col></Col>
       </Row>
 
       <Row style={{ paddingTop: "4em" }}>

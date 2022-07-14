@@ -1,0 +1,112 @@
+@font-face {
+  font-family: insidrFont;
+  src: url('../font/SFPRODISPLAYMEDIUM.OTF')  format('truetype');
+}
+
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.searchInner {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+}
+
+.forImage{
+  /* position: absolute; */
+  padding: 5px 9px ;
+  z-index: 10;
+}
+
+.forInput{
+padding:20px 0px 20px 40px;
+ width: 100%;
+ height:30px;
+ 
+ border-radius: 29px;
+ border: none;
+ box-shadow: 0px 11px 85px rgba(61, 37, 207, 0.08), 0px 6.4768px 44.336px rgba(61, 37, 207, 0.057856), 0px 3.3264px 20.808px rgba(61, 37, 207, 0.044928), 0px 1.3376px 9.112px rgba(61, 37, 207, 0.035072), 0px 0.2992px 3.944px rgba(61, 37, 207, 0.022144);
+}
+
+.forInput::placeholder{
+  font-weight: 500;
+}
+
+.dropdown {
+  background-color: white;
+  z-index: 10;
+  overflow-y: scroll;
+  position: absolute;
+  max-height: 100px;
+  width: 100%;
+  top:0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+}
+
+.dropdown:empty {
+  border: 10px;
+}
+
+.dropdownRow {
+  cursor: pointer;
+  text-align: start;
+  margin: 2px 0;
+}
+
+
+ 
+.idrop{
+  position: relative;
+  width: 80%;
+  padding:0px 0px 0px 40px;
+  
+}
+
+@media screen and (max-width :480px) {
+  .searchcontainer {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+  }
+ 
+}
+
+@media screen and (min-width: 480px) {
+  .searchcontainer {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+}
+
+@media screen  and (min-width: 950px) {
+  .idrop{
+    position: relative;
+    width: 85%;
+    padding:0px 0px 0px 40px;
+    
+  }
+}
+
+.search{
+  font-family: insidrFont;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  padding-bottom: 0.5vh;
+  color: #383838;
+}
