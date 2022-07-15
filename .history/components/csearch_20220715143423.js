@@ -77,8 +77,9 @@ const SearchBar = ({comp,setCompany,setCId,setcad}) => {
               const fullName = item.Name.toLowerCase();
               if(key!=0){
               return (
-                searchTerm.length&& (fullName != searchTerm )&& (fullName.startsWith(searchTerm) ||
-                isValid(fullName, searchTerm))
+                1
+                // searchTerm.length&& (fullName != searchTerm )&& (fullName.startsWith(searchTerm) ||
+                // isValid(fullName, searchTerm))
                 )
               }
             })

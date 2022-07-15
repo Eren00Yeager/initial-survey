@@ -29,7 +29,7 @@ export default function consumer() {
    
   useEffect(() => {
     axios
-      .get("/api/consumerdata")
+      .get("/api/consumersheet")
       .then((res) => {
         setComp(res.data)
         console.log(res.data);
