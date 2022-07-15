@@ -5,6 +5,8 @@ import { useState,useEffect } from 'react';
 import { Spinner } from 'react-bootstrap';
 import axios from 'axios';
 
+
+
 const SpinnerComp=()=>{
   return(
       <span style={{height:'100vh',marginTop:'45vh'}}>

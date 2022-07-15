@@ -37,7 +37,7 @@ async function handler(req, res) {
       
           const response = await sheets.spreadsheets.values.append({
             spreadsheetId: process.env.DATABASE_ID,
-            range: 'Consumernew!A:J',
+            range: 'Consumernew',
             valueInputOption: 'USER_ENTERED',
             requestBody: {
               values: [[name,email,address,cnam,cid,cad,cost,order,problem,demand,dateIST]],
