@@ -23,21 +23,20 @@ async function handler(req, res) {
       
           const response = await sheets.spreadsheets.values.get({
             spreadsheetId: process.env.DATABASE_ID,
-            range: 'Insurance Company mail!A:C', // sheet name
+            range: 'Consumer company mail', // sheet name
           });
           const rows = response.data.values;
           if (rows.length) {
-            return res.status(200).json(rows.map((row)=>({
+            return res.status(200).json(rows.map((row,key)=>{
+                if(row.length && row[0].length){
+                return{
                 "Name": row[0],
-<<<<<<< HEAD
-                "mailId": row[1],
-                "address": row[2]
-=======
-                "sector":row[1],
-                "mailId": row[2],
+                "mailId":row[1],
+                "address": row[2],
 
->>>>>>> ecaded50ca03bf33165271458a82b6020f561c4c
-            })));
+            }}
+              else{}        
+        }));
             // return res.status(200).json({message:"hello"});
           }
       

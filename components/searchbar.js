@@ -77,8 +77,7 @@ const SearchBar = ({ comp, setCompany, setCId }) => {
         <input
           type="text"
           value={companyToSearch}
-          maxLength="15"
-          placeholder="zolvit"
+          placeholder="Enter Company Name"
           onChange={changedSearch}
           className={searchStyles.forInput}
           onKeyUp={isEnter}
@@ -96,8 +95,8 @@ const SearchBar = ({ comp, setCompany, setCId }) => {
                 searchTerm &&
                 (fullName.startsWith(searchTerm) ||
                   isValid(fullName, searchTerm))
-                //     &&
-                //   fullName !== searchTerm
+                    &&
+                  fullName !== searchTerm
               );
             })
             .map((item) => (

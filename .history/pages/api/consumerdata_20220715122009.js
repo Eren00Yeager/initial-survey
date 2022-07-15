@@ -29,14 +29,9 @@ async function handler(req, res) {
           if (rows.length) {
             return res.status(200).json(rows.map((row)=>({
                 "Name": row[0],
-<<<<<<< HEAD
-                "mailId": row[1],
-                "address": row[2]
-=======
                 "sector":row[1],
                 "mailId": row[2],
 
->>>>>>> ecaded50ca03bf33165271458a82b6020f561c4c
             })));
             // return res.status(200).json({message:"hello"});
           }
