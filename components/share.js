@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
-
+import Image from 'next/image';
 import {
   FacebookShareButton,
   FacebookIcon,
@@ -14,6 +14,7 @@ import {
   LinkedinIcon,
 } from "next-share";
 import stylesSh from "../styles/share.module.css";
+import tc from "../pic/whitetick.svg"
 
 export default function Text({ compName }) {
   const linkN = "https://claim-remedy.com/";
@@ -28,6 +29,14 @@ export default function Text({ compName }) {
 
   return (
     <Col lg="8" xs="10" className={stylesSh.fontThank}>
+      <div style={{ textAlign: "center" }}>
+        <Image src={tc} width={40} height={40}></Image>
+      </div>
+      <div className={stylesSh.ms}>
+        Your legal notice has been sent successfully! A copy of the same has
+        been sent you via email. <br/>
+		<span style={{opacity:0.4}}>You will get notified when the company replies.</span>
+      </div>
       <Row>
         <div className={stylesSh.impact}>
           Share the below message on your favourite social media by tagging the
@@ -49,51 +58,49 @@ export default function Text({ compName }) {
           </div>
         </div>
       </Row>
-		<Row style={{justifyContent:"center"}}>
-			<div className={stylesSh.Share}>
+      <Row style={{ justifyContent: "center" }}>
+        <div className={stylesSh.Share}>
+          <div className={stylesSh.forShare}>Share </div>
 
-				<div className={stylesSh.forShare}>Share </div>
+          <FacebookShareButton
+            url={linkN}
+            quote={`I have sent a legal notice to ${compName} for the inconvenience caused to me in the insurance claim process.Thanks to  ${linkN}-[Claim Remedy] for helping me take legal action for no extra cost.`}
+            hashtag={"#claim"}
+          >
+            <FacebookIcon size={32} round />
+          </FacebookShareButton>
 
-            <FacebookShareButton
-              url={linkN}
-              quote={`I have sent a legal notice to ${compName} for the inconvenience caused to me in the insurance claim process.Thanks to  ${linkN}-[Claim Remedy] for helping me take legal action for no extra cost.`}
-              hashtag={"#claim"}
-            >
-              <FacebookIcon size={32} round />
-            </FacebookShareButton>
-         
-            <PinterestShareButton
-              // {/* Url you want to share */}
-              url={linkN}
-            >
-              <PinterestIcon size={32} round />
-            </PinterestShareButton>
-         
-            <RedditShareButton
-              // {/* Url you want to share */}
-              url={linkN}
-            >
-              <RedditIcon size={32} round />
-            </RedditShareButton>
-         
-            <WhatsappShareButton
-              // {/* Url you want to share */}
-              title={`I have sent a legal notice to ${compName} for the inconvenience caused to me in the insurance claim process.Thanks to  ${linkN}-[Claim Remedy] for helping me take legal action for no extra cost.`}
-              url={linkN}
-            >
-              <WhatsappIcon size={32} round />
-            </WhatsappShareButton>
-         
-            <LinkedinShareButton
-              // {/* Url you want to share */}
-              summary={`I have sent a legal notice to ${compName} for the inconvenience caused to me in the insurance claim process.Thanks to  ${linkN}-[Claim Remedy] for helping me take legal action for no extra cost.`}
-              title="Claim Remedy"
-              url={linkN}
-            >
-              <LinkedinIcon size={32} round />
-            </LinkedinShareButton>
-          </div>
-        
+          <PinterestShareButton
+            // {/* Url you want to share */}
+            url={linkN}
+          >
+            <PinterestIcon size={32} round />
+          </PinterestShareButton>
+
+          <RedditShareButton
+            // {/* Url you want to share */}
+            url={linkN}
+          >
+            <RedditIcon size={32} round />
+          </RedditShareButton>
+
+          <WhatsappShareButton
+            // {/* Url you want to share */}
+            title={`I have sent a legal notice to ${compName} for the inconvenience caused to me in the insurance claim process.Thanks to  ${linkN}-[Claim Remedy] for helping me take legal action for no extra cost.`}
+            url={linkN}
+          >
+            <WhatsappIcon size={32} round />
+          </WhatsappShareButton>
+
+          <LinkedinShareButton
+            // {/* Url you want to share */}
+            summary={`I have sent a legal notice to ${compName} for the inconvenience caused to me in the insurance claim process.Thanks to  ${linkN}-[Claim Remedy] for helping me take legal action for no extra cost.`}
+            title="Claim Remedy"
+            url={linkN}
+          >
+            <LinkedinIcon size={32} round />
+          </LinkedinShareButton>
+        </div>
       </Row>
     </Col>
   );

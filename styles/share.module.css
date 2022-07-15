@@ -4,20 +4,22 @@
 }
 
 @media screen and (min-width: 576px) {
-
-    .fontThank{
-        background: #FFFFFF;
-        border: 1px solid rgba(67, 44, 206, 0.29);
-        border-radius: 13px;
-        padding: 5vw;
-    }
+  .fontThank {
+    background: #ffffff;
+    border: 1px solid rgba(67, 44, 206, 0.29);
+    border-radius: 13px;
+    padding: 3vw;
+  }
   .impact {
     font-family: insidrFont;
     font-style: normal;
     font-weight: 400;
     font-size: 1.5vw;
     line-height: 1.6vw;
-    text-align: center;
+    text-align: left;
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+    
 
     /* or 108% */
 
@@ -30,6 +32,7 @@
     font-weight: 400;
     font-size: 1.4vw;
     line-height: 1.7vw;
+    text-align: left;
 
     color: #000000;
   }
@@ -38,9 +41,9 @@
     font-family: insidrFont;
     font-style: normal;
     font-weight: 600;
-    font-size: 1.512vw;
-    line-height: 1.6vw;
-    padding: 0.4vw;
+    font-size: 1.312vw;
+    line-height: 1.4vw;
+    padding: 0.6vw;
     margin-top: 1vw;
     margin-bottom: 1vw;
 
@@ -75,15 +78,26 @@
 
     color: #000000;
   }
+  .ms {
+    font-family: insidrFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4vw;
+    line-height: 1.5vw;
+    text-align: left;
+
+    margin-top: 2vw;
+    color: black;
+  }
 }
 
 @media screen and (max-width: 576px) {
-    .fontThank{
-        background: #FFFFFF;
-        border: 1px solid rgba(67, 44, 206, 0.29);
-        border-radius: 13px;
-        padding: 5vw;
-    }
+  .fontThank {
+    background: #ffffff;
+    border: 1px solid rgba(67, 44, 206, 0.29);
+    border-radius: 13px;
+    padding: 5vw;
+  }
   .impact {
     font-family: insidrFont;
     font-style: normal;
@@ -91,6 +105,8 @@
     font-size: 3.9vw;
     line-height: 4vw;
     text-align: left;
+
+    margin-top: 7vw;
 
     /* or 108% */
 
@@ -141,12 +157,24 @@
     margin-top: 2vw;
   }
   .forShare {
-    font-family: "SF UI Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 600;
     font-size: 4.5vw;
-    line-height: 4.7vw;
-
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     color: #000000;
+  }
+  .ms {
+    font-family: insidrFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.7vw;
+    line-height: 4vw;
+    text-align: center;
+
+    margin-top: 4vw;
+    color: black;
   }
 }
