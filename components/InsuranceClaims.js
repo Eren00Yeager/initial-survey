@@ -25,7 +25,6 @@ import Footer from "../pic/footerInsurance.svg";
 const Insurance = ({ comp }) => {
   const [type, setType] = useState("");
   const [name, setName] = useState("");
-  const [contact, setContact] = useState("");
   const [mail, setMail] = useState("");
   const [address, setAddress] = useState("");
   const [relIssue, setRelIssue] = useState("Claim got Rejected");
@@ -41,7 +40,6 @@ const Insurance = ({ comp }) => {
     console.log([
       type,
       name,
-      contact,
       mail,
       address,
       relIssue,
@@ -65,7 +63,6 @@ const Insurance = ({ comp }) => {
         body: JSON.stringify({
           type,
           name,
-          contact,
           mail,
           address,
           relIssue,
@@ -89,7 +86,6 @@ const Insurance = ({ comp }) => {
       alert("There was an error in submitting\nPlease try again");
       setName("");
       setType("");
-      setContact("");
       setMail("");
       setAddress("");
       setRelIssue("Issue1");
@@ -117,10 +113,12 @@ const Insurance = ({ comp }) => {
   const DetailsForm = (
     <Col lg="8" className={InsuranceStyles.formCol}>
       <Form onSubmit={submitHandler} className={InsuranceStyles.formdiv}>
-        <p className={InsuranceStyles.radiocontent}>
-          Choose the Insurance type
-        </p>
-        <Row>
+        <div>
+          <p className={InsuranceStyles.radiocontent}>
+            Choose the Insurance type
+          </p>
+        </div>
+        <Row >
           <div class="btn-group" role="group">
             <Col>
               {" "}
@@ -174,6 +172,7 @@ const Insurance = ({ comp }) => {
                 Vehicle
               </label>
             </Col>
+
           </div>
         </Row>
         <div className={InsuranceStyles.forForm}>
@@ -189,20 +188,6 @@ const Insurance = ({ comp }) => {
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-              />
-            </div>
-
-            <div className={InsuranceStyles.forInp}>
-              <input
-                className={InsuranceStyles.input}
-                id="contact"
-                type="contact"
-                name="contact"
-                placeholder="Contact"
-                pattern="[0-9]{10}"
-                required
-                value={contact}
-                onChange={(e) => setContact(e.target.value)}
               />
             </div>
 
@@ -293,7 +278,7 @@ const Insurance = ({ comp }) => {
             </Form.Group>
           </Row> */}
           <Row className={InsuranceStyles.upSpace}>
-            <div style={{ width: "90%" }}>
+            <div style={{ width: "90%"}}>
               <Form.Group className="mb-3">
                 <Form.Check
                   onClick={(e) => setConsent(!consent)}
@@ -316,6 +301,20 @@ const Insurance = ({ comp }) => {
             </div>
           </Row>
         </div>
+
+        <Row>
+            <div className={InsuranceStyles.belowText} style={{fontStyle:"italic",textAlign:"center"}}>
+              <span>
+              Kindly email us the Policy and Rejection Mail:
+              </span>
+              <span style={{ color: "#1B45DB" }}>
+              <a href="mailto:claimremedycares@gmail.com">
+                {" "}
+                claimremedycares@gmail.com
+              </a>
+            </span>
+            </div>
+          </Row>
       </Form>
     </Col>
   );

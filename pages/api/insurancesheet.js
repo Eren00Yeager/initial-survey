@@ -3,18 +3,18 @@ import { Router } from 'next/router';
 
 async function handler(req, res) {
   if (req.method === 'POST') {
-    const { type,name,contact,mail,address,relIssue,amt,company,companyId,pno } = req.body;
-    console.log([ type,name,contact,mail,address,relIssue,amt,company,companyId,pno  ])
+    const { type,name,mail,address,relIssue,amt,company,companyId,pno } = req.body;
+    console.log([ type,name,mail,address,relIssue,amt,company,companyId,pno  ])
     var dateUTC = new Date();
     var dateUTC = dateUTC.getTime() 
     var dateIST = new Date(dateUTC);
     dateIST.setHours(dateIST.getHours() + 5); 
     dateIST.setMinutes(dateIST.getMinutes() + 30);
 
-    if(type==null || name==null || contact==null || mail==null  || address==null  || relIssue==null  || company==null || companyId==null || amt==null || pno==null){
+    if(type==null || name==null || mail==null  || address==null  || relIssue==null  || company==null || companyId==null || amt==null || pno==null){
         res.status(500).json({message:"The form is empty"})
     }else{
-        console.log([ type,name,contact,mail,address,relIssue,amt,company,companyId,dateIST])
+        console.log([ type,name,mail,address,relIssue,amt,company,companyId,dateIST])
     }
 
     try{
@@ -38,10 +38,10 @@ async function handler(req, res) {
       
           const response = await sheets.spreadsheets.values.append({
             spreadsheetId: process.env.DATABASE_ID,
-            range: 'Insurance!A3:K1000',
+            range: 'Insurance!A3:J1000',
             valueInputOption: 'USER_ENTERED',
             requestBody: {
-              values: [[type,name,contact,mail,dateIST,address,relIssue,amt,company,companyId,pno]],
+              values: [[type,name,mail,dateIST,address,relIssue,amt,company,companyId,pno]],
             },
           });
       
