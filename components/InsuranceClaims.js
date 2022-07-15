@@ -1,14 +1,13 @@
 import InsuranceStyles from "../styles/InsuranceClaims.module.scss";
 import styles from "../styles/InsuranceNew.module.scss";
 import SearchBar from "./searchbar";
+import Share from '../components/share';
 
 import {
   Row,
   Container,
   Col,
-  Form,
-  Dropdown,
-  DropdownButton,
+  Form
 } from "react-bootstrap";
 import { useState, useRef } from "react";
 import Image from "next/image";
@@ -30,6 +29,7 @@ const Insurance = ({ comp }) => {
   const [relIssue, setRelIssue] = useState("Claim got Rejected");
   const [company, setCompany] = useState("Does not exist");
   const [companyId, setCId] = useState("Does not exist");
+  const [companyAddr,setCompanyAddr] = useState("Does not exist");
   const [amt, setAmt] = useState("");
   const [pno,setPno] = useState("");
   const [consent, setConsent] = useState(false);
@@ -47,6 +47,7 @@ const Insurance = ({ comp }) => {
       company,
       companyId,
       pno,
+      companyAddr,
     ]);
 
     if (type == "") {
@@ -70,6 +71,7 @@ const Insurance = ({ comp }) => {
           company,
           companyId,
           pno,
+          companyAddr
         }),
         headers: {
           "Content-Type": "application/json",
@@ -91,24 +93,29 @@ const Insurance = ({ comp }) => {
       setRelIssue("Issue1");
       setCompany("Does not exist");
       setCId("Does not exist");
+      setCompanyAddr("Does not exist");
       setAmt("");
       setPno("");
     }
   };
 
   const ThankForm = (
-    <Col lg="8" className={styles.fontThank}>
-      <h3
-        style={{
-          backgroundColor: "rgba(67, 44, 206, 0.25)",
-          padding: "2vh",
-          borderRadius: "13px",
-        }}
-      >
-        Thank you for signing up with us. We will soon reach out to you.
-      </h3>
-    </Col>
-  );
+    <Share comp={company}/>
+  )
+
+  // const ThankForm = (
+  //   <Col lg="8" className={styles.fontThank}>
+  //     <h3
+  //       style={{
+  //         backgroundColor: "rgba(67, 44, 206, 0.25)",
+  //         padding: "2vh",
+  //         borderRadius: "13px",
+  //       }}
+  //     >
+  //       Thank you for signing up with us. We will soon reach out to you.
+  //     </h3>
+  //   </Col>
+  // );
 
   const DetailsForm = (
     <Col lg="8" className={InsuranceStyles.formCol}>
@@ -184,7 +191,7 @@ const Insurance = ({ comp }) => {
                 id="name"
                 type="name"
                 name="name"
-                placeholder="Name"
+                placeholder="Name*"
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -196,7 +203,7 @@ const Insurance = ({ comp }) => {
                 className={InsuranceStyles.input}
                 id="mail" 
                 name="mail"
-                placeholder="Mail Id"
+                placeholder="Mail Id*"
                 pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
                 required
                 value={mail}
@@ -209,7 +216,7 @@ const Insurance = ({ comp }) => {
                 className={InsuranceStyles.input}
                 id="address"
                 name="address"
-                placeholder="Address"
+                placeholder="Address*"
                 required
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
@@ -221,15 +228,15 @@ const Insurance = ({ comp }) => {
                 className={InsuranceStyles.input}
                 id="amt"
                 name="amt"
-                placeholder="Claim Amount"
-                pattern="^\d+(\.\d+)?$"
+                placeholder="Claim Amount*"
+                pattern="[0-9]{2,10}"
                 required
                 value={amt}
                 onChange={(e) => setAmt(e.target.value)}
               />
             </div>
             <div className={InsuranceStyles.forInp}>
-              <SearchBar comp={comp} setCompany={setCompany} setCId={setCId} />
+              <SearchBar comp={comp} setCompany={setCompany} setCId={setCId} setCompanyAddr={setCompanyAddr} />
             </div>
             
             <div className={InsuranceStyles.forInp}>
@@ -237,7 +244,7 @@ const Insurance = ({ comp }) => {
                 className={InsuranceStyles.input}
                 id="pno"
                 name="pno"
-                placeholder="Policy Number"
+                placeholder="Policy Number*"
                 pattern="[0-9]{0-25}"
                 required
                 value={pno}
@@ -251,7 +258,7 @@ const Insurance = ({ comp }) => {
             <Col lg="8">
           <Form.Group>
                 <Form.Label htmlFor="issues" className={InsuranceStyles.labels}>
-                  Related Issue
+                  Related Issue*
                 </Form.Label>
                 <div className={InsuranceStyles.forInp1}>
                   <Form.Select
@@ -303,7 +310,7 @@ const Insurance = ({ comp }) => {
         </div>
 
         <Row>
-            <div className={InsuranceStyles.belowText} style={{fontStyle:"italic",textAlign:"center"}}>
+          <div className={InsuranceStyles.belowText} style={{fontStyle:"italic",textAlign:"center"}}>
               <span>
               Kindly email us the Policy and Rejection Mail:
               </span>

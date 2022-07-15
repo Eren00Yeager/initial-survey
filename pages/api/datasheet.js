@@ -23,7 +23,7 @@ async function handler(req, res) {
       
           const response = await sheets.spreadsheets.values.get({
             spreadsheetId: process.env.DATABASE_ID,
-            range: 'Insurance Company mail!A:C', // sheet name
+            range: 'Insurance Company mail!A:D', // sheet name
           });
           const rows = response.data.values;
           if (rows.length) {
@@ -31,6 +31,7 @@ async function handler(req, res) {
                 "Name": row[0],
                 "sector":row[1],
                 "mailId": row[2],
+                "address" :row[3],
 
             })));
             // return res.status(200).json({message:"hello"});

@@ -1,0 +1,152 @@
+@font-face {
+  font-family: insidrFont;
+  src: url("../font/SFPRODISPLAYMEDIUM.OTF") format("truetype");
+}
+
+@media screen and (min-width: 576px) {
+
+    .fontThank{
+        background: #FFFFFF;
+        border: 1px solid rgba(67, 44, 206, 0.29);
+        border-radius: 13px;
+        padding: 5vw;
+    }
+  .impact {
+    font-family: insidrFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vw;
+    line-height: 1.6vw;
+    text-align: center;
+
+    /* or 108% */
+
+    color: #fe6e6e;
+  }
+
+  .cText {
+    font-family: insidrFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4vw;
+    line-height: 1.7vw;
+
+    color: #000000;
+  }
+
+  .forButton {
+    font-family: insidrFont;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.512vw;
+    line-height: 1.6vw;
+    padding: 0.4vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+
+    border: none;
+    border-radius: 1.2vw;
+    background-color: white;
+
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+  .outerC {
+    margin-top: 1vw;
+    padding: 0.5vw;
+    background: rgba(199, 199, 199, 0.23);
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .Share {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    justify-content: space-around;
+    margin-top: 2vw;
+  }
+  .forShare {
+    font-family: "SF UI Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5vw;
+    line-height: 1.7vw;
+
+    color: #000000;
+  }
+}
+
+@media screen and (max-width: 576px) {
+    .fontThank{
+        background: #FFFFFF;
+        border: 1px solid rgba(67, 44, 206, 0.29);
+        border-radius: 13px;
+        padding: 5vw;
+    }
+  .impact {
+    font-family: insidrFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.9vw;
+    line-height: 4vw;
+    text-align: left;
+
+    /* or 108% */
+
+    color: #fe6e6e;
+  }
+
+  .cText {
+    font-family: insidrFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.6vw;
+    line-height: 4.3vw;
+    text-align: left;
+
+    color: #000000;
+  }
+
+  .forButton {
+    font-family: insidrFont;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.512vw;
+    line-height: 3.6vw;
+    padding: 1vw;
+    margin-top: 7vw;
+    margin-bottom: 1vw;
+
+    border: none;
+    border-radius: 5vw;
+    background-color: white;
+
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+  .outerC {
+    margin-top: 4vw;
+    padding: 2.5vw;
+    background: rgba(199, 199, 199, 0.23);
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .Share {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-around;
+    margin-top: 2vw;
+  }
+  .forShare {
+    font-family: "SF UI Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4.5vw;
+    line-height: 4.7vw;
+
+    color: #000000;
+  }
+}

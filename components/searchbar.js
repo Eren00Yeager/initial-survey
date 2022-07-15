@@ -2,42 +2,59 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import searchStyles from "../styles/searchbar.module.css";
 
-const SearchBar = ({ comp, setCompany, setCId }) => {
+const SearchBar = ({ comp, setCompany, setCId,setCompanyAddr }) => {
   const [companyToSearch, setCompanySearch] = useState("");
   const changedSearch = (event) => {
     setCompanySearch(event.target.value);
-    setCompany(event.target.value);
     const temp = comp.filter((item) => {
-        return event.target.value.toLowerCase() == item.Name.toLowerCase();
+        return item.Name.toLowerCase()==event.target.value.toLowerCase();
       });
-      if (temp.length>=1 && temp[0].mailId) {
-        setCId(temp[0].mailId);
-      } else {
+      if (temp.length>=1) {
+        setCompany(temp[0].Name)
+        if(temp[0].mailId!=""){
+          setCId(temp[0].mailId);
+        }
+        else{
+          setCId("Does not exist");
+        }
+        if(temp[0].address!=""){
+          setCompanyAddr(temp[0].address);
+        }
+        else{
+          setCompanyAddr("Does not exist");
+        }
+        
+      }
+       else {
         setCId("Does not Exist");
+        setCompanyAddr("Does not exist")
     }
     
   };
 
-  const isEnter = (event) => {
-    if (event.keyCode == 13) {
-      setCompanySearch(event.target.value);
-      setCompany(event.target.value);
-      const temp = comp.filter((item) => {
-        return event.target.value.toLowerCase() == item.Name.toLowerCase();
-      });
-      if (temp.length>=1 && temp[0].mailId) {
-        setCId(temp[0].mailId);
-      } else {
-        setCId("Does not Exist");
-      }
-    }
-  };
 
-  const onSearch = (searchTerm, searchId) => {
+  const onSearch = (searchTerm, searchId,searchAddr) => {
     setCompanySearch(searchTerm);
     setCompany(searchTerm);
     console.log(searchId);
-    setCId(searchId);
+    if(searchId==""){
+      setCId("Does not exist");
+
+    }
+    else{
+      setCId(searchId);
+
+    }
+    if(searchAddr!=""){
+      setCompanyAddr("Does not exist");
+
+    }
+    else{
+      setCompanyAddr(searchAddr);
+
+    }
+    
+    
   };
 
   function isValid(nameinDb, enteredName) {
@@ -77,10 +94,9 @@ const SearchBar = ({ comp, setCompany, setCId }) => {
         <input
           type="text"
           value={companyToSearch}
-          placeholder="Enter Company Name"
+          placeholder="Enter Company Name*"
           onChange={changedSearch}
           className={searchStyles.forInput}
-          onKeyUp={isEnter}
         />
       </div>
       {/* implementing scroll view for this div required */}
@@ -101,7 +117,7 @@ const SearchBar = ({ comp, setCompany, setCId }) => {
             })
             .map((item) => (
               <div
-                onClick={() => onSearch(item.Name, item.mailId)}
+                onClick={() => onSearch(item.Name, item.mailId,item.address)}
                 className={searchStyles.dropdownRow}
                 key={item.Name}
               >
