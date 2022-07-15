@@ -1,4 +1,7 @@
-@import url("http://fonts.cdnfonts.com/css/sf-pro-display");
+@font-face {
+  font-family: insidrFont;
+  src: url('../font/SFPRODISPLAYMEDIUM.OTF')  format('truetype');
+}
 
 @media screen and (min-width: 576px) {
   .Container {
@@ -10,7 +13,7 @@
   }
 
   .font1 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 700;
     font-size: 2em;
@@ -24,7 +27,7 @@
   }
 
   .font2 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 700;
     font-size: 2em;
@@ -42,7 +45,7 @@
   }
 
   .font3 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 700;
     font-size: 12.233vw;
@@ -53,7 +56,7 @@
   }
 
   .font4 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 500;
     margin-top: 0.869vw;
@@ -65,7 +68,7 @@
   }
 
   .font5 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 500;
     font-size: 2.34vw;
@@ -77,7 +80,7 @@
   }
 
   .font8 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 700;
     font-size: 3.543vw;
@@ -87,7 +90,7 @@
   }
 
   .font9 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 700;
     font-size: 2.844vw;
@@ -97,7 +100,7 @@
   }
 
   .font10 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 500;
     font-size: 2.249vw;
@@ -107,7 +110,7 @@
   }
 
   .font11 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 600;
     font-size: 2.072vw;
@@ -121,7 +124,7 @@
   }
 
   .font12 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 520;
     font-size: 1.604vw;
@@ -129,7 +132,7 @@
   }
 
   .font13 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 700;
     font-size: 1.671vw;
@@ -142,7 +145,7 @@
   }
 
   .font14 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 500;
     font-size: 1.337vw;
@@ -155,7 +158,7 @@
   }
 
   .font15 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 600;
     font-size: 1.671vw;
@@ -166,7 +169,7 @@
   }
 
   .font16 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 600;
     font-size: 0.869vw;
@@ -179,7 +182,7 @@
   }
 
   .font17 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 700;
     font-size: 2.005vw;
@@ -191,10 +194,13 @@
   }
 
   .fontThank {
-    font-family: "SF Pro Display";
+
+    margin-top: 5vh;
+
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 800;
-    font-size: 2.805vw;
+    font-size: 3.805vw;
     line-height: 3vw;
     text-align: center;
     align-self: center;
@@ -263,7 +269,7 @@
   }
 
   .mailPart {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 600;
     font-size: 1.653vw;
@@ -274,7 +280,7 @@
   }
 
   .font21 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 500;
     font-size: 1.521vw;
@@ -287,7 +293,7 @@
   }
 
   .font22 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 600;
     font-size: 1.918vw;
@@ -314,7 +320,7 @@
   }
 
   .font1 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 700;
     font-size: 3.846vw;
@@ -327,7 +333,7 @@
   .font2 {
     box-sizing: border-box;
 
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 700;
     font-size: 3.333vw;
@@ -344,7 +350,7 @@
   .font3 {
     padding-top: 0.3em;
     margin-top: 0.4em;
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 700;
     font-size: 12.821vw;
@@ -356,7 +362,7 @@
   }
 
   .font4 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 500;
     font-size: 7.692vw;
@@ -370,7 +376,7 @@
   }
 
   .font5 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 500;
     font-size: 4.359vw;
@@ -386,7 +392,7 @@
   .toShowForm {
     box-sizing: border-box;
 
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 700;
     font-size: 4.103vw;
@@ -411,7 +417,7 @@
   }
 
   .font17 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 700;
     font-size: 4.615vw;
@@ -423,7 +429,7 @@
   }
 
   .fontThank {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 800;
     font-size: 5.05vw;
@@ -439,7 +445,7 @@
   .font8 {
     margin-top: 2em;
 
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 700;
     font-size: 7.692vw;
@@ -449,7 +455,7 @@
   }
 
   .font13 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 700;
     font-size: 3.846vw;
@@ -462,7 +468,7 @@
   }
 
   .font14 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 500;
     font-size: 3.333vw;
@@ -502,7 +508,7 @@
   }
 
   .font9 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-size: 3.846vw;
     font-weight: 700;
     line-height: 5.385vw;
@@ -512,7 +518,7 @@
   }
 
   .font10 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-size: 3.846vw;
     font-weight: 600;
     line-height: 5.385vw;
@@ -522,7 +528,7 @@
   }
 
   .font20 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     margin-top: 0.5em;
     font-weight: 700;
@@ -535,7 +541,7 @@
   }
 
   .font11 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 600;
     font-size: 5.897vw;
@@ -546,7 +552,7 @@
   }
 
   .font12 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-size: 4.372vw;
     font-weight: 500;
     line-height: 6.993vw;
@@ -554,7 +560,7 @@
   }
 
   .font15 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-size: 4.103vw;
     font-weight: 600;
     line-height: 4.872vw;
@@ -572,7 +578,7 @@
   }
 
   .font16 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 600;
     font-size: 3.077vw;
@@ -583,7 +589,7 @@
   }
 
   .font21 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 500;
     font-size: 3.521vw;
@@ -595,7 +601,7 @@
   }
 
   .font22 {
-    font-family: "SF Pro Display";
+    font-family: insidrFont;
     font-style: normal;
     font-weight: 600;
     font-size: 4.918vw;

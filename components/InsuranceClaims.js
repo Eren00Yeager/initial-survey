@@ -22,30 +22,58 @@ import Phone from "../pic/phone.svg";
 import Arrow from "../pic/arrow.svg";
 import Footer from "../pic/footerInsurance.svg";
 
-const Insurance = ({comp}) => {
+const Insurance = ({ comp }) => {
   const [type, setType] = useState("");
   const [name, setName] = useState("");
   const [contact, setContact] = useState("");
   const [mail, setMail] = useState("");
   const [address, setAddress] = useState("");
-  const [relIssue,setRelIssue] = useState("Issue1");
-  const [company,setCompany] =useState("asd");
-  const [companyId,setCId] =useState("asd");
-  const [amt,setAmt]  = useState("");
+  const [relIssue, setRelIssue] = useState("Claim got Rejected");
+  const [company, setCompany] = useState("Does not exist");
+  const [companyId, setCId] = useState("Does not exist");
+  const [amt, setAmt] = useState("");
+  const [pno,setPno] = useState("");
+  const [consent, setConsent] = useState(false);
   const [state, setState] = useState(false);
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    console.log([type, name, contact,mail,address,relIssue,amt,company,companyId]);
+    console.log([
+      type,
+      name,
+      contact,
+      mail,
+      address,
+      relIssue,
+      amt,
+      company,
+      companyId,
+      pno,
+    ]);
 
     if (type == "") {
       alert("Select the insurance type");
       return;
     }
+    if (consent == false) {
+      alert("Consent is Required");
+      return;
+    }
     try {
       const response = await fetch("/api/insurancesheet", {
         method: "POST",
-        body: JSON.stringify({ type, name, contact,mail,address,relIssue,amt,company,companyId }),
+        body: JSON.stringify({
+          type,
+          name,
+          contact,
+          mail,
+          address,
+          relIssue,
+          amt,
+          company,
+          companyId,
+          pno,
+        }),
         headers: {
           "Content-Type": "application/json",
         },
@@ -65,15 +93,15 @@ const Insurance = ({comp}) => {
       setMail("");
       setAddress("");
       setRelIssue("Issue1");
-      // setCompany("");
-      // setCId("");
+      setCompany("Does not exist");
+      setCId("Does not exist");
       setAmt("");
-
+      setPno("");
     }
   };
 
   const ThankForm = (
-    <Col lg="3" className={styles.fontThank}>
+    <Col lg="8" className={styles.fontThank}>
       <h3
         style={{
           backgroundColor: "rgba(67, 44, 206, 0.25)",
@@ -87,7 +115,7 @@ const Insurance = ({comp}) => {
   );
 
   const DetailsForm = (
-    <Col lg="3" className={InsuranceStyles.formCol}>
+    <Col lg="8" className={InsuranceStyles.formCol}>
       <Form onSubmit={submitHandler} className={InsuranceStyles.formdiv}>
         <p className={InsuranceStyles.radiocontent}>
           Choose the Insurance type
@@ -149,7 +177,7 @@ const Insurance = ({comp}) => {
           </div>
         </Row>
         <div className={InsuranceStyles.forForm}>
-          <Row>
+          <Row style={{ justifyContent: "center" }}>
             <div className={InsuranceStyles.forInp}>
               {" "}
               <input
@@ -163,8 +191,7 @@ const Insurance = ({comp}) => {
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
-          </Row>
-          <Row>
+
             <div className={InsuranceStyles.forInp}>
               <input
                 className={InsuranceStyles.input}
@@ -178,77 +205,105 @@ const Insurance = ({comp}) => {
                 onChange={(e) => setContact(e.target.value)}
               />
             </div>
-          </Row>
-          <Row>
+
             <div className={InsuranceStyles.forInp}>
               <input
                 className={InsuranceStyles.input}
-                id="mail"
+                id="mail" 
                 name="mail"
                 placeholder="Mail Id"
-                // pattern="^[A-Za-z0-9_-]{0,50}$"
+                pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
                 required
                 value={mail}
                 onChange={(e) => setMail(e.target.value)}
               />
             </div>
-          </Row>
-          <Row>
+
             <div className={InsuranceStyles.forInp}>
               <input
                 className={InsuranceStyles.input}
                 id="address"
                 name="address"
                 placeholder="Address"
-                // pattern="^[A-Za-z0-9_-]{0,50}$"
                 required
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
               />
             </div>
-          </Row>
-          <Row>
+
             <div className={InsuranceStyles.forInp}>
               <input
                 className={InsuranceStyles.input}
                 id="amt"
                 name="amt"
-                placeholder="Amount"
-                // pattern="^[A-Za-z0-9_-]{0,50}$"
+                placeholder="Claim Amount"
+                pattern="^\d+(\.\d+)?$"
                 required
                 value={amt}
                 onChange={(e) => setAmt(e.target.value)}
               />
             </div>
+            <div className={InsuranceStyles.forInp}>
+              <SearchBar comp={comp} setCompany={setCompany} setCId={setCId} />
+            </div>
+            
+            <div className={InsuranceStyles.forInp}>
+              <input
+                className={InsuranceStyles.input}
+                id="pno"
+                name="pno"
+                placeholder="Policy Number"
+                pattern="[0-9]{0-25}"
+                required
+                value={pno}
+                onChange={(e) => setPno(e.target.value)}
+              />
+            </div>
           </Row>
-          <Row>
-            <Form.Group>
-              <Form.Label htmlFor="issues" >
-              Related Issue
-              </Form.Label>
-              <Form.Select id="issues" onChange={(e) => setRelIssue(e.target.value)}>
-                <option>Issue 1</option>
-                <option>Issue 2</option>
-              </Form.Select>
-            </Form.Group>
+
+          <Row className={InsuranceStyles.upSpace}>
+            <Col></Col>
+            <Col lg="8">
+          <Form.Group>
+                <Form.Label htmlFor="issues" className={InsuranceStyles.labels}>
+                  Related Issue
+                </Form.Label>
+                <div className={InsuranceStyles.forInp1}>
+                  <Form.Select
+                    id="issues"
+                    className={InsuranceStyles.input1}
+                    onChange={(e) => setRelIssue(e.target.value)}
+                  >
+                    <option className={InsuranceStyles.input}>Claim got rejected</option>
+                    <option className={InsuranceStyles.input}>Claim got delayed</option>
+                    <option className={InsuranceStyles.input}>Less claim passed</option>
+                    <option className={InsuranceStyles.input}>Not satisfied with claim</option>
+                  </Form.Select>
+                </div>
+              </Form.Group>
+              </Col>
+              <Col></Col>
           </Row>
-          <Row>
-            <SearchBar comp={comp} setCompany={setCompany} setCId={setCId}/>
-          </Row>
-          <Row>
+
+
+          {/* <Row>
             <Form.Group controlId="formFileMultiple" className="mb-3">
               <Form.Label>Add Relevant Documents</Form.Label>
               <Form.Control type="file" multiple />
             </Form.Group>
-          </Row>
-          <Row>
-          <Form.Group className="mb-3">
-              <Form.Check
-                type="checkbox"
-                id="consent"
-                label="I consent to take legal actions against the company"
-              />
-            </Form.Group>
+          </Row> */}
+          <Row className={InsuranceStyles.upSpace}>
+            <div style={{ width: "90%" }}>
+              <Form.Group className="mb-3">
+                <Form.Check
+                  onClick={(e) => setConsent(!consent)}
+                  type="checkbox"
+                  id="consent"
+                  label="I consent to take legal action against the company &#38; demand my claim and compensation."
+                  className={InsuranceStyles.labels1}
+                />
+              </Form.Group>
+            </div>
           </Row>
           <Row>
             <div className={InsuranceStyles.forSub}>
@@ -256,7 +311,7 @@ const Insurance = ({comp}) => {
                 type="submit"
                 className={`btn btn-primary ${InsuranceStyles.submit}`}
               >
-                Submit
+                Send Legal Notice
               </button>
             </div>
           </Row>
@@ -404,7 +459,8 @@ const Insurance = ({comp}) => {
       </Row>
 
       <Row style={{ paddingTop: "4em" }}>
-        <Col lg="8">
+        <Col></Col>
+        <Col lg="10">
           <p className={styles.font8} id="form">
             Why ClaimRemedy
           </p>
@@ -443,8 +499,13 @@ const Insurance = ({comp}) => {
             <p className={styles.font20}> So let's get what is yours!</p>
           </div>
         </Col>
+        <Col></Col>
+      </Row>
 
+      <Row>
+        <Col></Col>
         {state ? ThankForm : DetailsForm}
+        <Col></Col>
       </Row>
 
       <Row style={{ paddingTop: "4em" }}>
