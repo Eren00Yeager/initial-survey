@@ -16,9 +16,6 @@ import {
     WhatsappIcon,
     LinkedinShareButton,
     LinkedinIcon,
-    TwitterShareButton,
-    TwitterIcon,
-
     } from 'next-share';
     
 const cshare = ({cnam}) => {
@@ -37,7 +34,7 @@ const cshare = ({cnam}) => {
            <div className={consumerStyles.nt}>
             <div>
            I have sent a legal notice to {cnam} for the inconvenience caused to me in the insurance claim process. Thanks to <a href="https://getyourrefunds.com/" className={consumerStyles.web}>getyourrefunds.com</a>-GetYourRefunds for helping me take legal action for no extra cost.</div>
-           <div className={consumerStyles.cpt}>Copy Message</div>
+           <div className={consumerStyles.cpt}>copy message</div>
            </div>
     <div className={consumerStyles.shr}>
 	<div>Share</div>
@@ -61,13 +58,6 @@ const cshare = ({cnam}) => {
 		url={'https://insidr.vercel.app/'} >
 		<LinkedinIcon size={32} round />
 	</LinkedinShareButton>
-    <TwitterShareButton
-		// {/* Url you want to share */}
-       
-        title='dtyuikjl,mnbvct'
-		url={'https://insidr.vercel.app/'} >
-		<TwitterIcon size={32} round />
-	</TwitterShareButton>
 	</div>
         </div>  
     
