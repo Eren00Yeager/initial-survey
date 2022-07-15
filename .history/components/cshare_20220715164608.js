@@ -16,9 +16,6 @@ import {
     WhatsappIcon,
     LinkedinShareButton,
     LinkedinIcon,
-    TwitterShareButton,
-    TwitterIcon,
-
     } from 'next-share';
     
 const cshare = ({cnam}) => {
@@ -61,13 +58,6 @@ const cshare = ({cnam}) => {
 		url={'https://insidr.vercel.app/'} >
 		<LinkedinIcon size={32} round />
 	</LinkedinShareButton>
-    <TwitterShareButton
-		// {/* Url you want to share */}
-       
-        title='dtyuikjl,mnbvct'
-		url={'https://insidr.vercel.app/'} >
-		<TwitterIcon size={32} round />
-	</TwitterShareButton>
 	</div>
         </div>  
     

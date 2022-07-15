@@ -201,12 +201,6 @@
       }
       .tnk{
         width:90%;
-        display: flex;
-        flex-direction: column;
-        border: 2px solid #2196F3;
-        border-radius: 20px;
-        padding: 10px;
-        row-gap: 15px;
         }
         .thank{
             font-family: 'Poppins';
@@ -826,10 +820,7 @@ width:40%;
 display: flex;
 flex-direction: column;
 row-gap: 15px;
-border: 1px solid rgb(7, 116, 205);
-border-radius: 10px;
-padding: 10px;
-background-color: #424242;
+/* background-color: yellow; */
 }
 .thank{
 font-family: 'Poppins';
@@ -1019,14 +1010,14 @@ font-family: 'Poppins';
 font-style: normal;
 font-weight: 500;
 font-size: 20px;
-color: #FFFFFF;
+color: white;
 }
 .msr{
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 500;
 font-size: 17px;
-color: #2196F3;
+color: red;
 
 }
 .nt{
@@ -1034,16 +1025,13 @@ color: #2196F3;
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
-    
-    color: #FFFFFF;
-
+    color: white;  
     background-color: rgba(199, 199, 199, 0.23);
     border-radius: 20px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 10px;
 }
 .web{
     text-decoration: none;
@@ -1051,7 +1039,7 @@ color: #2196F3;
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
-    color: #4611f6;
+    color: #2196F3;
    
 }
 .cpt{
@@ -1061,20 +1049,7 @@ font-weight: 600;
 font-size: 20px;
 line-height: 14px;
 background-color: #FFFFFF;
-padding: 10px;
-color: #2196F3;
+padding: 5px;
+color: rgba(0, 0, 0, 0.65);
 border-radius: 20px;
-}
-.shr{
-    display: flex;
-    flex-direction: row;
-    
-    font-family: 'SF Pro Display';
-    column-gap: 10px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    color: #FFFFFF;
-    width: fit-content;
-    align-self: center;
 }
