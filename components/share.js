@@ -20,20 +20,57 @@ export default function Text({ compName }) {
   // const [text, setText] = useState(
   //   `I have sent a legal notice to ${compName} for the inconvenience caused to me in the insurance claim process.Thanks to  ${linkN}-[Claim Remedy] for helping me take legal action for no extra cost.`
   // );
+  const text =  `I have sent a legal notice to ${compName} for the inconvenience caused to me in the insurance claim process.Thanks to  ${linkN}-[Claim Remedy] for helping me take legal action for no extra cost.`;
 
-  const copy = async () => {
-      const text =  `I have sent a legal notice to ${compName} for the inconvenience caused to me in the insurance claim process.Thanks to  ${linkN}-[Claim Remedy] for helping me take legal action for no extra cost.`;
-      // await navigator.clipboard.writeText(text);
-      await navigator.clipboard
-      .writeText(text)
-      .then(() => {
-        alert("successfully copied");
-      })
-      .catch(() => {
-        alert("something went wrong");
-      });
-    // await navigator.clipboard.writeText(text);
-  };
+  // const copy = async () => {
+      // const text =  `I have sent a legal notice to ${compName} for the inconvenience caused to me in the insurance claim process.Thanks to  ${linkN}-[Claim Remedy] for helping me take legal action for no extra cost.`;
+  //     // await navigator.clipboard.writeText(text);
+  //     await navigator.clipboard
+  //     .writeText(text)
+  //     .then(() => {
+  //       alert("successfully copied");
+  //     })
+  //     .catch(() => {
+  //       alert("something went wrong");
+  //     });
+  //   // await navigator.clipboard.writeText(text);
+  // };
+
+
+  const fallbackCopyTextToClipboard = async()=> {
+    var textArea = document.createElement("textarea");
+    textArea.value = text;
+    
+    // Avoid scrolling to bottom
+    textArea.style.top = "0";
+    textArea.style.left = "0";
+    textArea.style.position = "fixed";
+  
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+  
+    try {
+      var successful = document.execCommand('copy');
+      var msg = successful ? 'Copied Successfully' : 'unsuccessful';
+      alert(msg)
+    } catch (err) {
+      alert('Fallback: Oops, unable to copy', err);
+    }
+  
+    document.body.removeChild(textArea);
+  }
+  const copy = async () =>{
+    if (!navigator.clipboard) {
+      fallbackCopyTextToClipboard(text);
+      return;
+    }
+    await navigator.clipboard.writeText(text).then(function() {
+      alert('Copied Successfully');
+    }, function(err) {
+      console.error('Async: Could not copy text: ', err);
+    });
+  }
 
   return (
     <Col lg="8" xs="10" className={stylesSh.fontThank}>
