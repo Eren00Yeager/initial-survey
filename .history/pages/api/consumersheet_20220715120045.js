@@ -40,7 +40,7 @@ async function handler(req, res) {
             range: 'Consumernew',
             valueInputOption: 'USER_ENTERED',
             requestBody: {
-              values: [[name,email,address,cnam,cid,cad,cost,order,problem,demand,dateIST]],
+              values: [[name,mobnum,email,address,cnam,cid,cad,cost,order,problem,demand,dateIST]],
             },
           });
 

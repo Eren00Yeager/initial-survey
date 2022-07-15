@@ -2,7 +2,7 @@ import { google } from 'googleapis';
 
 async function handler(req, res) {
   if (req.method === 'POST') {
-    const { name,mobnum,email,problem,address,demand,cnam,cad,cid,cost,order } = req.body;
+    const { name,mobnum,email,problem,address,demand,cnam,cad,cid} } = req.body;
 
     var dateUTC = new Date();
     var dateUTC = dateUTC.getTime() 
@@ -40,7 +40,7 @@ async function handler(req, res) {
             range: 'Consumernew',
             valueInputOption: 'USER_ENTERED',
             requestBody: {
-              values: [[name,email,address,cnam,cid,cad,cost,order,problem,demand,dateIST]],
+              values: [[name,mobnum,email,address,cnam,cid,cad,cost,order,problem,demand,dateIST]],
             },
           });
 

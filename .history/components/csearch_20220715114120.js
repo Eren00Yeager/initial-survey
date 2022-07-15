@@ -4,7 +4,7 @@ import { useState } from "react";
 // import searchStyles from "../styles/searchbar.module.css";
 import { Col, Row, Form, Button, Accordion } from 'react-bootstrap';
 import consumerStyles from "../styles/consumer.module.css";
-const SearchBar = ({comp,setCompany,setCId,setcad,setData}) => {
+const SearchBar = ({comp,setCompany,setCId,setcad}) => {
   const [companyToSearch, setCompanySearch] = useState("");
   const changedSearch = (event) => {
     setCompanySearch(event.target.value);

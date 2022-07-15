@@ -1,7 +1,7 @@
 import { Col, Row, Form, Button, Accordion } from 'react-bootstrap';
 import consumerStyles from "../styles/consumer.module.css";
 import SearchBar from "./csearch";
-import { useState,useEffect } from "react";
+import { useState } from "react";
 const cForm = ({comp,setst}) => {
     // const [name, setName] = useState('');
     // const [mobile, setMobile] = useState('');
@@ -10,10 +10,8 @@ const cForm = ({comp,setst}) => {
     // const [error, seterror] = useState('');
     
     const [Data,setData] =useState({});
-    const [isSubmit,setsub] =useState(false);
     const [cnam,setcnam]=useState('');
     const [cid,setcid] = useState('');
-    const [cad,setcad] = useState('');
   const onChangeHandler =(e)=>{
    setData((state)=>{
     return{
@@ -22,49 +20,34 @@ const cForm = ({comp,setst}) => {
     }
    })
   }
-  useEffect(() => {
-    if(isSubmit){
-   async function fun(){ 
-     try {
-        const response = await fetch("/api/consumersheet", {
-            method: "POST",
-            body: JSON.stringify(Data),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        })
-        if (await response.status == 201) {
-            setst(true);
-        } else {
-            throw response.json()
-        }
-        setsub(false);
-
-
-    } catch (e) {
-        console.log(e)
-        alert("There was an error in submitting\nPlease try again")
-        setsub(false);
-        // setName('');
-        // setMobile('');
-        // setEmail('');
-        // setProblem('');
-        // setst(false);
-    }
-   }
-   fun();
-}
-    },[isSubmit])
-  
   async function onSubmitHandler(e){
     e.preventDefault();
-    setData((state)=>{
-    return{
-    ...state,
-    cnam:cnam,
-    cid:cid,
-    cad:cad  } });
-    setsub(true);
+    
+        try {
+            const response = await fetch("/api/consumersheet", {
+                method: "POST",
+                body: JSON.stringify(Data),
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+            if (await response.status == 201) {
+                setst(true);
+            } else {
+                throw response.json()
+            }
+
+
+        } catch (e) {
+            console.log(e)
+            alert("There was an error in submitting\nPlease try again")
+            // setName('');
+            // setMobile('');
+            // setEmail('');
+            // setProblem('');
+            // setst(false);
+        }
+    
   }
   
   return (
@@ -87,9 +70,9 @@ const cForm = ({comp,setst}) => {
                         <Form.Control className={consumerStyles.plc} name="mobnum" type="Mobile No." pattern="[0-9]{10}" placeholder="Mobile No." onChange={onChangeHandler} />
                     </Form.Group>
 
-                    <Form.Group className={consumerStyles.det} >
+                    <Form.Group className={consumerStyles.det} controlId="formPlaintextEmail">
                         {/* <Form.Label className={consumerStyles.nam}>Email Id.</Form.Label> */}
-                        <Form.Control className={consumerStyles.plc} name="email" type="email" placeholder="Email Id." required onChange={onChangeHandler} />
+                        <Form.Control className={consumerStyles.plc} name="email" type="text" placeholder="Email Id." required onChange={onChangeHandler} />
                     </Form.Group>
                     <Form.Group className={consumerStyles.det} >
                         {/* <Form.Label className={consumerStyles.nam}>Address of Consumer</Form.Label> */}
@@ -103,14 +86,10 @@ const cForm = ({comp,setst}) => {
                 <Accordion.Header><div className={consumerStyles.id}>Product Details</div></Accordion.Header>
                 <Accordion.Body className={consumerStyles.cbd}>
 
-                <SearchBar comp={comp} setCompany={setcnam} setData={setData} setCId ={setcid} setcad={setcad}/>
+                <SearchBar comp={comp} setCompany={setcnam}  setCId ={setcid}/>
                     <Form.Group className={consumerStyles.det} >
                         {/* <Form.Label className={consumerStyles.nam}>Name</Form.Label> */}
-                        <Form.Control className={consumerStyles.plc} type="tel" name="cost"  required placeholder="Cost of Product" onChange={onChangeHandler}/>
-                    </Form.Group>
-                    <Form.Group className={consumerStyles.det} >
-                        {/* <Form.Label className={consumerStyles.nam}>Name</Form.Label> */}
-                        <Form.Control className={consumerStyles.plc} type="tel" name="order"  required placeholder="Invoice ID" onChange={onChangeHandler}/>
+                        <Form.Control className={consumerStyles.plc} type="tel" name="cost"  required placeholder="Cost of Product" />
                     </Form.Group>
                     <Form.Group className={consumerStyles.det}>
                         {/* <Form.Label className={consumerStyles.nam}>Problem Faced</Form.Label> */}
@@ -143,7 +122,7 @@ const cForm = ({comp,setst}) => {
 
 
         <Form.Group className={consumerStyles.terms} >
-            <Form.Check type="checkbox" label="check this" required/>
+            <Form.Check type="checkbox" label="check this" />
 
         </Form.Group>
         <Button variant="primary" type="submit" className={consumerStyles.sub} >

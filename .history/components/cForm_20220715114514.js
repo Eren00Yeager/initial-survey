@@ -11,6 +11,7 @@ const cForm = ({comp,setst}) => {
     
     const [Data,setData] =useState({});
     const [isSubmit,setsub] =useState(false);
+    const [cm,setcm] =useState({});
     const [cnam,setcnam]=useState('');
     const [cid,setcid] = useState('');
     const [cad,setcad] = useState('');
@@ -23,9 +24,7 @@ const cForm = ({comp,setst}) => {
    })
   }
   useEffect(() => {
-    if(isSubmit){
-   async function fun(){ 
-     try {
+    try {
         const response = await fetch("/api/consumersheet", {
             method: "POST",
             body: JSON.stringify(Data),
@@ -38,33 +37,24 @@ const cForm = ({comp,setst}) => {
         } else {
             throw response.json()
         }
-        setsub(false);
 
 
     } catch (e) {
         console.log(e)
         alert("There was an error in submitting\nPlease try again")
-        setsub(false);
         // setName('');
         // setMobile('');
         // setEmail('');
         // setProblem('');
         // setst(false);
     }
-   }
-   fun();
-}
     },[isSubmit])
   
   async function onSubmitHandler(e){
     e.preventDefault();
-    setData((state)=>{
-    return{
-    ...state,
-    cnam:cnam,
-    cid:cid,
-    cad:cad  } });
-    setsub(true);
+    set
+      
+    
   }
   
   return (
@@ -106,11 +96,7 @@ const cForm = ({comp,setst}) => {
                 <SearchBar comp={comp} setCompany={setcnam} setData={setData} setCId ={setcid} setcad={setcad}/>
                     <Form.Group className={consumerStyles.det} >
                         {/* <Form.Label className={consumerStyles.nam}>Name</Form.Label> */}
-                        <Form.Control className={consumerStyles.plc} type="tel" name="cost"  required placeholder="Cost of Product" onChange={onChangeHandler}/>
-                    </Form.Group>
-                    <Form.Group className={consumerStyles.det} >
-                        {/* <Form.Label className={consumerStyles.nam}>Name</Form.Label> */}
-                        <Form.Control className={consumerStyles.plc} type="tel" name="order"  required placeholder="Invoice ID" onChange={onChangeHandler}/>
+                        <Form.Control className={consumerStyles.plc} type="tel" name="cost"  required placeholder="Cost of Product" />
                     </Form.Group>
                     <Form.Group className={consumerStyles.det}>
                         {/* <Form.Label className={consumerStyles.nam}>Problem Faced</Form.Label> */}

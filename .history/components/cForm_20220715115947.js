@@ -51,9 +51,7 @@ const cForm = ({comp,setst}) => {
         // setProblem('');
         // setst(false);
     }
-   }
-   fun();
-}
+   }}
     },[isSubmit])
   
   async function onSubmitHandler(e){

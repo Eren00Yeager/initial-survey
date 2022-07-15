@@ -4,7 +4,7 @@ import { useState } from "react";
 // import searchStyles from "../styles/searchbar.module.css";
 import { Col, Row, Form, Button, Accordion } from 'react-bootstrap';
 import consumerStyles from "../styles/consumer.module.css";
-const SearchBar = ({comp,setCompany,setCId,setcad,setData}) => {
+const SearchBar = ({comp,setCompany,setCId}) => {
   const [companyToSearch, setCompanySearch] = useState("");
   const changedSearch = (event) => {
     setCompanySearch(event.target.value);
@@ -38,6 +38,7 @@ const SearchBar = ({comp,setCompany,setCId,setcad,setData}) => {
     nameinDb = nameinDb.toLowerCase();
     let m = enteredName.length;
     let n = nameinDb.length;
+
     let allGood = 0;
     let j = 0;
     let i = 0;
@@ -62,12 +63,25 @@ const SearchBar = ({comp,setCompany,setCId,setcad,setData}) => {
 
     return 1;
   }
-
+ const isEnter = (event) => {
+    if (event.keyCode == 13) {
+      setCompanySearch(event.target.value);
+      setCompany(event.target.value);
+      const temp = comp.filter((item) => {
+        return event.target.value.toLowerCase() == item.Name.toLowerCase();
+      });
+      if (temp.length>=1 && temp[0].mailId) {
+        setCId(temp[0].mailId);
+      } else {
+        setCId("Does not Exist");
+      }
+    }
+  };
   return (
     <div style={{position:"relative"}}>
       <Form.Group className={consumerStyles.det}>
       {/* <Form.Label className={consumerStyles.nam}>Name</Form.Label> */}
-      <Form.Control className={consumerStyles.plc} type="text" placeholder="company name" value={companyToSearch}
+      <Form.Control className={consumerStyles.plc} type="text" placeholder="company name" onKeyUp={isEnter} value={companyToSearch}
           onChange={changedSearch} required/>
       </Form.Group>
       

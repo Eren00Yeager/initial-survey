@@ -24,7 +24,7 @@ const cForm = ({comp,setst}) => {
   }
   useEffect(() => {
     if(isSubmit){
-   async function fun(){ 
+   async =()=>{ 
      try {
         const response = await fetch("/api/consumersheet", {
             method: "POST",
@@ -51,9 +51,7 @@ const cForm = ({comp,setst}) => {
         // setProblem('');
         // setst(false);
     }
-   }
-   fun();
-}
+   }}
     },[isSubmit])
   
   async function onSubmitHandler(e){

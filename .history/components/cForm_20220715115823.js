@@ -11,6 +11,7 @@ const cForm = ({comp,setst}) => {
     
     const [Data,setData] =useState({});
     const [isSubmit,setsub] =useState(false);
+    const [cm,setcm] =useState({});
     const [cnam,setcnam]=useState('');
     const [cid,setcid] = useState('');
     const [cad,setcad] = useState('');
@@ -51,9 +52,7 @@ const cForm = ({comp,setst}) => {
         // setProblem('');
         // setst(false);
     }
-   }
-   fun();
-}
+   }}
     },[isSubmit])
   
   async function onSubmitHandler(e){
@@ -106,11 +105,11 @@ const cForm = ({comp,setst}) => {
                 <SearchBar comp={comp} setCompany={setcnam} setData={setData} setCId ={setcid} setcad={setcad}/>
                     <Form.Group className={consumerStyles.det} >
                         {/* <Form.Label className={consumerStyles.nam}>Name</Form.Label> */}
-                        <Form.Control className={consumerStyles.plc} type="tel" name="cost"  required placeholder="Cost of Product" onChange={onChangeHandler}/>
+                        <Form.Control className={consumerStyles.plc} type="tel" name="cost"  required placeholder="Cost of Product" />
                     </Form.Group>
                     <Form.Group className={consumerStyles.det} >
                         {/* <Form.Label className={consumerStyles.nam}>Name</Form.Label> */}
-                        <Form.Control className={consumerStyles.plc} type="tel" name="order"  required placeholder="Invoice ID" onChange={onChangeHandler}/>
+                        <Form.Control className={consumerStyles.plc} type="tel" name="order"  required placeholder="Invoice ID" />
                     </Form.Group>
                     <Form.Group className={consumerStyles.det}>
                         {/* <Form.Label className={consumerStyles.nam}>Problem Faced</Form.Label> */}
