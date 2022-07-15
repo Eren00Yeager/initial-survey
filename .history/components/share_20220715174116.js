@@ -17,10 +17,25 @@ import tc from "../pic/whitetick.svg";
 
 export default function Text({ compName }) {
   const linkN = "https://claim-remedy.com/";
-
+  // const [text, setText] = useState(
+  //   `I have sent a legal notice to ${compName} for the inconvenience caused to me in the insurance claim process.Thanks to  ${linkN}-[Claim Remedy] for helping me take legal action for no extra cost.`
+  // );
   const text =  `I have sent a legal notice to ${compName} for the inconvenience caused to me in the insurance claim process.Thanks to  ${linkN}-[Claim Remedy] for helping me take legal action for no extra cost.`;
 
- 
+  // const copy = async () => {
+      // const text =  `I have sent a legal notice to ${compName} for the inconvenience caused to me in the insurance claim process.Thanks to  ${linkN}-[Claim Remedy] for helping me take legal action for no extra cost.`;
+  //     // await navigator.clipboard.writeText(text);
+  //     await navigator.clipboard
+  //     .writeText(text)
+  //     .then(() => {
+  //       alert("successfully copied");
+  //     })
+  //     .catch(() => {
+  //       alert("something went wrong");
+  //     });
+  //   // await navigator.clipboard.writeText(text);
+  // };
+
 
   const fallbackCopyTextToClipboard = async()=> {
     var textArea = document.createElement("textarea");

@@ -24,43 +24,6 @@ import {
     
 const cshare = ({cnam}) => {
   
-    const text=`I have sent a legal notice to ${cnam} for the inconvenient services provided by the company. Thanks to getyourrefunds.com -GetYourRefunds for helping me take legal action for no extra cost.`;
-    
-  const fallbackCopyTextToClipboard = async()=> {
-    var textArea = document.createElement("textarea");
-    textArea.value = text;
-    
-    // Avoid scrolling to bottom
-    textArea.style.top = "0";
-    textArea.style.left = "0";
-    textArea.style.position = "fixed";
-  
-    document.body.appendChild(textArea);
-    textArea.focus();
-    textArea.select();
-  
-    try {
-      var successful = document.execCommand('copy');
-      var msg = successful ? 'Copied Successfully' : 'unsuccessful';
-      alert(msg)
-    } catch (err) {
-      alert('Fallback: Oops, unable to copy', err);
-    }
-  
-    document.body.removeChild(textArea);
-  }
-  const copy = async () =>{
-    if (!navigator.clipboard) {
-      fallbackCopyTextToClipboard(text);
-      return;
-    }
-    await navigator.clipboard.writeText(text).then(function() {
-      alert('Copied Successfully');
-    }, function(err) {
-      console.error('Async: Could not copy text: ', err);
-    });
-  }
-
 
   return (
        <div className={consumerStyles.tnk}>
@@ -75,7 +38,7 @@ const cshare = ({cnam}) => {
            <div className={consumerStyles.nt}>
             <div>
            I have sent a legal notice to {cnam} for the inconvenient services provided by the company. Thanks to <a href="https://getyourrefunds.com/" className={consumerStyles.web}>getyourrefunds.com</a>-GetYourRefunds for helping me take legal action for no extra cost.</div>
-           <div className={consumerStyles.cpt} onClick={copy}>Copy Message</div>
+           <div className={consumerStyles.cpt}>Copy Message</div>
            </div>
     <div className={consumerStyles.shr}>
 	<div>Share</div>
@@ -88,9 +51,8 @@ const cshare = ({cnam}) => {
     </FacebookShareButton>
 	<WhatsappShareButton
 		// {/* Url you want to share */}
-        quote={`I have sent a legal notice to ${cnam} for the inconvenient services provided by the company. Thanks to getyourrefunds.com -GetYourRefunds for helping me take legal action for no extra cost.`}
-        title={`I have sent a legal notice to ${cnam} for the inconvenient services provided by the company. Thanks to getyourrefunds.com -GetYourRefunds for helping me take legal action for no extra cost.`}
-		url={'getyourrefunds.com'} >
+        title={"next-share is a social share buttons for your next React apps."}
+		url={'https://insidr.vercel.app/'} >
 		<WhatsappIcon size={32} round />
 	</WhatsappShareButton>
 	<LinkedinShareButton

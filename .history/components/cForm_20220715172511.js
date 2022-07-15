@@ -103,9 +103,9 @@ const cForm = ({comp,setst,st}) => {
                         <Form.Control className={consumerStyles.plc} name="address" placeholder="Address of Consumer" required onChange={onChangeHandler}/>
                     </Form.Group>
         <Accordion >
-            <Accordion.Item eventKey="0" style={{ background: "#424242" }}>
-                <Accordion.Header style={{borderRadius:"20px"}}><div className={consumerStyles.id}>Product Details</div></Accordion.Header>
-                <Accordion.Body style={{borderRadius:"20px"}} className={consumerStyles.cbd}>
+            <Accordion.Item eventKey="0" style={{ background: "#424242", borderRadius:"20px" }}>
+                <Accordion.Header><div className={consumerStyles.id}>Product Details</div></Accordion.Header>
+                <Accordion.Body className={consumerStyles.cbd}>
 
                 <SearchBar comp={comp} setCompany={setcnam} setData={setData} setCId ={setcid} setcad={setcad}/>
                     <Form.Group className={consumerStyles.det} >

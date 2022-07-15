@@ -276,9 +276,9 @@ export default function consumer() {
                         <div className={consumerStyles.cprt}>© Copyright 2022</div>
                     </div>
                     <div className={consumerStyles.ab2}>
-                        <a target="_blank" href="https://www.linkedin.com/company/getyourrefund/" style={windowSize.width > 900 ? { width: '3.255vw', position: 'relative' } : { width: '20vw', position: 'relative' }}><Image src={z1} layout='responsive'></Image></a>
-                        <a target="_blank" href="https://twitter.com/getyourrefunds" style={windowSize.width > 900 ? { width: '3.255vw', position: 'relative' } : { width: '20vw', position: 'relative' }}><Image src={z2} layout='responsive'></Image></a>
-                        <a target="_blank" href="mailto:getyourrefunds@gmail.com" style={windowSize.width > 900 ? { width: '3.255vw', position: 'relative' } : { width: '20vw', position: 'relative' }}><Image src={z3} layout='responsive'></Image></a>
+                        <a href="https://www.linkedin.com/company/getyourrefund/" style={windowSize.width > 900 ? { width: '3.255vw', position: 'relative' } : { width: '20vw', position: 'relative' }}><Image src={z1} layout='responsive'></Image></a>
+                        <a href="https://twitter.com/getyourrefunds" style={windowSize.width > 900 ? { width: '3.255vw', position: 'relative' } : { width: '20vw', position: 'relative' }}><Image src={z2} layout='responsive'></Image></a>
+                        <a href="mailto:getyourrefunds@gmail.com" style={windowSize.width > 900 ? { width: '3.255vw', position: 'relative' } : { width: '20vw', position: 'relative' }}><Image src={z3} layout='responsive'></Image></a>
 
                     </div>
                     {windowSize.width > 900 ? <div style={{ width: '100%', position: 'relative' }}>

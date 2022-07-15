@@ -88,9 +88,8 @@ const cshare = ({cnam}) => {
     </FacebookShareButton>
 	<WhatsappShareButton
 		// {/* Url you want to share */}
-        quote={`I have sent a legal notice to ${cnam} for the inconvenient services provided by the company. Thanks to getyourrefunds.com -GetYourRefunds for helping me take legal action for no extra cost.`}
-        title={`I have sent a legal notice to ${cnam} for the inconvenient services provided by the company. Thanks to getyourrefunds.com -GetYourRefunds for helping me take legal action for no extra cost.`}
-		url={'getyourrefunds.com'} >
+        title={"next-share is a social share buttons for your next React apps."}
+		url={'https://insidr.vercel.app/'} >
 		<WhatsappIcon size={32} round />
 	</WhatsappShareButton>
 	<LinkedinShareButton

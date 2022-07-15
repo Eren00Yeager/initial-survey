@@ -559,7 +559,7 @@
         width: 30%;
     }
     .pu{
-        font-family: 'Poppins';
+        font-family: 'SF Pro Display';
         font-style: normal;
         font-weight: 700;
         font-size: 2.344vw;
@@ -569,7 +569,7 @@
         color: #FFFFFF;
     }
     .pd{
-        font-family: 'Poppins';
+        font-family: 'SF Pro Display';
         font-style: normal;
         font-weight: 500;
         font-size: 1.302vw;
@@ -605,7 +605,7 @@
         padding: 3px 50px;
         }
     .des1{
-        font-family: 'Poppins';
+        font-family: 'SF Pro Display';
         font-style: normal;
         font-weight: 700;
         font-size: 2.799vw;
@@ -1055,7 +1055,7 @@ color: #2196F3;
    
 }
 .cpt{
-font-family: 'Poppins';
+font-family: 'SF Pro Display';
 font-style: normal;
 font-weight: 600;
 font-size: 20px;
@@ -1070,7 +1070,7 @@ cursor: pointer;
     display: flex;
     flex-direction: row;
     
-    font-family: 'Poppins';
+    font-family: 'SF Pro Display';
     column-gap: 10px;
     font-style: normal;
     font-weight: 500;
