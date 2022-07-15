@@ -33,7 +33,7 @@ const Insurance = ({ comp }) => {
   const [amt, setAmt] = useState("");
   const [pno,setPno] = useState("");
   const [consent, setConsent] = useState(false);
-  const [state, setState] = useState(false);
+  const [state, setState] = useState(true);
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -100,7 +100,7 @@ const Insurance = ({ comp }) => {
   };
 
   const ThankForm = (
-    <Share comp={company}/>
+    <Share compName={company}/>
   )
 
   // const ThankForm = (

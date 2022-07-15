@@ -1,30 +1,38 @@
 import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
-import Image from 'next/image';
+import Image from "next/image";
 import {
   FacebookShareButton,
   FacebookIcon,
-  PinterestShareButton,
-  PinterestIcon,
-  RedditShareButton,
-  RedditIcon,
   WhatsappShareButton,
   WhatsappIcon,
   LinkedinShareButton,
   LinkedinIcon,
+  TwitterShareButton,
+  TwitterIcon,
+
 } from "next-share";
 import stylesSh from "../styles/share.module.css";
-import tc from "../pic/whitetick.svg"
+import tc from "../pic/whitetick.svg";
 
 export default function Text({ compName }) {
   const linkN = "https://claim-remedy.com/";
-  const [text, setText] = useState(
-    `I have sent a legal notice to ${compName} for the inconvenience caused to me in the insurance claim process.Thanks to  ${linkN}-[Claim Remedy] for helping me take legal action for no extra cost.`
-  );
+  // const [text, setText] = useState(
+  //   `I have sent a legal notice to ${compName} for the inconvenience caused to me in the insurance claim process.Thanks to  ${linkN}-[Claim Remedy] for helping me take legal action for no extra cost.`
+  // );
 
   const copy = async () => {
-    await navigator.clipboard.writeText(text);
-    alert("Text copied");
+      const text =  `I have sent a legal notice to ${compName} for the inconvenience caused to me in the insurance claim process.Thanks to  ${linkN}-[Claim Remedy] for helping me take legal action for no extra cost.`;
+      // await navigator.clipboard.writeText(text);
+      await navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        alert("successfully copied");
+      })
+      .catch(() => {
+        alert("something went wrong");
+      });
+    // await navigator.clipboard.writeText(text);
   };
 
   return (
@@ -34,8 +42,10 @@ export default function Text({ compName }) {
       </div>
       <div className={stylesSh.ms}>
         Your legal notice has been sent successfully! A copy of the same has
-        been sent you via email. <br/>
-		<span style={{opacity:0.4}}>You will get notified when the company replies.</span>
+        been sent you via email. <br />
+        <span style={{ opacity: 0.4 }}>
+          You will get notified when the company replies.
+        </span>
       </div>
       <Row>
         <div className={stylesSh.impact}>
@@ -70,20 +80,9 @@ export default function Text({ compName }) {
             <FacebookIcon size={32} round />
           </FacebookShareButton>
 
-          <PinterestShareButton
-            // {/* Url you want to share */}
-            url={linkN}
-          >
-            <PinterestIcon size={32} round />
-          </PinterestShareButton>
-
-          <RedditShareButton
-            // {/* Url you want to share */}
-            url={linkN}
-          >
-            <RedditIcon size={32} round />
-          </RedditShareButton>
-
+          <TwitterShareButton url={linkN} title={`I have sent a legal notice to ${compName} for the inconvenience caused to me in the insurance claim process.Thanks to  ${linkN}-[Claim Remedy] for helping me take legal action for no extra cost.`}>
+            <TwitterIcon round size={32} />
+          </TwitterShareButton>
           <WhatsappShareButton
             // {/* Url you want to share */}
             title={`I have sent a legal notice to ${compName} for the inconvenience caused to me in the insurance claim process.Thanks to  ${linkN}-[Claim Remedy] for helping me take legal action for no extra cost.`}
